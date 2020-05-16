@@ -31,7 +31,7 @@ class Gracz{
     //void kup_pole(Pole pole);
 
 };
-class Pole{
+class Pole{ //nie dalem jako abstrakcyjna, opiekt Pole ma pelnic funkcje pola neutralnego
     protected:
     int id_wlasciciel =-1; //-1 to bank
     string nazwa = "nazwa_pola";
@@ -64,7 +64,8 @@ class Specjalna : public Pole
 
     public:
     Specjalna(int grupa);
-    //tu efekt na graczu
+    int ile_z_grupy(Gracz gracz);
+    //tu efekt na graczu bedzie pobieral czynsz w zaleznosci od ilosci posiadanych w grupie
 };
 
 #endif // MONOPOLY_H
