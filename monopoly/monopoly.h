@@ -7,6 +7,7 @@ class Gracz{
     int saldo =0;
     bool bankrut = false;
     string nazwa = "nazwa_gracza";
+    int poprzednia_pozycja = 0;
     int pozycja = 0;
     vector<int> posiadane_pola;
 
@@ -52,13 +53,18 @@ class Posiadlosc : public Pole
     void sprzedaj_domek();
     //tu efekt na graczu bedzie pobieral czynsz
 };
-class Wielokrotek : public Pole
+class Start : public Pole
 {
-
+   bool czy_przeszedl(Gracz &gracz);
+   //tu efekt na graczu bedzie dawal za start
 };
-class Dworzec : public Pole
+class Specjalna : public Pole
 {
+    int grupa;
 
+    public:
+    Specjalna(int grupa);
+    //tu efekt na graczu
 };
 
 #endif // MONOPOLY_H
