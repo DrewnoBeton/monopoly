@@ -4,7 +4,9 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
-        main.cpp
+        gracz.cpp \
+        main.cpp \
+        pole.cpp
 
 HEADERS += \
     monopoly.h

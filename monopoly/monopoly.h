@@ -15,7 +15,7 @@ class Gracz{
     bool tura = false;
 
     Gracz();
-    Gracz(string arg_nazwa, int arg_bankrut, int arg_saldo, int arg_pozycja, bool arg_tura);
+    Gracz(string arg_nazwa, bool arg_bankrut, int arg_saldo, int arg_pozycja, bool arg_tura);
     ~Gracz();
 
     int rzuc_kostkami();
@@ -27,7 +27,7 @@ class Gracz{
     void otrzymaj(int kwota, Gracz &gracz);
     int stan_konta();
     bool czy_bankrut();
-    bool czy_wlasciciel();
+    bool czy_wlasciciel(int id_pola);
     //void kup_pole(Pole pole);
 
 };

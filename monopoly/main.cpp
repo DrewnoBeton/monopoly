@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include "monopoly.h"
 using namespace std;
 
 int main()
