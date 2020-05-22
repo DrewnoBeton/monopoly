@@ -13,7 +13,6 @@ Gracz::~Gracz()
     bankrut = true;
     saldo = 0;
 }
-
 int Gracz::rzuc_kostkami()
 {
     return rand() % 12 + 2;

@@ -4,6 +4,8 @@ using namespace std;
 
 int main()
 {
-    cout << "Hello World!" << endl;
+    Gracz gracz1 = Gracz("a",false,0,0,false);
+    Gracz gracz2 = Gracz("a",false,0,0,false);
+    Gracz gracz3 = Gracz("a",false,0,0,false);
     return 0;
 }

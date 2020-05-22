@@ -58,7 +58,9 @@ OBJECTS       = gracz.o \
 		main.o \
 		pole.o
 
-DIST          =  monopoly.h ..\monopoly\gracz.cpp \
+DIST          =  gracz.h \
+		monopoly.h \
+		pole.h ..\monopoly\gracz.cpp \
 		..\monopoly\main.cpp \
 		..\monopoly\pole.cpp
 QMAKE_TARGET  = monopoly

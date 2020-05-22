@@ -9,4 +9,6 @@ SOURCES += \
         pole.cpp
 
 HEADERS += \
-    monopoly.h
+    gracz.h \
+    monopoly.h \
+    pole.h
