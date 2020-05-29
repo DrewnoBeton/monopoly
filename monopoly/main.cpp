@@ -7,6 +7,6 @@ int main()
     Gracz gracz1 = Gracz("a",false,0,0,false);
     Gracz gracz2 = Gracz("a",false,0,0,false);
     Gracz gracz3 = Gracz("a",false,0,0,false);
-    //cout << test();
+    cout << test();
     return 0;
 }

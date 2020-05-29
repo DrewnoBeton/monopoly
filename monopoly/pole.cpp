@@ -1,4 +1,4 @@
-#include "monopoly.h"
+#include "pole.h"
 #include <typeinfo>
 //Pole
 Pole::Pole(int arg_wlasciciel,string arg_nazwa,int arg_koszt)

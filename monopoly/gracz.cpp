@@ -1,4 +1,4 @@
-#include "monopoly.h"
+#include "gracz.h"
 
 Gracz::Gracz(string arg_nazwa, bool arg_bankrut, int arg_saldo, int arg_pozycja, bool arg_tura)
 {

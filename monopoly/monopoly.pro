@@ -4,6 +4,7 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += \
+        funkcje.cpp \
         gracz.cpp \
         main.cpp \
         pole.cpp
