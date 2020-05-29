@@ -5,7 +5,7 @@ using namespace std;
 #define POLE_H
 class Pole{ //nie dalem jako abstrakcyjna, opiekt Pole ma pelnic funkcje pola neutralnego
     protected:
-    int id_wlasciciel =-1; //-1 to bank
+    int id_wlasciciela_ =-1; //-1 to bank
     string nazwa = "nazwa_pola";
     int koszt;
 
@@ -13,6 +13,8 @@ class Pole{ //nie dalem jako abstrakcyjna, opiekt Pole ma pelnic funkcje pola ne
     Pole(int arg_wlasciciel,string arg_nazwa,int arg_koszt);
     int id_wlasciciela();
     virtual void efekt_na_graczu(Gracz &gracz, vector<Gracz> &arg_gracze);
+    //virtual void kup_pole(Gracz &gracz);
+    //virtual void sprzedaj_pole(Gracz &gracz);
 
 };
 class Posiadlosc : public Pole
@@ -25,23 +27,25 @@ class Posiadlosc : public Pole
     {
         grupa = arg_grupa;
     }
+    void kup_pole(Gracz &gracz);
+    void sprzedaj_pole(Gracz &gracz);
     void kup_domek(Gracz &gracz);
     void sprzedaj_domek(Gracz &gracz);
     void efekt_na_graczu(Gracz &gracz, vector<Gracz> &arg_gracze);
     //tu efekt na graczu bedzie pobieral czynsz
-};
-class Start : public Pole
-{
-   bool czy_przeszedl(Gracz &gracz);
-   //tu efekt na graczu bedzie dawal za start
 };
 class Specjalna : public Pole
 {
     int grupa;
 
     public:
-    Specjalna(int grupa);
-    int ile_z_grupy(Gracz gracz);
+    Specjalna(int arg_wlasciciel,string arg_nazwa,int arg_koszt,int arg_grupa) : Pole(arg_wlasciciel,arg_nazwa,arg_koszt)
+    {
+        grupa = arg_grupa;
+    }
+    void kup_pole(Gracz &gracz);
+    void sprzedaj_pole(Gracz &gracz);
+    int ile_z_grupy(vector<Pole> &pola);
     //tu efekt na graczu bedzie pobieral czynsz w zaleznosci od ilosci posiadanych w grupie
 };
 

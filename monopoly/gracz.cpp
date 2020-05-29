@@ -2,6 +2,8 @@
 
 Gracz::Gracz(string arg_nazwa, bool arg_bankrut, int arg_saldo, int arg_pozycja, bool arg_tura)
 {
+    static int id = 0;
+    id_= id++;
     nazwa = arg_nazwa;
     bankrut = arg_bankrut;
     saldo = arg_saldo;
@@ -12,6 +14,10 @@ Gracz::~Gracz()
 {
     bankrut = true;
     saldo = 0;
+}
+int Gracz::id()
+{
+    return id_;
 }
 int Gracz::rzuc_kostkami()
 {

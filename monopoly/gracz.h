@@ -11,6 +11,7 @@ class Gracz{
     int poprzednia_pozycja = 0;
     int pozycja = 0;
     vector<int> posiadane_pola;
+    int id_;
 
     public:
     bool tura = false;
