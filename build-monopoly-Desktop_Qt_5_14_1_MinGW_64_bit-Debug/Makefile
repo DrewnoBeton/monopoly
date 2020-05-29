@@ -451,13 +451,19 @@ compiler_clean:
 
 ####### Compile
 
-gracz.o: ../monopoly/gracz.cpp ../monopoly/monopoly.h
+gracz.o: ../monopoly/gracz.cpp ../monopoly/monopoly.h \
+		../monopoly/gracz.h \
+		../monopoly/pole.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o gracz.o ..\monopoly\gracz.cpp
 
-main.o: ../monopoly/main.cpp ../monopoly/monopoly.h
+main.o: ../monopoly/main.cpp ../monopoly/monopoly.h \
+		../monopoly/gracz.h \
+		../monopoly/pole.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o main.o ..\monopoly\main.cpp
 
-pole.o: ../monopoly/pole.cpp ../monopoly/monopoly.h
+pole.o: ../monopoly/pole.cpp ../monopoly/monopoly.h \
+		../monopoly/gracz.h \
+		../monopoly/pole.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o pole.o ..\monopoly\pole.cpp
 
 ####### Install

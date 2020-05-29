@@ -1,4 +1,5 @@
 #include "monopoly.h"
+#include <typeinfo>
 //Pole
 Pole::Pole(int arg_wlasciciel,string arg_nazwa,int arg_koszt)
 {
@@ -10,7 +11,7 @@ int Pole::id_wlasciciela()
 {
     return id_wlasciciela_;
 }
-void Pole::efekt_na_graczu(Gracz &gracz, vector<Gracz> &gracze)
+void Pole::efekt_na_graczu(Gracz &gracz, vector<Gracz> &gracze, vector<Pole> &pola)
 {
     //pole neutralne, tu bedzie wialo nuda
 }
@@ -34,7 +35,7 @@ void Posiadlosc::sprzedaj_domek(Gracz &gracz)
         gracz.otrzymaj(koszt_domku);
     }
 }
-void Posiadlosc::efekt_na_graczu(Gracz &gracz, vector<Gracz> &gracze)//do naprawy
+void Posiadlosc::efekt_na_graczu(Gracz &gracz, vector<Gracz> &gracze, vector<Pole> &pola)
 {
     if(id_wlasciciela_==-1)
     {
@@ -77,5 +78,64 @@ void Posiadlosc::sprzedaj_pole(Gracz &gracz)
         domki = 0;
         cout << "Sprzedales pole"  << nazwa << " za kwote" << koszt << "$" <<endl;
         return;
+    }
+}
+
+//Specjalna
+void Specjalna::kup_pole(Gracz &gracz)
+{
+    if(id_wlasciciela_==-1)
+    {
+        gracz.zaplac(koszt);
+        id_wlasciciela_ = gracz.id();
+        cout << "Kupiles pole"  << nazwa << " za kwote" << koszt << "$" <<endl;
+    }
+    else if(id_wlasciciela_==gracz.id())
+    {
+        cout << "Juz kupiles to pole!" <<endl;
+        return;
+    }
+    else
+    {
+        cout << "To juz czyjes pole, nie mozesz go kupic." <<endl;
+        return;
+    }
+}
+void Specjalna::sprzedaj_pole(Gracz &gracz)
+{
+    if(id_wlasciciela_==gracz.id())
+    {
+        id_wlasciciela_ = -1;
+        gracz.otrzymaj(koszt);
+        cout << "Sprzedales pole"  << nazwa << " za kwote" << koszt << "$" <<endl;
+        return;
+    }
+}
+void Specjalna::efekt_na_graczu(Gracz &gracz, vector<Gracz> &gracze, vector<Pole> &pola)//do naprawy
+{
+
+    if(id_wlasciciela_==-1)
+    {
+        cout << "To pole banku, mozesz je kupic." <<endl;
+    }
+    else if(id_wlasciciela_==gracz.id())
+    {
+        cout << "To twoje pole!" <<endl;
+        return;
+    }
+    else
+    {
+        int wielokrotnosc = 1;
+        for(int el:gracze[id_wlasciciela()].posiadane_pola)
+        {
+            if(pola[el].id_wlasciciela() == gracze[id_wlasciciela()].id())
+            {
+                if(typeid(pola[el]).name() == typeid(Specjalna).name())
+                wielokrotnosc++;
+            }
+        }
+        cout << "Wlasciciel pola ma "<< wielokrotnosc << " pol tego rodzaju." <<endl;
+        cout << "Zaplaciles graczowi: " << id_wlasciciela_ << " kwote " << koszt*wielokrotnosc << "$" <<endl;
+        gracz.zaplac(koszt*wielokrotnosc,gracze[id_wlasciciela_]);
     }
 }

@@ -10,10 +10,10 @@ class Gracz{
     string nazwa = "nazwa_gracza";
     int poprzednia_pozycja = 0;
     int pozycja = 0;
-    vector<int> posiadane_pola;
     int id_;
 
     public:
+    vector<int> posiadane_pola;
     bool tura = false;
 
     Gracz();

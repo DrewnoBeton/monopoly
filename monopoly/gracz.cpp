@@ -25,8 +25,15 @@ int Gracz::rzuc_kostkami()
 }
 void Gracz::zmien_pozycje(int odleglosc)
 {
-    if(pozycja+odleglosc<=40) pozycja += odleglosc;
-    else pozycja = pozycja+odleglosc-40;
+    if(pozycja+odleglosc<=40)
+    {
+        pozycja += odleglosc;
+    }
+    else
+    {
+        otrzymaj(200);
+        pozycja = pozycja+odleglosc-40;
+    }
 }
 int Gracz::gdzie_jest()
 {
