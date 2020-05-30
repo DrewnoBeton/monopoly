@@ -7,12 +7,13 @@ using namespace std;
 class Gracz{
     int saldo =0;
     bool bankrut = false;
-    string nazwa = "nazwa_gracza";
+
     int poprzednia_pozycja = 0;
     int pozycja = 0;
     int id_;
 
     public:
+    string nazwa = "nazwa_gracza";
     vector<int> posiadane_pola;
     bool tura = false;
 

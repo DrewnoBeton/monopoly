@@ -12,7 +12,7 @@ void nowa_plansza(vector<Pole> &pola)
     pola.emplace_back(Posiadlosc(-1,"zadupie2",200,1));
     pola.emplace_back(Posiadlosc(-1,"zadupie3",200,1));
     pola.emplace_back(Posiadlosc(-1,"zadupie4",200,1));
-    pola.emplace_back(Specjalna(-1,"dworzec1",1000));
+    pola.emplace_back(Specjalna(-1,"dworzec1",750));
     pola.emplace_back(Posiadlosc(-1,"wioska1",400,2));
     pola.emplace_back(Posiadlosc(-1,"wioska2",400,2));
     pola.emplace_back(Posiadlosc(-1,"wioska3",400,2));
@@ -22,7 +22,7 @@ void nowa_plansza(vector<Pole> &pola)
     pola.emplace_back(Posiadlosc(-1,"wies2",600,3));
     pola.emplace_back(Posiadlosc(-1,"wies3",600,3));
     pola.emplace_back(Posiadlosc(-1,"wies4",600,3));
-    pola.emplace_back(Specjalna(-1,"dworzec2",1000));
+    pola.emplace_back(Specjalna(-1,"dworzec2",750));
     pola.emplace_back(Posiadlosc(-1,"duza_wies1",800,4));
     pola.emplace_back(Posiadlosc(-1,"duza_wies2",800,4));
     pola.emplace_back(Posiadlosc(-1,"duza_wies3",800,4));
@@ -32,7 +32,7 @@ void nowa_plansza(vector<Pole> &pola)
     pola.emplace_back(Posiadlosc(-1,"miasteczko2",1000,5));
     pola.emplace_back(Posiadlosc(-1,"miasteczko3",1000,5));
     pola.emplace_back(Posiadlosc(-1,"miasteczko4",1000,5));
-    pola.emplace_back(Specjalna(-1,"dworzec3",1000));
+    pola.emplace_back(Specjalna(-1,"dworzec3",750));
     pola.emplace_back(Posiadlosc(-1,"male_miasto1",1200,6));
     pola.emplace_back(Posiadlosc(-1,"male_miasto2",1200,6));
     pola.emplace_back(Posiadlosc(-1,"male_miasto3",1200,6));
@@ -42,7 +42,7 @@ void nowa_plansza(vector<Pole> &pola)
     pola.emplace_back(Posiadlosc(-1,"miasto2",1400,7));
     pola.emplace_back(Posiadlosc(-1,"miasto3",1400,7));
     pola.emplace_back(Posiadlosc(-1,"miasto4",1400,7));
-    pola.emplace_back(Specjalna(-1,"dworzec4",1000));
+    pola.emplace_back(Specjalna(-1,"dworzec4",750));
     pola.emplace_back(Posiadlosc(-1,"metropolia1",1600,8));
     pola.emplace_back(Posiadlosc(-1,"metropolia2",1600,8));
     pola.emplace_back(Posiadlosc(-1,"metropolia3",1600,8));
@@ -51,13 +51,81 @@ void nowa_plansza(vector<Pole> &pola)
 }
 void nowa_gra(vector<Gracz> &gracze,vector<Pole> &pola)
 {
-    int ilu_graczy = 2;
+    int ilu_graczy = 4;
     int kwota_start = 5000;
     string nazwa = "nazwa_gracza";
-    for(int i=0; i<ilu_graczy;i++)
+    /*for(int i=0; i<ilu_graczy;i++)
     {
         Gracz g(nazwa,false,kwota_start,0,false);
         gracze.emplace_back(g);
-    }
+    }*/
     nowa_plansza(pola);
+    //gracze[0].tura=true;
+}
+void ustaw_ture(vector<Gracz> &gracze, bool &koniec)
+{
+    bool znaleziono = false;
+    bool nie_ustawiono =  true;
+    int i,j=0;
+    for(i=gracze.size();i>0;i--) //to szuka gracza z tura
+    {
+        if(gracze[i].tura && !gracze[i].czy_bankrut())
+        {
+            znaleziono = true;
+            break;
+        }
+    }
+    if(!znaleziono)
+    {
+        i=0;
+    }
+    cout << "gracz z tura: " << i <<endl;
+    for(int licznik=0;licznik<gracze.size();licznik++)
+    {
+        if(i+1<gracze.size() && !gracze[i+1].czy_bankrut())
+        {
+            for(Gracz &g:gracze)g.tura = false;
+            gracze[i+1].tura = true;
+            return;
+        }
+        else if(i+1<gracze.size())
+        {
+            i++;
+        }
+        else
+        {
+            i=i-gracze.size();
+        }
+    }
+    cout << "Nie znaleziono zadnego nastepnego gracza" << endl;
+    koniec = true;
+}
+void wyswietl_graczy(vector<Gracz> &gracze)
+{
+    cout << "-------------------------------------\n";
+    //cout << "TURA GRACZA: "<< czyja_tura() << " \n";
+    for(int i = 0; i < gracze.size(); i++)
+    {
+        if(gracze[i].czy_bankrut())
+        {
+            //SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 4);
+            cout << "| Gracz " << i << " | ";
+            cout << gracze[i].nazwa << " | ";
+            cout << gracze[i].czy_bankrut() << " | ";
+            cout << gracze[i].stan_konta() << " | ";
+            cout << gracze[i].gdzie_jest() << " | ";
+            cout << gracze[i].tura << " |\n";
+            //SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), 7);
+        }
+        else
+        {
+            cout << "| Gracz " << i << " | ";
+            cout << gracze[i].nazwa << " | ";
+            cout << gracze[i].czy_bankrut() << " | ";
+            cout << gracze[i].stan_konta() << " | ";
+            cout << gracze[i].gdzie_jest() << " | ";
+            cout << gracze[i].tura << " |\n";
+        }
+    }
+    cout << "-------------------------------------\n";
 }
