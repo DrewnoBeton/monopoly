@@ -67,34 +67,50 @@ void ustaw_ture(vector<Gracz> &gracze, bool &koniec)
     bool znaleziono = false;
     bool nie_ustawiono =  true;
     int i,j=0;
-    for(i=gracze.size();i>0;i--) //to szuka gracza z tura
+    //vector<Gracz>::iterator it;
+    for(Gracz &g:gracze) //to szuka gracza z tura
     {
-        if(gracze[i].tura && !gracze[i].czy_bankrut())
+        if(g.tura && !g.czy_bankrut())
         {
+            //i=g.id();
             znaleziono = true;
             break;
         }
+        i++;
     }
     if(!znaleziono)
     {
         i=0;
     }
-    cout << "gracz z tura: " << i <<endl;
+    cout << "gracz z tura: " << i << " : " << j <<endl;
     for(int licznik=0;licznik<gracze.size();licznik++)
     {
-        if(i+1<gracze.size() && !gracze[i+1].czy_bankrut())
-        {
-            for(Gracz &g:gracze)g.tura = false;
-            gracze[i+1].tura = true;
-            return;
-        }
-        else if(i+1<gracze.size())
+        cout << i <<": \n";
+        if(i+1<gracze.size())
         {
             i++;
+            cout << "zwiekszam" <<endl;
+            if(!gracze[i].czy_bankrut())
+            {
+                cout << "bingo!:" << i <<endl;
+                for(Gracz &g:gracze)g.tura = false;
+                gracze[i].tura = true;
+                return;
+            }
         }
         else
         {
-            i=i-gracze.size();
+            cout << "za daleko, wracamy do zera"<<endl;
+            i=0;
+            if(!gracze[i].czy_bankrut())
+            {
+                cout << "bingo!" << i <<endl;
+                for(Gracz &g:gracze)g.tura = false;
+                gracze[i].tura = true;
+                return;
+            }
+            //i=i-gracze.size()+1;
+            //cout << i;
         }
     }
     cout << "Nie znaleziono zadnego nastepnego gracza" << endl;

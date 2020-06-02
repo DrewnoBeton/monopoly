@@ -9,11 +9,12 @@ int main()
     //debug
     Gracz gracz1 = Gracz("a",false,0,0,true);
     Gracz gracz2 = Gracz("a",true,0,0,false);
-    Gracz gracz4 = Gracz("a",true,0,0,false);
     Gracz gracz3 = Gracz("a",false,0,0,false);
     gracze.emplace_back(gracz1);
     gracze.emplace_back(gracz2);
-    gracze.emplace_back(gracz4);
+    gracze.emplace_back(gracz2);
+    //gracze.emplace_back(gracz3);
+    //gracze.emplace_back(gracz3);
     gracze.emplace_back(gracz3);
     nowa_gra(gracze,pola);
     wyswietl_graczy(gracze);
