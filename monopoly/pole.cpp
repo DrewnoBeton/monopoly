@@ -13,7 +13,7 @@ int Pole::id_wlasciciela()
 }
 
 //Neutralne
-void Neutralne::efekt_na_graczu(Gracz &gracz, vector<Gracz> &gracze, vector<unique_ptr<Pole>> &pola)
+void Neutralne::efekt_na_graczu(Gracz &gracz, vector<Gracz> &gracze, vector<shared_ptr<Pole>> &pola)
 {
     cout << "pole neutralne";
     //pole neutralne, tu bedzie wialo nuda
@@ -38,7 +38,7 @@ void Posiadlosc::sprzedaj_domek(Gracz &gracz)
         gracz.otrzymaj(koszt_domku);
     }
 }
-void Posiadlosc::efekt_na_graczu(Gracz &gracz, vector<Gracz> &gracze, vector<unique_ptr<Pole>> &pola)
+void Posiadlosc::efekt_na_graczu(Gracz &gracz, vector<Gracz> &gracze, vector<shared_ptr<Pole>> &pola)
 {
     if(id_wlasciciela_==-1)
     {
@@ -114,7 +114,7 @@ void Specjalna::sprzedaj_pole(Gracz &gracz)
         return;
     }
 }
-void Specjalna::efekt_na_graczu(Gracz &gracz, vector<Gracz> &gracze, vector<unique_ptr<Pole>> &pola)//do naprawy
+void Specjalna::efekt_na_graczu(Gracz &gracz, vector<Gracz> &gracze, vector<shared_ptr<Pole>> &pola)//do naprawy
 {
 
     if(id_wlasciciela_==-1)
