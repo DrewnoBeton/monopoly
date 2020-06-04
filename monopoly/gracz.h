@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <memory>
 using namespace std;
 #ifndef GRACZ_H
 #define GRACZ_H

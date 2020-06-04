@@ -11,8 +11,11 @@ int Pole::id_wlasciciela()
 {
     return id_wlasciciela_;
 }
-void Pole::efekt_na_graczu(Gracz &gracz, vector<Gracz> &gracze, vector<Pole> &pola)
+
+//Neutralne
+void Neutralne::efekt_na_graczu(Gracz &gracz, vector<Gracz> &gracze, vector<unique_ptr<Pole>> &pola)
 {
+    cout << "pole neutralne";
     //pole neutralne, tu bedzie wialo nuda
 }
 
@@ -35,7 +38,7 @@ void Posiadlosc::sprzedaj_domek(Gracz &gracz)
         gracz.otrzymaj(koszt_domku);
     }
 }
-void Posiadlosc::efekt_na_graczu(Gracz &gracz, vector<Gracz> &gracze, vector<Pole> &pola)
+void Posiadlosc::efekt_na_graczu(Gracz &gracz, vector<Gracz> &gracze, vector<unique_ptr<Pole>> &pola)
 {
     if(id_wlasciciela_==-1)
     {
@@ -111,7 +114,7 @@ void Specjalna::sprzedaj_pole(Gracz &gracz)
         return;
     }
 }
-void Specjalna::efekt_na_graczu(Gracz &gracz, vector<Gracz> &gracze, vector<Pole> &pola)//do naprawy
+void Specjalna::efekt_na_graczu(Gracz &gracz, vector<Gracz> &gracze, vector<unique_ptr<Pole>> &pola)//do naprawy
 {
 
     if(id_wlasciciela_==-1)
@@ -128,7 +131,7 @@ void Specjalna::efekt_na_graczu(Gracz &gracz, vector<Gracz> &gracze, vector<Pole
         int wielokrotnosc = 1;
         for(int el:gracze[id_wlasciciela()].posiadane_pola)
         {
-            if(pola[el].id_wlasciciela() == gracze[id_wlasciciela()].id())
+            if(pola[el]->id_wlasciciela() == gracze[id_wlasciciela()].id())
             {
                 if(typeid(pola[el]).name() == typeid(Specjalna).name())
                 wielokrotnosc++;
