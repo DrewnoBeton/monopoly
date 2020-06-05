@@ -1,6 +1,9 @@
 #include <iostream>
 #include <vector>
 #include <memory>
+#include <SFML/Window.hpp>
+#include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 using namespace std;
 #ifndef GRACZ_H
 #define GRACZ_H
@@ -14,6 +17,7 @@ class Gracz{
     int id_;
 
     public:
+    sf::Color kolor;
     string nazwa = "nazwa_gracza";
     vector<int> posiadane_pola;
     bool tura = false;

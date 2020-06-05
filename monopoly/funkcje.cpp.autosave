@@ -50,7 +50,7 @@ void nowa_plansza(vector<shared_ptr<Pole>> &pola)//tu trzeba zrobic wektor share
     pola.emplace_back(make_shared<Posiadlosc>(-1,"metropolia4",1600,8));
     cout << "Utworzono nowa plansze!" <<endl;
 }
-void nowa_gra(vector<Gracz> &gracze,vector<shared_ptr<Pole>> &pola)
+void nowa_gra(vector<Gracz> &gracze,vector<shared_ptr<Pole>> &pola)//do dokonczenia
 {
     int ilu_graczy = 4;
     int kwota_start = 5000;
@@ -123,7 +123,7 @@ void ustaw_ture(vector<Gracz> &gracze, bool &koniec)
     cout << "Nie znaleziono zadnego nastepnego gracza" << endl;
     koniec = true;
 }
-void wyswietl_graczy(vector<Gracz> &gracze)
+void debug_wyswietl_graczy(vector<Gracz> &gracze)
 {
     cout << "-------------------------------------\n";
     //cout << "TURA GRACZA: "<< czyja_tura() << " \n";

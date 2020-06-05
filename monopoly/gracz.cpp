@@ -9,6 +9,54 @@ Gracz::Gracz(string arg_nazwa, bool arg_bankrut, int arg_saldo, int arg_pozycja,
     saldo = arg_saldo;
     pozycja = arg_pozycja;
     tura = arg_tura;
+    switch(id_)
+    {
+        case 0:
+        {
+            kolor = sf::Color::Red;
+            break;
+        }
+        case 1:
+        {
+            kolor = sf::Color::Blue;
+            break;
+        }
+        case 2:
+        {
+            kolor = sf::Color::Green;
+            break;
+        }
+        case 3:
+        {
+            kolor = sf::Color::Yellow;
+            break;
+        }
+        case 4:
+        {
+            kolor = sf::Color::Magenta;
+            break;
+        }
+        case 5:
+        {
+            kolor = sf::Color::Cyan;
+            break;
+        }
+        case 6:
+        {
+            kolor = sf::Color(150, 75, 0);
+            break;
+        }
+        case 7:
+        {
+            kolor = sf::Color(255, 132, 19);
+            break;
+        }
+        default:
+        {
+            kolor = sf::Color(rand() % 100 + 50, rand() % 100 + 50, rand() % 100 + 50);
+            break;
+        }
+    }
 }
 Gracz::~Gracz()
 {

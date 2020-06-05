@@ -16,10 +16,10 @@ CXX           = g++
 DEFINES       = -DUNICODE -D_UNICODE -DWIN32 -DMINGW_HAS_SECURE_API=1 -DQT_QML_DEBUG
 CFLAGS        = -fno-keep-inline-dllexport -O2 -Wall -W -Wextra $(DEFINES)
 CXXFLAGS      = -fno-keep-inline-dllexport -O2 -std=gnu++1z -Wall -W -Wextra -fexceptions -mthreads $(DEFINES)
-INCPATH       = -I..\monopoly -I. -I..\..\..\..\programy\qt\5.13.2\mingw73_64\mkspecs\win32-g++ 
+INCPATH       = -I..\monopoly -I. -I..\..\..\sfml\SFML-2.5.1\include -I..\..\..\..\programy\qt\5.13.2\mingw73_64\mkspecs\win32-g++ 
 LINKER      =        g++
 LFLAGS        =        -Wl,-s -Wl,-subsystem,console -mthreads
-LIBS        =           
+LIBS        =        -LD:\polibuda\sfml\SFML-2.5.1\lib -lsfml-audio -lsfml-graphics -lsfml-network -lsfml-system -lsfml-window   
 QMAKE         = D:\programy\qt\5.13.2\mingw73_64\bin\qmake.exe
 IDC           = idc
 IDL           = midl
