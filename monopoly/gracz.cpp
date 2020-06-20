@@ -57,10 +57,13 @@ Gracz::Gracz(string arg_nazwa, bool arg_bankrut, int arg_saldo, int arg_pozycja,
             break;
         }
     }
+    pionek.setRadius(20);
+    pionek.setFillColor(kolor);
 }
 Gracz::~Gracz()
 {
     bankrut = true;
+    kolor = sf::Color::Transparent;
     saldo = 0;
 }
 int Gracz::id()
@@ -73,7 +76,7 @@ int Gracz::rzuc_kostkami()
 }
 void Gracz::zmien_pozycje(int odleglosc)
 {
-    if(pozycja+odleglosc<=40)
+    if(pozycja+odleglosc<40)
     {
         pozycja += odleglosc;
     }
@@ -94,6 +97,7 @@ void Gracz::zaplac(int kwota)
     {
         saldo=-1;
         bankrut=true;
+        kolor = sf::Color::Transparent;
     }
 }
 void Gracz::otrzymaj(int kwota)
@@ -129,4 +133,217 @@ bool Gracz::czy_wlasciciel(int id_pola)
         }
     }
     return false;
+}
+
+void Gracz::wyswietl_gracza(sf::RenderWindow &window)
+{
+    switch (pozycja)
+    {
+        case 0:
+        {
+         pionek.setPosition(910,880);
+         break;
+        }
+        case 1:
+        {
+            pionek.setPosition(810,880);
+            break;
+        }
+        case 2:
+        {
+            pionek.setPosition(720,880);
+            break;
+        }
+        case 3:
+        {
+            pionek.setPosition(640,880);
+            break;
+        }
+        case 4:
+        {
+            pionek.setPosition(560,880);
+            break;
+        }
+        case 5:
+        {
+            pionek.setPosition(480,880);
+            break;
+        }
+        case 6:
+        {
+            pionek.setPosition(400,880);
+            break;
+        }
+        case 7:
+        {
+            pionek.setPosition(320,880);
+            break;
+        }
+        case 8:
+        {
+            pionek.setPosition(250,880);
+            break;
+        }
+        case 9:
+        {
+            pionek.setPosition(170,880);
+            break;
+        }
+        case 10:
+        {
+            pionek.setPosition(50,880);
+            break;
+        }
+        case 11:
+        {
+            pionek.setPosition(50,770);
+            break;
+        }
+        case 12:
+        {
+            pionek.setPosition(50,690);
+            break;
+        }
+        case 13:
+        {
+            pionek.setPosition(50,610);
+            break;
+        }
+        case 14:
+        {
+            pionek.setPosition(50,530);
+            break;
+        }
+        case 15:
+        {
+            pionek.setPosition(50,450);
+            break;
+        }
+        case 16:
+        {
+            pionek.setPosition(50,370);
+            break;
+        }
+        case 17:
+        {
+            pionek.setPosition(50,290);
+            break;
+        }
+        case 18:
+        {
+            pionek.setPosition(50,220);
+            break;
+        }
+        case 19:
+        {
+            pionek.setPosition(50,140);
+            break;
+        }
+        case 20:
+        {
+            pionek.setPosition(50,30);
+            break;
+        }
+        case 21:
+        {
+            pionek.setPosition(170,30);
+            break;
+        }
+        case 22:
+        {
+            pionek.setPosition(250,30);
+            break;
+        }
+        case 23:
+        {
+            pionek.setPosition(320,30);
+            break;
+        }
+        case 24:
+        {
+            pionek.setPosition(400,30);
+            break;
+        }
+        case 25:
+        {
+            pionek.setPosition(480,30);
+            break;
+        }
+        case 26:
+        {
+            pionek.setPosition(560,30);
+            break;
+        }
+        case 27:
+        {
+            pionek.setPosition(640,30);
+            break;
+        }
+        case 28:
+        {
+            pionek.setPosition(720,30);
+            break;
+        }
+        case 29:
+        {
+            pionek.setPosition(810,30);
+            break;
+        }
+        case 30:
+        {
+            pionek.setPosition(910,30);
+            break;
+        }
+        case 31:
+        {
+            pionek.setPosition(910,30);
+            break;
+        }
+        case 32:
+        {
+            pionek.setPosition(910,140);
+            break;
+        }
+        case 33:
+        {
+            pionek.setPosition(910,220);
+            break;
+        }
+        case 34:
+        {
+            pionek.setPosition(910,290);
+            break;
+        }
+        case 35:
+        {
+            pionek.setPosition(910,370);
+            break;
+        }
+        case 36:
+        {
+            pionek.setPosition(910,450);
+            break;
+        }
+        case 37:
+        {
+            pionek.setPosition(910,530);
+            break;
+        }
+        case 38:
+        {
+            pionek.setPosition(910,610);
+            break;
+        }
+        case 39:
+        {
+            pionek.setPosition(910,690);
+            break;
+        }
+        case 40:
+        {
+            pionek.setPosition(910,770);
+            break;
+        }
+    }
+    window.draw(pionek);
 }

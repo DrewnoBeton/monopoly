@@ -17,6 +17,7 @@ class Gracz{
     int id_;
 
     public:
+    sf::CircleShape pionek;
     sf::Color kolor;
     string nazwa = "nazwa_gracza";
     vector<int> posiadane_pola;
@@ -37,6 +38,7 @@ class Gracz{
     int stan_konta();
     bool czy_bankrut();
     bool czy_wlasciciel(int id_pola);
+    void wyswietl_gracza(sf::RenderWindow &window);
     friend bool operator==(const Gracz gracz1,const Gracz &gracz2) {return gracz1.nazwa==gracz2.nazwa;};
 
 };

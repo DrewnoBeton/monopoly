@@ -1,16 +1,22 @@
-#include <iostream>
+﻿#include <iostream>
 #include "monopoly.h"
 using namespace std;
 
 int wybor;
+bool ruszono = false;
 
 int main()
 {
     // create the window
     sf::RenderWindow window(sf::VideoMode(1000, 1000), "My window");
-
+    sf::Font font;
+    font.loadFromFile("czcionka.ttf");
+    sf::Text tekst;
+    tekst.setFont(font);
     sf::Clock clock;
-
+    tekst.setCharacterSize(20);
+    tekst.setPosition(300, 400);
+    tekst.setColor(sf::Color::Black);
     sf::Texture texture;
     if (!texture.loadFromFile("obrazki//plansza_gotowa.png")) {
         std::cerr << "Could not load texture" << std::endl;
@@ -24,7 +30,7 @@ int main()
 
     //todo przerob wektor na set, zeby nie miec duplikatow bo id sie powtarzaja
     //debug
-    Gracz gracz1 = Gracz("a",false,1000,0,true);
+    Gracz gracz1 = Gracz("a",false,1000,30,true);
     Gracz gracz2 = Gracz("a",true,0,0,false);
     Gracz gracz3 = Gracz("a",false,1000,0,false);
     gracze.emplace_back(gracz1);
@@ -45,6 +51,28 @@ int main()
             // "close requested" event: we close the window
             if (event.type == sf::Event::Closed)
                 window.close();
+            if(event.type == sf::Event::KeyReleased && event.key.code == sf::Keyboard::R)
+            {
+                if(!ruszono)
+                {
+                    ruch(gracze[czyja_tura(gracze)],gracze,pola);
+                    debug_wyswietl_graczy(gracze);
+                    ruszono = true;
+                }
+                else
+                {
+                    cout << "Juz wykonales ruch w swojej turze"<<endl;
+                    tekst.setString("Juz wykonales ruch w swojej turze");
+                }
+
+
+            }
+            if(event.type == sf::Event::KeyReleased && event.key.code == sf::Keyboard::T)
+            {
+                ustaw_ture(gracze,koniec);
+                debug_wyswietl_graczy(gracze);
+                ruszono = false;
+            }
         }
 
         // mierzy ile minelo czasu od ostatniego restartu
@@ -52,37 +80,22 @@ int main()
         float czas = ile_minelo.asSeconds();
         //std::cout << czas <<std::endl;
 
+
         // clear the window with black color
         window.clear(sf::Color::Black);
         window.draw(tlo);
-
-        //window.draw(guy);
+        window.draw(tekst);
+        for(Gracz &g:gracze)
+        {
+            g.wyswietl_gracza(window);
+        }
+        wyswietl_wlascicieli(pola,gracze,window);
         // draw everything here...
-        /*do {
-            cout << "Wybierz opcje: \n 1-zmien ture" << endl;
-            cin >> wybor;
-            switch (wybor)
-            {
-                case 1:
-                {
-                    ustaw_ture(gracze,koniec);
-                    break;
-                }
-                case 2:
-                {
-                    ruch(gracze[czyja_tura(gracze)],gracze,pola);
-                    break;
-                }
-                default:
-                {
-                   koniec = true;
-                   break;
-                }
-            }
-            wyswietl_graczy(gracze);
 
-        }while (!koniec);*/
         // end the current frame
+        //gracz1.wyswietl_gracza(window);
+        //gracz2.wyswietl_gracza(window);
+
         window.display();
     }
 

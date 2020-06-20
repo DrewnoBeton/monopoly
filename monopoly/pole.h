@@ -15,6 +15,7 @@ class Pole{
     virtual void efekt_na_graczu(Gracz &gracz, vector<Gracz> &arg_gracze, vector<shared_ptr<Pole>> &pola) =0;
     //virtual void kup_pole(Gracz &gracz);
     //virtual void sprzedaj_pole(Gracz &gracz);
+    friend void ruch(Gracz &gracz,vector<Gracz> &gracze,vector<shared_ptr<Pole>> &pola);
 
 };
 class Neutralne : public Pole
