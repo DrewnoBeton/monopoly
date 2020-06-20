@@ -167,42 +167,6 @@ void ruch(Gracz &gracz,vector<Gracz> &gracze,vector<shared_ptr<Pole>> &pola)
     cout << "wyrzucono: " <<rzut<<endl;
     gracz.zmien_pozycje(rzut);
     pola[gracz.gdzie_jest()]->efekt_na_graczu(gracz,gracze,pola);
-    /*auto neutralne = dynamic_pointer_cast<Neutralne>(pola[gracz.gdzie_jest()]);
-    if(neutralne)
-    {
-        cout << "Pola neutralnego nie mozesz kupic"<<endl;
-    }
-    else
-    {
-        if(pola[gracz.gdzie_jest()]->id_wlasciciela() == -1)
-        {
-            cout << "Mozesz kupic to pole! Wcisnij K by kupic"<<endl;
-            char guzior;
-           // cin >> guzior;
-            if(guzior == 'k' || guzior == 'K')
-            {
-                auto posiadlosc = dynamic_pointer_cast<Posiadlosc>(pola[gracz.gdzie_jest()]);
-                auto specjalna = dynamic_pointer_cast<Specjalna>(pola[gracz.gdzie_jest()]);
-                if(posiadlosc) posiadlosc->kup_pole(gracz);
-                else if(specjalna) specjalna->kup_pole(gracz);
-            }
-        }
-        else if(pola[gracz.gdzie_jest()]->id_wlasciciela() == gracz.id())
-        {
-            cout << "To twoje pole!"<<endl;
-            auto posiadlosc = dynamic_pointer_cast<Posiadlosc>(pola[gracz.gdzie_jest()]);
-            if(posiadlosc)
-            {
-                cout << "Mozesz kupic tu domek! Wcisnij U by ulepszyc"<<endl;
-                char guzior;
-                //cin >> guzior;
-                if(guzior == 'u' || guzior == 'U')
-                {
-                    posiadlosc->kup_domek(gracz);
-                }
-            }
-        }
-    }*/
     //sprawdza czy wszystkie posiadlosci bankrutow juz do nich nie naleza
     for(Gracz &g:gracze)
     {
@@ -218,12 +182,13 @@ void ruch(Gracz &gracz,vector<Gracz> &gracze,vector<shared_ptr<Pole>> &pola)
         }
     }
 }
-void kup_lub_ulepsz_pole(Gracz &gracz,vector<Gracz> &gracze,vector<shared_ptr<Pole>> &pola)
+void kup_lub_ulepsz_pole(Gracz &gracz,vector<Gracz> &gracze,vector<shared_ptr<Pole>> &pola,sf::Text &tekst)
 {
     auto neutralne = dynamic_pointer_cast<Neutralne>(pola[gracz.gdzie_jest()]);
     if(neutralne)
     {
         cout << "Pola neutralnego nie mozesz kupic"<<endl;
+        tekst.setString("Pola neutralnego nie mozesz kupic");
     }
     else
     {
@@ -231,214 +196,229 @@ void kup_lub_ulepsz_pole(Gracz &gracz,vector<Gracz> &gracze,vector<shared_ptr<Po
         {
             auto posiadlosc = dynamic_pointer_cast<Posiadlosc>(pola[gracz.gdzie_jest()]);
             auto specjalna = dynamic_pointer_cast<Specjalna>(pola[gracz.gdzie_jest()]);
-            if(posiadlosc) posiadlosc->kup_pole(gracz);
-            else if(specjalna) specjalna->kup_pole(gracz);
+            if(posiadlosc)
+            {
+                posiadlosc->kup_pole(gracz);
+                tekst.setString("Kupiles pole (" + to_string(gracz.gdzie_jest()) + ") " + pola[gracz.gdzie_jest()]->nazwap());
+            }
+            else if(specjalna)
+            {
+                specjalna->kup_pole(gracz);
+                tekst.setString("Kupiles pole (" + to_string(gracz.gdzie_jest()) + ") " + pola[gracz.gdzie_jest()]->nazwap());
+            }
         }
         else if(pola[gracz.gdzie_jest()]->id_wlasciciela() == gracz.id())
         {
             cout << "To twoje pole!"<<endl;
+            tekst.setString("To twoje pole!");
             auto posiadlosc = dynamic_pointer_cast<Posiadlosc>(pola[gracz.gdzie_jest()]);
             if(posiadlosc)
             {
                 posiadlosc->kup_domek(gracz);
+                tekst.setString("To twoje pole, zakupiono domek");
             }
+        }
+        else
+        {
+            cout << "To pole nalezy do innego gracza"<<endl;
+            tekst.setString("To pole nalezy do innego gracza");
         }
     }
 }
 void wyswietl_wlascicieli(vector<shared_ptr<Pole>> &pola,vector<Gracz> &gracze,sf::RenderWindow &window)
 {
     int licznik =0;
-    sf::RectangleShape pionek;
-    pionek.setSize(sf::Vector2f(20,20));
+    sf::RectangleShape znacznik;
+    znacznik.setSize(sf::Vector2f(20,20));
     for(auto p:pola)
     {
-        if(p->id_wlasciciela() != -1) pionek.setFillColor(gracze[p->id_wlasciciela()].kolor);
-        else pionek.setFillColor(sf::Color::White);
+        if(p->id_wlasciciela() != -1) znacznik.setFillColor(gracze[p->id_wlasciciela()].kolor);
+        else znacznik.setFillColor(sf::Color::White);
         switch (licznik)
         {
             case 1:
             {
-                pionek.setPosition(800,800);
+                znacznik.setPosition(800,800);
                 break;
             }
             case 2:
             {
-                pionek.setPosition(720,800);
+                znacznik.setPosition(720,800);
                 break;
             }
             case 3:
             {
-                pionek.setPosition(640,800);
+                znacznik.setPosition(640,800);
                 break;
             }
             case 4:
             {
-                pionek.setPosition(560,800);
+                znacznik.setPosition(560,800);
                 break;
             }
             case 5:
             {
-                pionek.setPosition(480,800);
+                znacznik.setPosition(480,800);
                 break;
             }
             case 6:
             {
-                pionek.setPosition(400,800);
+                znacznik.setPosition(400,800);
                 break;
             }
             case 7:
             {
-                pionek.setPosition(320,800);
+                znacznik.setPosition(320,800);
                 break;
             }
             case 8:
             {
-                pionek.setPosition(250,800);
+                znacznik.setPosition(250,800);
                 break;
             }
             case 9:
             {
-                pionek.setPosition(170,800);
+                znacznik.setPosition(170,800);
                 break;
             }
             case 11:
             {
-                pionek.setPosition(150,770);
+                znacznik.setPosition(150,770);
                 break;
             }
             case 12:
             {
-                pionek.setPosition(150,690);
+                znacznik.setPosition(150,690);
                 break;
             }
             case 13:
             {
-                pionek.setPosition(150,610);
+                znacznik.setPosition(150,610);
                 break;
             }
             case 14:
             {
-                pionek.setPosition(150,530);
+                znacznik.setPosition(150,530);
                 break;
             }
             case 15:
             {
-                pionek.setPosition(150,450);
+                znacznik.setPosition(150,450);
                 break;
             }
             case 16:
             {
-                pionek.setPosition(150,370);
+                znacznik.setPosition(150,370);
                 break;
             }
             case 17:
             {
-                pionek.setPosition(150,290);
+                znacznik.setPosition(150,290);
                 break;
             }
             case 18:
             {
-                pionek.setPosition(150,220);
+                znacznik.setPosition(150,220);
                 break;
             }
             case 19:
             {
-                pionek.setPosition(150,150);
+                znacznik.setPosition(150,150);
                 break;
             }
             case 21:
             {
-                pionek.setPosition(170,120);
+                znacznik.setPosition(170,120);
                 break;
             }
             case 22:
             {
-                pionek.setPosition(250,120);
+                znacznik.setPosition(250,120);
                 break;
             }
             case 23:
             {
-                pionek.setPosition(320,120);
+                znacznik.setPosition(320,120);
                 break;
             }
             case 24:
             {
-                pionek.setPosition(400,120);
+                znacznik.setPosition(400,120);
                 break;
             }
             case 25:
             {
-                pionek.setPosition(480,120);
+                znacznik.setPosition(480,120);
                 break;
             }
             case 26:
             {
-                pionek.setPosition(560,120);
+                znacznik.setPosition(560,120);
                 break;
             }
             case 27:
             {
-                pionek.setPosition(640,120);
+                znacznik.setPosition(640,120);
                 break;
             }
             case 28:
             {
-                pionek.setPosition(720,120);
+                znacznik.setPosition(720,120);
                 break;
             }
             case 29:
             {
-                pionek.setPosition(800,120);
+                znacznik.setPosition(800,120);
                 break;
             }
             case 31:
             {
-                pionek.setPosition(830,140);
+                znacznik.setPosition(830,140);
                 break;
             }
             case 32:
             {
-                pionek.setPosition(830,220);
+                znacznik.setPosition(830,220);
                 break;
             }
             case 33:
             {
-                pionek.setPosition(830,290);
+                znacznik.setPosition(830,290);
                 break;
             }
             case 34:
             {
-                pionek.setPosition(830,370);
+                znacznik.setPosition(830,370);
                 break;
             }
             case 35:
             {
-                pionek.setPosition(830,450);
+                znacznik.setPosition(830,450);
                 break;
             }
             case 36:
             {
-                pionek.setPosition(830,530);
+                znacznik.setPosition(830,530);
                 break;
             }
             case 37:
             {
-                pionek.setPosition(830,610);
+                znacznik.setPosition(830,610);
                 break;
             }
             case 38:
             {
-                pionek.setPosition(830,690);
+                znacznik.setPosition(830,690);
                 break;
             }
             case 39:
             {
-                pionek.setPosition(830,770);
+                znacznik.setPosition(830,770);
                 break;
             }
         }
         licznik++;
-        window.draw(pionek);
+        window.draw(znacznik);
     }
 
 }

@@ -137,6 +137,7 @@ bool Gracz::czy_wlasciciel(int id_pola)
 
 void Gracz::wyswietl_gracza(sf::RenderWindow &window)
 {
+    if(bankrut) kolor = sf::Color::Transparent;
     switch (pozycja)
     {
         case 0:

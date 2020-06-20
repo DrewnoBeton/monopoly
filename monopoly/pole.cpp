@@ -12,6 +12,11 @@ int Pole::id_wlasciciela()
     return id_wlasciciela_;
 }
 
+string Pole::nazwap()
+{
+    return nazwa;
+}
+
 //Neutralne
 void Neutralne::efekt_na_graczu(Gracz &gracz, vector<Gracz> &gracze, vector<shared_ptr<Pole>> &pola)
 {
