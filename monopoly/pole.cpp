@@ -49,8 +49,8 @@ void Posiadlosc::efekt_na_graczu(Gracz &gracz, vector<Gracz> &gracze, vector<sha
         cout << "To twoje pole!" <<endl;
         return;
     }
-    cout << "Zaplaciles graczowi: " << id_wlasciciela_ << " kwote " << koszt*(0.1*domki) << "$" <<endl;
-    gracz.zaplac(koszt*(0.1*domki),gracze[id_wlasciciela_]);
+    cout << "Zaplaciles graczowi: " << id_wlasciciela_ << " kwote " << koszt*(0.1*(domki+1)) << "$" <<endl;
+    gracz.zaplac(koszt*(0.1*(domki+1)),gracze[id_wlasciciela_]);
 
 }
 void Posiadlosc::kup_pole(Gracz &gracz)

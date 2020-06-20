@@ -14,8 +14,8 @@ HEADERS += \
         monopoly.h \
         pole.h
 
-INCLUDEPATH += "C:\polibuda\sfml\SFML-2.5.1\include"
-LIBS += -L"C:\polibuda\sfml\SFML-2.5.1\lib"
+INCLUDEPATH += "D:\polibuda\sfml\SFML-2.5.1\include"
+LIBS += -L"D:\polibuda\sfml\SFML-2.5.1\lib"
 CONFIG(debug, debug|release){
     LIBS += -lsfml-audio-d -lsfml-graphics-d -lsfml-network-d -lsfml-system-d -lsfml-window-d
 } else {

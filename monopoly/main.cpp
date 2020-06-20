@@ -30,7 +30,7 @@ int main()
 
     //todo przerob wektor na set, zeby nie miec duplikatow bo id sie powtarzaja
     //debug
-    Gracz gracz1 = Gracz("a",false,1000,30,true);
+    Gracz gracz1 = Gracz("a",false,21000,40,true);
     Gracz gracz2 = Gracz("a",true,0,0,false);
     Gracz gracz3 = Gracz("a",false,1000,0,false);
     gracze.emplace_back(gracz1);
@@ -64,14 +64,21 @@ int main()
                     cout << "Juz wykonales ruch w swojej turze"<<endl;
                     tekst.setString("Juz wykonales ruch w swojej turze");
                 }
-
-
+            }
+            if(event.type == sf::Event::KeyReleased && event.key.code == sf::Keyboard::K && ruszono)
+            {
+                kup_lub_ulepsz_pole(gracze[czyja_tura(gracze)],gracze,pola);
+                debug_wyswietl_graczy(gracze);
             }
             if(event.type == sf::Event::KeyReleased && event.key.code == sf::Keyboard::T)
             {
                 ustaw_ture(gracze,koniec);
                 debug_wyswietl_graczy(gracze);
                 ruszono = false;
+            }
+            if(event.type == sf::Event::KeyReleased && event.key.code == sf::Keyboard::D)
+            {
+                debug_wyswietl_pola(pola);
             }
         }
 
@@ -89,6 +96,7 @@ int main()
         {
             g.wyswietl_gracza(window);
         }
+        //debug_wyswietl_pola(pola);
         wyswietl_wlascicieli(pola,gracze,window);
         // draw everything here...
 

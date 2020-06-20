@@ -4,7 +4,7 @@
 int test(){
     return 887;
 }
-void nowa_plansza(vector<shared_ptr<Pole>> &pola)//tu trzeba zrobic wektor shared pointerow x d, nie wiem czego to ja nie porusze w tym projekcie
+void nowa_plansza(vector<shared_ptr<Pole>> &pola)
 {
     if(!pola.empty()) pola.clear();
     //grupy 1-zadupie, 2-wioska, 3-wies, 4-duza wies, 5-miasteczko, 6-male miasto, 7-miasto, 8-metropolia
@@ -153,13 +153,21 @@ void debug_wyswietl_graczy(vector<Gracz> &gracze)
     }
     cout << "-------------------------------------\n";
 }
+void debug_wyswietl_pola(vector<shared_ptr<Pole>> &pola)
+{
+    cout << endl;
+    for(int i =0; i< pola.size(); i++)
+    {
+        cout << i << " : " << pola[i]->id_wlasciciela() <<endl;
+    }
+}
 void ruch(Gracz &gracz,vector<Gracz> &gracze,vector<shared_ptr<Pole>> &pola)
 {
     int rzut = gracz.rzuc_kostkami();
     cout << "wyrzucono: " <<rzut<<endl;
     gracz.zmien_pozycje(rzut);
     pola[gracz.gdzie_jest()]->efekt_na_graczu(gracz,gracze,pola);
-    auto neutralne = dynamic_pointer_cast<Neutralne>(pola[gracz.gdzie_jest()]);
+    /*auto neutralne = dynamic_pointer_cast<Neutralne>(pola[gracz.gdzie_jest()]);
     if(neutralne)
     {
         cout << "Pola neutralnego nie mozesz kupic"<<endl;
@@ -194,7 +202,7 @@ void ruch(Gracz &gracz,vector<Gracz> &gracze,vector<shared_ptr<Pole>> &pola)
                 }
             }
         }
-    }
+    }*/
     //sprawdza czy wszystkie posiadlosci bankrutow juz do nich nie naleza
     for(Gracz &g:gracze)
     {
@@ -210,9 +218,36 @@ void ruch(Gracz &gracz,vector<Gracz> &gracze,vector<shared_ptr<Pole>> &pola)
         }
     }
 }
+void kup_lub_ulepsz_pole(Gracz &gracz,vector<Gracz> &gracze,vector<shared_ptr<Pole>> &pola)
+{
+    auto neutralne = dynamic_pointer_cast<Neutralne>(pola[gracz.gdzie_jest()]);
+    if(neutralne)
+    {
+        cout << "Pola neutralnego nie mozesz kupic"<<endl;
+    }
+    else
+    {
+        if(pola[gracz.gdzie_jest()]->id_wlasciciela() == -1)
+        {
+            auto posiadlosc = dynamic_pointer_cast<Posiadlosc>(pola[gracz.gdzie_jest()]);
+            auto specjalna = dynamic_pointer_cast<Specjalna>(pola[gracz.gdzie_jest()]);
+            if(posiadlosc) posiadlosc->kup_pole(gracz);
+            else if(specjalna) specjalna->kup_pole(gracz);
+        }
+        else if(pola[gracz.gdzie_jest()]->id_wlasciciela() == gracz.id())
+        {
+            cout << "To twoje pole!"<<endl;
+            auto posiadlosc = dynamic_pointer_cast<Posiadlosc>(pola[gracz.gdzie_jest()]);
+            if(posiadlosc)
+            {
+                posiadlosc->kup_domek(gracz);
+            }
+        }
+    }
+}
 void wyswietl_wlascicieli(vector<shared_ptr<Pole>> &pola,vector<Gracz> &gracze,sf::RenderWindow &window)
 {
-    int licznik =1;
+    int licznik =0;
     sf::RectangleShape pionek;
     pionek.setSize(sf::Vector2f(20,20));
     for(auto p:pola)
@@ -223,7 +258,7 @@ void wyswietl_wlascicieli(vector<shared_ptr<Pole>> &pola,vector<Gracz> &gracze,s
         {
             case 1:
             {
-                pionek.setPosition(810,800);
+                pionek.setPosition(800,800);
                 break;
             }
             case 2:
@@ -353,52 +388,52 @@ void wyswietl_wlascicieli(vector<shared_ptr<Pole>> &pola,vector<Gracz> &gracze,s
             }
             case 29:
             {
-                pionek.setPosition(810,120);
+                pionek.setPosition(800,120);
                 break;
             }
             case 31:
             {
-                pionek.setPosition(810,30);
+                pionek.setPosition(830,140);
                 break;
             }
             case 32:
             {
-                pionek.setPosition(910,140);
+                pionek.setPosition(830,220);
                 break;
             }
             case 33:
             {
-                pionek.setPosition(910,220);
+                pionek.setPosition(830,290);
                 break;
             }
             case 34:
             {
-                pionek.setPosition(910,290);
+                pionek.setPosition(830,370);
                 break;
             }
             case 35:
             {
-                pionek.setPosition(910,370);
+                pionek.setPosition(830,450);
                 break;
             }
             case 36:
             {
-                pionek.setPosition(910,450);
+                pionek.setPosition(830,530);
                 break;
             }
             case 37:
             {
-                pionek.setPosition(910,530);
+                pionek.setPosition(830,610);
                 break;
             }
             case 38:
             {
-                pionek.setPosition(910,610);
+                pionek.setPosition(830,690);
                 break;
             }
             case 39:
             {
-                pionek.setPosition(910,690);
+                pionek.setPosition(830,770);
                 break;
             }
         }
