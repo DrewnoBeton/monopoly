@@ -6,7 +6,8 @@ Nie używałem żadnych dodatkowych bibliotek poza tymi z SFML.
 Gra wymaga conajmniej c++17
 
 #### Sterowanie: 
-Po uruchomieniu gry by stworzyć nową grę klikamy N, wtedy tworzy się gra dla dwóch graczy
+Po uruchomieniu gry by stworzyć nową grę klikamy N, wtedy tworzy się gra dla dwóch graczy.
+
 Jeżeli chcemy grać w więcej osób, klikamy D by dodać kolejną(tutaj proszę o cierpliwość, ponieważ licznik ma opóźnienia)
 
 W trakcie gry sterowanie mamy wyjaśnione z prawej strony planszy pod MOŻLIWE AKCJE
