@@ -1,4 +1,45 @@
 # monopoly
+
+#### Opis instalacji:
+kod źródłowy znajduje się w folderze monopoly, reszta niezbędnych plików w folderze "build-monopoly-Desktop_Qt_5_13_2_MinGW_64_bit-Debug"
+Nie używałem żadnych dodatkowych bibliotek poza tymi z SFML
+Gra wymaga conajmniej c++17
+
+#### Sterowanie: 
+Po uruchomieniu gry by stworzyć nową grę klikamy N, wtedy tworzy się gra dla dwóch graczy
+Jeżeli chcemy grać w więcej osób, klikamy D by dodać kolejną(tutaj proszę o cierpliwość, ponieważ licznik ma opóźnienia)
+
+W trakcie gry sterowanie mamy wyjaśnione z prawej strony planszy pod MOŻLIWE AKCJE
+Może to być jedna z trzech akcji:
+- T kończy turę
+- R rzuca kostką i przesuwa pionek o wyrzuconą liczbę
+- K kupuje lub ulepsza pole jesli jest posiadane(i typem Posiadlosc)
+Jest jeszcze ukryta opcja D, ona wyświetla stan mapy w konsoli
+
+#### Film instruktażowy: https://youtu.be/WXIhpMK-J4g
+
+#### Dokumentacja: 
+Dokumentacja znajduje się w folderze dokumentacja/html/index.html
+Jest ona w postaci rozbudowanej strony html. 
+
+#### Opis gry:
+Rozgrywka jest przeznaczona od 2 do 8 graczy.(ze względu na czytelność)
+Każdy gracz oznaczony jest swoim unikalnym kolorem, są oni pokazani na planszy w odpowieddnich polach w postaci okrągłych pionków.
+
+Plansza została przygotowana w osobnym programie graficznym, specjalnie dla potrzeb gry, w grze jest ona wyświetlana jako tło.
+
+Zarówno gracze jak i pola są przechowywani jako obiekty odpowiadających im klas.
+
+Gra posiada zaawansowany system tur, nie ustawi ona tury bankrutowi lub kilku graczom jednocześnie, a jesli tak będzie to czyści ona dane i ustawia ją pierwszemu graczowi ktory nie jest bankrutem.
+Zabezpieczone również zostały: ruch, wyświetlanie, płatności i operacje na polach.
+
+Gra trwa dopóki tylko jeden z graczy nie będzie bankrutem.
+Gracz ten wygrywa grę.
+
+Jako, że rozgrywka w Monopoly może być długa(oryginalna planszowa wersja potrafi trwać godzinami),
+zalecam testowanie gry przy małej ilości graczy.
+
+#### Stary opis gry z moodle
 Moją propozycją na projekt jest gra typu Monopoly.
 
 Jest to dość popularna gra, lecz gwoli ścisłości wyjaśnię na czym polega.
@@ -18,11 +59,9 @@ Jeśli to czyjeś pole to płaci mu czynsz. I tak dopóki nie zbankrutują wszys
 
 Aplikacja:
 Plansza będzie wyświetlana z góry, w SFML
-Będzie rozbudowane menu pozwalające na wszytskie transakcje między graczami i bankiem.
 Gracze będą "dynamiczni", będzie można ich dodawać, edytować, usuwać(oczywiście nie dodawać i usuwać w trakcie, to by się mijało z celem gry)
-Zapis obecnego stanu gry do pliku, odczyt dawnych gier.
 Własne grafiki i efekty dźwiękowe.
  
-Grę obsługiwać będziemy za pomocą myszki i klawiatury(zależy co uznam za wygodniejsze do płatności, być może wyłącznie myszki)
+Grę obsługiwać będziemy za pomocą klawiatury
 
-Być może rozwinę projekt bardziej, lecz teraz ciężko o czas.
+
