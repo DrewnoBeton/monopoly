@@ -64,4 +64,4 @@ Własne grafiki i efekty dźwiękowe.
  
 Grę obsługiwać będziemy za pomocą klawiatury
 
-
+Autor gry: Marcin Brończyk A1
