@@ -1,8 +1,8 @@
 # monopoly
 
 #### Opis instalacji:
-kod źródłowy znajduje się w folderze monopoly, reszta niezbędnych plików w folderze "build-monopoly-Desktop_Qt_5_13_2_MinGW_64_bit-Debug"
-Nie używałem żadnych dodatkowych bibliotek poza tymi z SFML
+Kod źródłowy znajduje się w folderze monopoly, reszta niezbędnych plików w folderze "build-monopoly-Desktop_Qt_5_13_2_MinGW_64_bit-Debug"
+Nie używałem żadnych dodatkowych bibliotek poza tymi z SFML.
 Gra wymaga conajmniej c++17
 
 #### Sterowanie: 
