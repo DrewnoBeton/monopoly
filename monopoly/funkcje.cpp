@@ -50,19 +50,21 @@ void nowa_plansza(vector<shared_ptr<Pole>> &pola)
     pola.emplace_back(make_shared<Posiadlosc>(-1,"metropolia4",1600,8));
     cout << "Utworzono nowa plansze!" <<endl;
 }
-void nowa_gra(vector<Gracz> &gracze,vector<shared_ptr<Pole>> &pola)//do dokonczenia
+void nowa_gra(vector<Gracz> &gracze,vector<shared_ptr<Pole>> &pola,int &ilosc)//do dokonczenia
 {
-    int ilu_graczy = 4;
-    int kwota_start = 5000;
+    if(ilosc > 8) ilosc =8;
+    int ilu_graczy = ilosc;
+    int kwota_start = 3000;
     string nazwa = "nazwa_gracza";
-    /*for(int i=0; i<ilu_graczy;i++)
-    {
-        Gracz g(nazwa,false,kwota_start,0,false);
-        gracze.emplace_back(g);
-    }*/
-    nowa_plansza(pola);
 
-    //gracze[0].tura=true;
+        for(int i=gracze.size(); i<ilu_graczy;i++)
+        {
+            Gracz g(nazwa,false,kwota_start,0,false);
+            gracze.emplace_back(g);
+        }
+    nowa_plansza(pola);
+    //menu = false;
+    gracze[0].tura=true;
 }
 int czyja_tura(vector<Gracz> &gracze)
 {
@@ -233,7 +235,7 @@ void wyswietl_wlascicieli(vector<shared_ptr<Pole>> &pola,vector<Gracz> &gracze,s
     for(auto p:pola)
     {
         if(p->id_wlasciciela() != -1) znacznik.setFillColor(gracze[p->id_wlasciciela()].kolor);
-        else znacznik.setFillColor(sf::Color::White);
+        else znacznik.setFillColor(sf::Color::Transparent);
         switch (licznik)
         {
             case 1:
@@ -281,6 +283,11 @@ void wyswietl_wlascicieli(vector<shared_ptr<Pole>> &pola,vector<Gracz> &gracze,s
                 znacznik.setPosition(170,800);
                 break;
             }
+            case 10:
+            {
+                znacznik.setPosition(0,0);
+                break;
+            }
             case 11:
             {
                 znacznik.setPosition(150,770);
@@ -326,6 +333,11 @@ void wyswietl_wlascicieli(vector<shared_ptr<Pole>> &pola,vector<Gracz> &gracze,s
                 znacznik.setPosition(150,150);
                 break;
             }
+            case 20:
+            {
+                znacznik.setPosition(0,0);
+                break;
+            }
             case 21:
             {
                 znacznik.setPosition(170,120);
@@ -369,6 +381,11 @@ void wyswietl_wlascicieli(vector<shared_ptr<Pole>> &pola,vector<Gracz> &gracze,s
             case 29:
             {
                 znacznik.setPosition(800,120);
+                break;
+            }
+            case 30:
+            {
+                znacznik.setPosition(0,0);
                 break;
             }
             case 31:
@@ -421,4 +438,14 @@ void wyswietl_wlascicieli(vector<shared_ptr<Pole>> &pola,vector<Gracz> &gracze,s
         window.draw(znacznik);
     }
 
+}
+void wyswietl_statystyki(vector<Gracz> &gracze,sf::Text &tekst)
+{
+    string tekst_string = "GRACZ : SALDO\n\n";
+    for(int i=0;i<gracze.size();i++)
+    {
+        if(gracze[i].czy_bankrut()) tekst_string = tekst_string + "Gracz " + to_string(i) + " ZBANKRUTOWAL\n";
+        else tekst_string = tekst_string + "Gracz " + to_string(i) + " : " + to_string(gracze[i].stan_konta()) + "$\n";
+    }
+    tekst.setString(tekst_string);
 }

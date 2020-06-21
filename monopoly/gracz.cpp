@@ -297,54 +297,56 @@ void Gracz::wyswietl_gracza(sf::RenderWindow &window)
         }
         case 31:
         {
-            pionek.setPosition(910,30);
+            pionek.setPosition(910,140);
             break;
         }
         case 32:
         {
-            pionek.setPosition(910,140);
+            pionek.setPosition(910,220);
             break;
         }
         case 33:
         {
-            pionek.setPosition(910,220);
+            pionek.setPosition(910,290);
             break;
         }
         case 34:
         {
-            pionek.setPosition(910,290);
+            pionek.setPosition(910,370);
             break;
         }
         case 35:
         {
-            pionek.setPosition(910,370);
+            pionek.setPosition(910,450);
             break;
         }
         case 36:
         {
-            pionek.setPosition(910,450);
+            pionek.setPosition(910,530);
             break;
         }
         case 37:
         {
-            pionek.setPosition(910,530);
+            pionek.setPosition(910,610);
             break;
         }
         case 38:
         {
-            pionek.setPosition(910,610);
+            pionek.setPosition(910,690);
             break;
         }
         case 39:
         {
-            pionek.setPosition(910,690);
+            pionek.setPosition(910,770);
             break;
         }
         case 40:
         {
-            pionek.setPosition(910,770);
+            pionek.setPosition(910,880);
             break;
         }
+
     }
+    pionek.move((id_*2),0);
     window.draw(pionek);
 }

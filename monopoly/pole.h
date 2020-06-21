@@ -13,8 +13,6 @@ class Pole{
     Pole(int arg_wlasciciel,string arg_nazwa,int arg_koszt);
     virtual int id_wlasciciela();
     virtual void efekt_na_graczu(Gracz &gracz, vector<Gracz> &arg_gracze, vector<shared_ptr<Pole>> &pola) =0;
-    //virtual void kup_pole(Gracz &gracz);
-    //virtual void sprzedaj_pole(Gracz &gracz);
     friend void ruch(Gracz &gracz,vector<Gracz> &gracze,vector<shared_ptr<Pole>> &pola);
     string nazwap();
 
