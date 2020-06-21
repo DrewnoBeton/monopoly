@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.18"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>My Project: D:/polibuda/sem2/monopoly/monopoly/monopoly.h Source File</title>
+<title>Monopoly: D:/polibuda/sem2/monopoly/monopoly/monopoly.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,7 +21,7 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">My Project
+   <div id="projectname">Monopoly
    </div>
   </td>
  </tr>
@@ -81,18 +81,20 @@ $(function() {
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;vector&lt;shared_ptr&lt;Pole&gt;&gt; pola;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;vector &lt;sf::Sprite&gt; pionki;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keywordtype">bool</span> koniec=<span class="keyword">false</span>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keywordtype">int</span> test();</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keywordtype">void</span> nowa_gra(vector&lt;Gracz&gt; &amp;gracze,vector&lt;shared_ptr&lt;Pole&gt;&gt; &amp;pola);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keywordtype">void</span> nowa_plansza(vector&lt;shared_ptr&lt;Pole&gt;&gt; &amp;pola);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keywordtype">int</span> czyja_tura(vector&lt;Gracz&gt; &amp;gracze);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">void</span> ustaw_ture(vector&lt;Gracz&gt; &amp;gracze, <span class="keywordtype">bool</span> &amp;koniec);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keywordtype">void</span> debug_wyswietl_graczy(vector&lt;Gracz&gt; &amp;gracze);</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">void</span> debug_wyswietl_pola(vector&lt;shared_ptr&lt;Pole&gt;&gt; &amp;pola);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">void</span> wyswietl_wlascicieli(vector&lt;shared_ptr&lt;Pole&gt;&gt; &amp;pola,vector&lt;Gracz&gt; &amp;gracze,sf::RenderWindow &amp;window);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">void</span> wyswietl_statystyki(vector&lt;Gracz&gt; &amp;gracze,sf::Text &amp;tekst);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">void</span> ruch(<a class="code" href="class_gracz.html">Gracz</a> &amp;gracz,vector&lt;Gracz&gt; &amp;gracze,vector&lt;shared_ptr&lt;Pole&gt;&gt; &amp;pola);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">void</span> kup_lub_ulepsz_pole(<a class="code" href="class_gracz.html">Gracz</a> &amp;gracz,vector&lt;Gracz&gt; &amp;gracze,vector&lt;shared_ptr&lt;Pole&gt;&gt; &amp;pola,sf::Text &amp;tekst);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#endif // MONOPOLY_H</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keywordtype">bool</span> menu = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keywordtype">int</span> ilosc =2;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keywordtype">int</span> test();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keywordtype">void</span> nowa_gra(vector&lt;Gracz&gt; &amp;gracze,vector&lt;shared_ptr&lt;Pole&gt;&gt; &amp;pola,<span class="keywordtype">int</span> &amp;ilosc);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keywordtype">void</span> nowa_plansza(vector&lt;shared_ptr&lt;Pole&gt;&gt; &amp;pola);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="keywordtype">int</span> czyja_tura(vector&lt;Gracz&gt; &amp;gracze);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keywordtype">void</span> ustaw_ture(vector&lt;Gracz&gt; &amp;gracze, <span class="keywordtype">bool</span> &amp;koniec);</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">void</span> debug_wyswietl_graczy(vector&lt;Gracz&gt; &amp;gracze);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">void</span> debug_wyswietl_pola(vector&lt;shared_ptr&lt;Pole&gt;&gt; &amp;pola);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">void</span> wyswietl_wlascicieli(vector&lt;shared_ptr&lt;Pole&gt;&gt; &amp;pola,vector&lt;Gracz&gt; &amp;gracze,sf::RenderWindow &amp;window);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">void</span> wyswietl_statystyki(vector&lt;Gracz&gt; &amp;gracze,sf::Text &amp;tekst);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keywordtype">void</span> ruch(<a class="code" href="class_gracz.html">Gracz</a> &amp;gracz,vector&lt;Gracz&gt; &amp;gracze,vector&lt;shared_ptr&lt;Pole&gt;&gt; &amp;pola,sf::Text &amp;tekst);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordtype">void</span> kup_lub_ulepsz_pole(<a class="code" href="class_gracz.html">Gracz</a> &amp;gracz,vector&lt;Gracz&gt; &amp;gracze,vector&lt;shared_ptr&lt;Pole&gt;&gt; &amp;pola,sf::Text &amp;tekst);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif // MONOPOLY_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_gracz_html"><div class="ttname"><a href="class_gracz.html">Gracz</a></div><div class="ttdef"><b>Definition:</b> gracz.h:11</div></div>
 <!-- start footer part -->
