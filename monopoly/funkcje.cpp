@@ -8,46 +8,46 @@ void nowa_plansza(vector<shared_ptr<Pole>> &pola)
 {
     if(!pola.empty()) pola.clear();
     //grupy 1-zadupie, 2-wioska, 3-wies, 4-duza wies, 5-miasteczko, 6-male miasto, 7-miasto, 8-metropolia
-    pola.emplace_back(make_shared<Neutralne>(-1,"start",9999999));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"zadupie1",200,1));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"zadupie2",200,1));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"zadupie3",200,1));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"zadupie4",200,1));
-    pola.emplace_back(make_shared<Specjalna>(-1,"dworzec1",750));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"wioska1",400,2));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"wioska2",400,2));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"wioska3",400,2));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"wioska4",400,2));
-    pola.emplace_back(make_shared<Neutralne>(-1,"parking1",9999999)); //10
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"wies1",600,3));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"wies2",600,3));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"wies3",600,3));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"wies4",600,3));
-    pola.emplace_back(make_shared<Specjalna>(-1,"dworzec2",750));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"duza_wies1",800,4));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"duza_wies2",800,4));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"duza_wies3",800,4));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"duza_wies4",800,4));
-    pola.emplace_back(make_shared<Neutralne>(-1,"parking2",9999999)); //20
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"miasteczko1",1000,5));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"miasteczko2",1000,5));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"miasteczko3",1000,5));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"miasteczko4",1000,5));
-    pola.emplace_back(make_shared<Specjalna>(-1,"dworzec3",750));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"male_miasto1",1200,6));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"male_miasto2",1200,6));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"male_miasto3",1200,6));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"male_miasto4",1200,6));
-    pola.emplace_back(make_shared<Neutralne>(-1,"parking3",9999999)); //30
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"miasto1",1400,7));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"miasto2",1400,7));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"miasto3",1400,7));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"miasto4",1400,7));
-    pola.emplace_back(make_shared<Specjalna>(-1,"dworzec4",750));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"metropolia1",1600,8));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"metropolia2",1600,8));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"metropolia3",1600,8));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"metropolia4",1600,8));
+    pola.emplace_back(make_shared<Neutralne>(-1,"Start",9999999));
+    pola.emplace_back(make_shared<Posiadlosc>(-1,"Jablonowo Nowe",200,1));
+    pola.emplace_back(make_shared<Posiadlosc>(-1,"Jablonowo Stare",200,1));
+    pola.emplace_back(make_shared<Posiadlosc>(-1,"Stobno",200,1));
+    pola.emplace_back(make_shared<Posiadlosc>(-1,"Maczyce",200,1));
+    pola.emplace_back(make_shared<Specjalna>(-1,"Dworzec Poludniowy",750));
+    pola.emplace_back(make_shared<Posiadlosc>(-1,"Lucznik",400,2));
+    pola.emplace_back(make_shared<Posiadlosc>(-1,"Nowogard",400,2));
+    pola.emplace_back(make_shared<Posiadlosc>(-1,"Brzemiewice",400,2));
+    pola.emplace_back(make_shared<Posiadlosc>(-1,"Lobez",400,2));
+    pola.emplace_back(make_shared<Neutralne>(-1,"Parking #1",9999999)); //10
+    pola.emplace_back(make_shared<Posiadlosc>(-1,"Mragowo",600,3));
+    pola.emplace_back(make_shared<Posiadlosc>(-1,"Wrzesnia",600,3));
+    pola.emplace_back(make_shared<Posiadlosc>(-1,"Biskupin",600,3));
+    pola.emplace_back(make_shared<Posiadlosc>(-1,"Tychy",600,3));
+    pola.emplace_back(make_shared<Specjalna>(-1,"Dworzec Zachodni",750));
+    pola.emplace_back(make_shared<Posiadlosc>(-1,"Olsztyn",800,4));
+    pola.emplace_back(make_shared<Posiadlosc>(-1,"Ciechocinek",800,4));
+    pola.emplace_back(make_shared<Posiadlosc>(-1,"Gniezno",800,4));
+    pola.emplace_back(make_shared<Posiadlosc>(-1,"Czestochowa",800,4));
+    pola.emplace_back(make_shared<Neutralne>(-1,"Parking #2",9999999)); //20
+    pola.emplace_back(make_shared<Posiadlosc>(-1,"Szczecin",1000,5));
+    pola.emplace_back(make_shared<Posiadlosc>(-1,"Torun",1000,5));
+    pola.emplace_back(make_shared<Posiadlosc>(-1,"Bialystok",1000,5));
+    pola.emplace_back(make_shared<Posiadlosc>(-1,"Bydgoszcz",1000,5));
+    pola.emplace_back(make_shared<Specjalna>(-1,"Dworzec Polnocny",750));
+    pola.emplace_back(make_shared<Posiadlosc>(-1,"Krakow",1200,6));
+    pola.emplace_back(make_shared<Posiadlosc>(-1,"Poznan",1200,6));
+    pola.emplace_back(make_shared<Posiadlosc>(-1,"Gdansk",1200,6));
+    pola.emplace_back(make_shared<Posiadlosc>(-1,"Zakopane",1200,6));
+    pola.emplace_back(make_shared<Neutralne>(-1,"Parking #3",9999999)); //30
+    pola.emplace_back(make_shared<Posiadlosc>(-1,"Praga",1400,7));
+    pola.emplace_back(make_shared<Posiadlosc>(-1,"Paryz",1400,7));
+    pola.emplace_back(make_shared<Posiadlosc>(-1,"Berlin",1400,7));
+    pola.emplace_back(make_shared<Posiadlosc>(-1,"Warszawa",1400,7));
+    pola.emplace_back(make_shared<Specjalna>(-1,"Dworzec Wschodni",750));
+    pola.emplace_back(make_shared<Posiadlosc>(-1,"Tokio",1600,8));
+    pola.emplace_back(make_shared<Posiadlosc>(-1,"Pekin",1600,8));
+    pola.emplace_back(make_shared<Posiadlosc>(-1,"Moskwa",1600,8));
+    pola.emplace_back(make_shared<Posiadlosc>(-1,"Nowy Jork",1600,8));
     cout << "Utworzono nowa plansze!" <<endl;
 }
 void nowa_gra(vector<Gracz> &gracze,vector<shared_ptr<Pole>> &pola,int &ilosc)//do dokonczenia
@@ -163,12 +163,12 @@ void debug_wyswietl_pola(vector<shared_ptr<Pole>> &pola)
         cout << i << " : " << pola[i]->id_wlasciciela() <<endl;
     }
 }
-void ruch(Gracz &gracz,vector<Gracz> &gracze,vector<shared_ptr<Pole>> &pola)
+void ruch(Gracz &gracz,vector<Gracz> &gracze,vector<shared_ptr<Pole>> &pola,sf::Text &tekst)
 {
     int rzut = gracz.rzuc_kostkami();
     cout << "wyrzucono: " <<rzut<<endl;
     gracz.zmien_pozycje(rzut);
-    pola[gracz.gdzie_jest()]->efekt_na_graczu(gracz,gracze,pola);
+    pola[gracz.gdzie_jest()]->efekt_na_graczu(gracz,gracze,pola,tekst);
     //sprawdza czy wszystkie posiadlosci bankrutow juz do nich nie naleza
     for(Gracz &g:gracze)
     {

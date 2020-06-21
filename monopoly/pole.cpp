@@ -18,7 +18,7 @@ string Pole::nazwap()
 }
 
 //Neutralne
-void Neutralne::efekt_na_graczu(Gracz &gracz, vector<Gracz> &gracze, vector<shared_ptr<Pole>> &pola)
+void Neutralne::efekt_na_graczu(Gracz &gracz, vector<Gracz> &gracze, vector<shared_ptr<Pole>> &pola,sf::Text &tekst)
 {
     cout << "pole neutralne";
     //pole neutralne, tu bedzie wialo nuda
@@ -43,7 +43,7 @@ void Posiadlosc::sprzedaj_domek(Gracz &gracz)
         gracz.otrzymaj(koszt_domku);
     }
 }
-void Posiadlosc::efekt_na_graczu(Gracz &gracz, vector<Gracz> &gracze, vector<shared_ptr<Pole>> &pola)
+void Posiadlosc::efekt_na_graczu(Gracz &gracz, vector<Gracz> &gracze, vector<shared_ptr<Pole>> &pola,sf::Text &tekst)
 {
     if(id_wlasciciela_==-1)
     {
@@ -54,8 +54,12 @@ void Posiadlosc::efekt_na_graczu(Gracz &gracz, vector<Gracz> &gracze, vector<sha
         cout << "To twoje pole!" <<endl;
         return;
     }
-    cout << "Zaplaciles graczowi: " << id_wlasciciela_ << " kwote " << koszt*(0.1*(domki+1)) << "$" <<endl;
-    if(id_wlasciciela_ != -1) gracz.zaplac(koszt*(0.1*(domki+1)),gracze[id_wlasciciela_]);
+    if(id_wlasciciela_ != -1)
+    {
+        cout << "Zaplaciles graczowi: " << id_wlasciciela_ << " kwote " << koszt*(0.1*(domki+1)) << "$" <<endl;
+        gracz.zaplac(koszt*(0.1*(domki+1)),gracze[id_wlasciciela_]);
+        tekst.setString("Zaplaciles graczowi: " + to_string(id_wlasciciela_) + " kwote " + to_string(int(koszt*(0.1*(domki+1)))) + "$");
+    }
 
 }
 void Posiadlosc::kup_pole(Gracz &gracz)
@@ -119,7 +123,7 @@ void Specjalna::sprzedaj_pole(Gracz &gracz)
         return;
     }
 }
-void Specjalna::efekt_na_graczu(Gracz &gracz, vector<Gracz> &gracze, vector<shared_ptr<Pole>> &pola)//do naprawy
+void Specjalna::efekt_na_graczu(Gracz &gracz, vector<Gracz> &gracze, vector<shared_ptr<Pole>> &pola,sf::Text &tekst)//do naprawy
 {
 
     if(id_wlasciciela_==-1)
@@ -145,5 +149,6 @@ void Specjalna::efekt_na_graczu(Gracz &gracz, vector<Gracz> &gracze, vector<shar
         cout << "Wlasciciel pola ma "<< wielokrotnosc << " pol tego rodzaju." <<endl;
         cout << "Zaplaciles graczowi: " << id_wlasciciela_ << " kwote " << koszt*wielokrotnosc << "$" <<endl;
         gracz.zaplac(koszt*wielokrotnosc,gracze[id_wlasciciela_]);
+        tekst.setString("Zaplaciles graczowi: " + to_string(id_wlasciciela_) + " kwote " + to_string(koszt*wielokrotnosc) + "$");
     }
 }

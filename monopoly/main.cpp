@@ -22,7 +22,7 @@ int main()
     sf::Text tekst_wygrana;
     tekst_wygrana.setFont(font);
     tekst_wygrana.setCharacterSize(50);
-    tekst_wygrana.setPosition(200, 400);
+    tekst_wygrana.setPosition(280, 400);
     tekst_wygrana.setColor(sf::Color::Green);
     string wygrana_string = "WYGRYWA GRACZ ";
 
@@ -46,6 +46,13 @@ int main()
     tekst_statystyki.setPosition(600, 600);
     tekst_statystyki.setColor(sf::Color::Black);
 
+    sf::Music music;
+    if (!music.openFromFile("muza.ogg"))
+        return -1; // error
+    music.play();
+    music.setLoop(true);
+    music.setVolume(5);
+
     sf::Clock clock;
 
     sf::Texture texture;
@@ -59,10 +66,10 @@ int main()
     tlo.setTextureRect(sf::IntRect(0, 0, window.getSize().x, window.getSize().y));
 
     //debug
-    /*Gracz gracz1 = Gracz("a",false,21000,0,true);
+    /*Gracz gracz1 = Gracz("a",false,21000,38,true);
+    gracze.emplace_back(gracz1);
     Gracz gracz2 = Gracz("a",true,0,0,false);
     Gracz gracz3 = Gracz("a",false,1000,0,false);
-    gracze.emplace_back(gracz1);
     gracze.emplace_back(gracz2);
     gracze.emplace_back(gracz3);*/
     nowa_gra(gracze,pola,ilosc);
@@ -98,7 +105,7 @@ int main()
                 {
                     if(!ruszono)
                     {
-                        ruch(gracze[czyja_tura(gracze)],gracze,pola);
+                        ruch(gracze[czyja_tura(gracze)],gracze,pola,tekst);
                         debug_wyswietl_graczy(gracze);
                         ruszono = true;
                     }
@@ -164,11 +171,11 @@ int main()
         // end the current frame
         if(koniec)
         {
-            tekst_wygrana.setString(wygrana_string + to_string(gracze[czyja_tura(gracze)].id()));
+            tekst_wygrana.setString(wygrana_string + to_string(gracze[czyja_tura(gracze)].id()) + "!");
             tekst_wygrana.setFillColor(gracze[czyja_tura(gracze)].kolor);
             window.draw(tekst_wygrana);
             window.display();
-            sf::sleep(sf::seconds(2));
+            sf::sleep(sf::seconds(3));
             window.close();
         }
         window.display();

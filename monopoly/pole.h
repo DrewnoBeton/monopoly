@@ -12,15 +12,15 @@ class Pole{
     public:
     Pole(int arg_wlasciciel,string arg_nazwa,int arg_koszt);
     virtual int id_wlasciciela();
-    virtual void efekt_na_graczu(Gracz &gracz, vector<Gracz> &arg_gracze, vector<shared_ptr<Pole>> &pola) =0;
-    friend void ruch(Gracz &gracz,vector<Gracz> &gracze,vector<shared_ptr<Pole>> &pola);
+    virtual void efekt_na_graczu(Gracz &gracz, vector<Gracz> &arg_gracze, vector<shared_ptr<Pole>> &pola,sf::Text &tekst) =0;
+    friend void ruch(Gracz &gracz,vector<Gracz> &gracze,vector<shared_ptr<Pole>> &pola,sf::Text &tekst);
     string nazwap();
 
 };
 class Neutralne : public Pole
 {
     public:
-    void efekt_na_graczu(Gracz &gracz, vector<Gracz> &arg_gracze, vector<shared_ptr<Pole>> &pola) override;
+    void efekt_na_graczu(Gracz &gracz, vector<Gracz> &arg_gracze, vector<shared_ptr<Pole>> &pola,sf::Text &tekst) override;
     Neutralne(int arg_wlasciciel,string arg_nazwa,int arg_koszt) : Pole(arg_wlasciciel,arg_nazwa,arg_koszt){}
 };
 class Posiadlosc : public Pole
@@ -37,7 +37,7 @@ class Posiadlosc : public Pole
     void sprzedaj_pole(Gracz &gracz);
     void kup_domek(Gracz &gracz);
     void sprzedaj_domek(Gracz &gracz);
-    void efekt_na_graczu(Gracz &gracz, vector<Gracz> &arg_gracze, vector<shared_ptr<Pole>> &pola) override;
+    void efekt_na_graczu(Gracz &gracz, vector<Gracz> &arg_gracze, vector<shared_ptr<Pole>> &pola,sf::Text &tekst) override;
     //tu efekt na graczu bedzie pobieral czynsz
 };
 class Specjalna : public Pole
@@ -46,7 +46,7 @@ class Specjalna : public Pole
     Specjalna(int arg_wlasciciel,string arg_nazwa,int arg_koszt) : Pole(arg_wlasciciel,arg_nazwa,arg_koszt){}
     void kup_pole(Gracz &gracz);
     void sprzedaj_pole(Gracz &gracz);
-    void efekt_na_graczu(Gracz &gracz, vector<Gracz> &arg_gracze, vector<shared_ptr<Pole>> &pola) override;
+    void efekt_na_graczu(Gracz &gracz, vector<Gracz> &arg_gracze, vector<shared_ptr<Pole>> &pola,sf::Text &tekst) override;
     //tu efekt na graczu bedzie pobieral czynsz w zaleznosci od ilosci posiadanych w grupie
 };
 
