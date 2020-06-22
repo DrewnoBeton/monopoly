@@ -1,0 +1,22 @@
+digraph "Gracz::zaplac"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="Gracz::zaplac",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Posiadlosc::efekt_na\l_graczu",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_posiadlosc.html#a0e84f1a1b27c142d552e615ec0141780",tooltip=" "];
+  Node1 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Specjalna::efekt_na\l_graczu",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_specjalna.html#a29eda8c094c1aac1f9cee1ea43b32f6f",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="Posiadlosc::kup_domek",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_posiadlosc.html#a4751faea37ac76af6db2278bae58bdb4",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="Posiadlosc::kup_pole",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_posiadlosc.html#a28d425abb542d0e98d00fa2da4b84000",tooltip=" "];
+  Node1 -> Node6 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="Specjalna::kup_pole",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_specjalna.html#a23940b15662794ce9b7a2d49bb2a6e2a",tooltip=" "];
+  Node1 -> Node7 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="Gracz::otrzymaj",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_gracz.html#ae63d2c84faf7bd787b1dcc270d94ff4a",tooltip=" "];
+  Node1 -> Node8 [dir="back",color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="Gracz::zaplac",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_gracz.html#a9abc388dd7fac93da238eb82df52d482",tooltip=" "];
+}

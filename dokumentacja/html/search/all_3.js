@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['specjalna_4',['Specjalna',['../class_specjalna.html',1,'']]]
+  ['funkcje_2ecpp_6',['funkcje.cpp',['../funkcje_8cpp.html',1,'']]]
 ];

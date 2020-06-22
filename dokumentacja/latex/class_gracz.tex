@@ -1,74 +1,132 @@
 \hypertarget{class_gracz}{}\doxysection{Gracz Class Reference}
 \label{class_gracz}\index{Gracz@{Gracz}}
+
+
+The \mbox{\hyperlink{class_gracz}{Gracz}} class.  
+
+
+
+
+{\ttfamily \#include $<$gracz.\+h$>$}
+
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_gracz_a3e7a8b3ea71cb147351ac3fd768626ac}\label{class_gracz_a3e7a8b3ea71cb147351ac3fd768626ac}} 
-{\bfseries Gracz} (string arg\+\_\+nazwa, bool arg\+\_\+bankrut, int arg\+\_\+saldo, int arg\+\_\+pozycja, bool arg\+\_\+tura)
+\mbox{\hyperlink{class_gracz_a460af0a2e2749e8c81ae86127320013a}{Gracz}} ()
 \item 
-\mbox{\Hypertarget{class_gracz_a858548ee9ace1ac7acc8a744a34420f8}\label{class_gracz_a858548ee9ace1ac7acc8a744a34420f8}} 
-int {\bfseries id} ()
+\mbox{\hyperlink{class_gracz_a3e7a8b3ea71cb147351ac3fd768626ac}{Gracz}} (string arg\+\_\+nazwa, bool arg\+\_\+bankrut, int arg\+\_\+saldo, int arg\+\_\+pozycja, bool arg\+\_\+tura)
 \item 
-\mbox{\Hypertarget{class_gracz_a9f5ee97ace374124b736081d70140c54}\label{class_gracz_a9f5ee97ace374124b736081d70140c54}} 
-int {\bfseries rzuc\+\_\+kostkami} ()
+\mbox{\hyperlink{class_gracz_abdad0e2d01ae6c1acaa0cd43d0787fc0}{$\sim$\+Gracz}} ()
 \item 
-\mbox{\Hypertarget{class_gracz_ae82af23c4fc8f34ed844cd0d95579374}\label{class_gracz_ae82af23c4fc8f34ed844cd0d95579374}} 
-void {\bfseries zmien\+\_\+pozycje} (int odleglosc)
+int \mbox{\hyperlink{class_gracz_a858548ee9ace1ac7acc8a744a34420f8}{id}} ()
 \item 
-\mbox{\Hypertarget{class_gracz_afdc9d50cee093657a5e1739897221efe}\label{class_gracz_afdc9d50cee093657a5e1739897221efe}} 
-int {\bfseries gdzie\+\_\+jest} ()
+int \mbox{\hyperlink{class_gracz_a9f5ee97ace374124b736081d70140c54}{rzuc\+\_\+kostkami}} ()
 \item 
-\mbox{\Hypertarget{class_gracz_a18b1e1c55fe64c923060f8d627884002}\label{class_gracz_a18b1e1c55fe64c923060f8d627884002}} 
-void {\bfseries zaplac} (int kwota)
+void \mbox{\hyperlink{class_gracz_ae82af23c4fc8f34ed844cd0d95579374}{zmien\+\_\+pozycje}} (int odleglosc)
+\begin{DoxyCompactList}\small\item\em zmienia pozycje gracza o podana odleglosc \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_gracz_afdc9d50cee093657a5e1739897221efe}{gdzie\+\_\+jest}} ()
 \item 
-\mbox{\Hypertarget{class_gracz_a9abc388dd7fac93da238eb82df52d482}\label{class_gracz_a9abc388dd7fac93da238eb82df52d482}} 
-void {\bfseries zaplac} (int kwota, \mbox{\hyperlink{class_gracz}{Gracz}} \&gracz)
+void \mbox{\hyperlink{class_gracz_a18b1e1c55fe64c923060f8d627884002}{zaplac}} (int kwota)
 \item 
-\mbox{\Hypertarget{class_gracz_adc70b43039dcdfe80daf97e4fae8f994}\label{class_gracz_adc70b43039dcdfe80daf97e4fae8f994}} 
-void {\bfseries otrzymaj} (int kwota)
+void \mbox{\hyperlink{class_gracz_a9abc388dd7fac93da238eb82df52d482}{zaplac}} (int kwota, \mbox{\hyperlink{class_gracz}{Gracz}} \&gracz)
 \item 
-\mbox{\Hypertarget{class_gracz_ae63d2c84faf7bd787b1dcc270d94ff4a}\label{class_gracz_ae63d2c84faf7bd787b1dcc270d94ff4a}} 
-void {\bfseries otrzymaj} (int kwota, \mbox{\hyperlink{class_gracz}{Gracz}} \&gracz)
+void \mbox{\hyperlink{class_gracz_adc70b43039dcdfe80daf97e4fae8f994}{otrzymaj}} (int kwota)
 \item 
-\mbox{\Hypertarget{class_gracz_a9b02ea548ef56aa43dde94395615635d}\label{class_gracz_a9b02ea548ef56aa43dde94395615635d}} 
-int {\bfseries stan\+\_\+konta} ()
+void \mbox{\hyperlink{class_gracz_ae63d2c84faf7bd787b1dcc270d94ff4a}{otrzymaj}} (int kwota, \mbox{\hyperlink{class_gracz}{Gracz}} \&gracz)
 \item 
-\mbox{\Hypertarget{class_gracz_a93677a5f9a7a422d29c3f0951f7d9369}\label{class_gracz_a93677a5f9a7a422d29c3f0951f7d9369}} 
-bool {\bfseries czy\+\_\+bankrut} ()
+int \mbox{\hyperlink{class_gracz_a9b02ea548ef56aa43dde94395615635d}{stan\+\_\+konta}} ()
+\begin{DoxyCompactList}\small\item\em stan\+\_\+konta \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_gracz_a93677a5f9a7a422d29c3f0951f7d9369}{czy\+\_\+bankrut}} ()
 \item 
-\mbox{\Hypertarget{class_gracz_a18681c0999a9257596b3178eb715e722}\label{class_gracz_a18681c0999a9257596b3178eb715e722}} 
-bool {\bfseries czy\+\_\+wlasciciel} (int id\+\_\+pola)
+bool \mbox{\hyperlink{class_gracz_a18681c0999a9257596b3178eb715e722}{czy\+\_\+wlasciciel}} (int id\+\_\+pola)
 \item 
-\mbox{\Hypertarget{class_gracz_a334f6d2296c28e8cefbec34dc82beb36}\label{class_gracz_a334f6d2296c28e8cefbec34dc82beb36}} 
-void {\bfseries wyswietl\+\_\+gracza} (sf\+::\+Render\+Window \&window)
+void \mbox{\hyperlink{class_gracz_a334f6d2296c28e8cefbec34dc82beb36}{wyswietl\+\_\+gracza}} (sf\+::\+Render\+Window \&window)
 \end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_gracz_a188e9c156f9bc6c6a66398cec6b34851}\label{class_gracz_a188e9c156f9bc6c6a66398cec6b34851}} 
-sf\+::\+Circle\+Shape {\bfseries pionek}
+sf\+::\+Circle\+Shape \mbox{\hyperlink{class_gracz_a188e9c156f9bc6c6a66398cec6b34851}{pionek}}
 \item 
-\mbox{\Hypertarget{class_gracz_a46483a2d724d3b30709dc12704bcb778}\label{class_gracz_a46483a2d724d3b30709dc12704bcb778}} 
-sf\+::\+Color {\bfseries kolor}
+sf\+::\+Color \mbox{\hyperlink{class_gracz_a46483a2d724d3b30709dc12704bcb778}{kolor}}
 \item 
-\mbox{\Hypertarget{class_gracz_a4b6cb4abfba854a45d71fe50dea46f81}\label{class_gracz_a4b6cb4abfba854a45d71fe50dea46f81}} 
-string {\bfseries nazwa} = \char`\"{}nazwa\+\_\+gracza\char`\"{}
+string \mbox{\hyperlink{class_gracz_a4b6cb4abfba854a45d71fe50dea46f81}{nazwa}} = \char`\"{}nazwa\+\_\+gracza\char`\"{}
 \item 
-\mbox{\Hypertarget{class_gracz_a2b6c9564ad6d2d3b65b6ca356cffbda9}\label{class_gracz_a2b6c9564ad6d2d3b65b6ca356cffbda9}} 
-vector$<$ int $>$ {\bfseries posiadane\+\_\+pola}
+vector$<$ int $>$ \mbox{\hyperlink{class_gracz_a2b6c9564ad6d2d3b65b6ca356cffbda9}{posiadane\+\_\+pola}}
 \item 
-\mbox{\Hypertarget{class_gracz_a32eb8d998a989643cfd8aa5fd2bd7683}\label{class_gracz_a32eb8d998a989643cfd8aa5fd2bd7683}} 
-bool {\bfseries tura} = false
+bool \mbox{\hyperlink{class_gracz_a32eb8d998a989643cfd8aa5fd2bd7683}{tura}} = false
 \end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_gracz_a62911cb75084f03eb9961368258eef95}\label{class_gracz_a62911cb75084f03eb9961368258eef95}} 
-bool {\bfseries operator==} (const \mbox{\hyperlink{class_gracz}{Gracz}} gracz1, const \mbox{\hyperlink{class_gracz}{Gracz}} \&gracz2)
+bool \mbox{\hyperlink{class_gracz_a62911cb75084f03eb9961368258eef95}{operator==}} (const \mbox{\hyperlink{class_gracz}{Gracz}} gracz1, const \mbox{\hyperlink{class_gracz}{Gracz}} \&gracz2)
 \end{DoxyCompactItemize}
 
 
-The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
-\item 
-D\+:/polibuda/sem2/monopoly/monopoly/gracz.\+h\item 
-D\+:/polibuda/sem2/monopoly/monopoly/gracz.\+cpp\end{DoxyCompactItemize}
+\doxysubsection{Detailed Description}
+The \mbox{\hyperlink{class_gracz}{Gracz}} class. 
+
+Definition at line 15 of file gracz.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_gracz_a460af0a2e2749e8c81ae86127320013a}\label{class_gracz_a460af0a2e2749e8c81ae86127320013a}} 
+\index{Gracz@{Gracz}!Gracz@{Gracz}}
+\index{Gracz@{Gracz}!Gracz@{Gracz}}
+\doxysubsubsection{\texorpdfstring{Gracz()}{Gracz()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Gracz\+::\+Gracz (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{class_gracz_a3e7a8b3ea71cb147351ac3fd768626ac}\label{class_gracz_a3e7a8b3ea71cb147351ac3fd768626ac}} 
+\index{Gracz@{Gracz}!Gracz@{Gracz}}
+\index{Gracz@{Gracz}!Gracz@{Gracz}}
+\doxysubsubsection{\texorpdfstring{Gracz()}{Gracz()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Gracz\+::\+Gracz (\begin{DoxyParamCaption}\item[{string}]{arg\+\_\+nazwa,  }\item[{bool}]{arg\+\_\+bankrut,  }\item[{int}]{arg\+\_\+saldo,  }\item[{int}]{arg\+\_\+pozycja,  }\item[{bool}]{arg\+\_\+tura }\end{DoxyParamCaption})}
+
+
+
+Definition at line 3 of file gracz.\+cpp.
+
+\mbox{\Hypertarget{class_gracz_abdad0e2d01ae6c1acaa0cd43d0787fc0}\label{class_gracz_abdad0e2d01ae6c1acaa0cd43d0787fc0}} 
+\index{Gracz@{Gracz}!````~Gracz@{$\sim$Gracz}}
+\index{````~Gracz@{$\sim$Gracz}!Gracz@{Gracz}}
+\doxysubsubsection{\texorpdfstring{$\sim$Gracz()}{~Gracz()}}
+{\footnotesize\ttfamily Gracz\+::$\sim$\+Gracz (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 63 of file gracz.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_gracz_a93677a5f9a7a422d29c3f0951f7d9369}\label{class_gracz_a93677a5f9a7a422d29c3f0951f7d9369}} 
+\index{Gracz@{Gracz}!czy\_bankrut@{czy\_bankrut}}
+\index{czy\_bankrut@{czy\_bankrut}!Gracz@{Gracz}}
+\doxysubsubsection{\texorpdfstring{czy\_bankrut()}{czy\_bankrut()}}
+{\footnotesize\ttfamily bool Gracz\+::czy\+\_\+bankrut (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 121 of file gracz.\+cpp.
+
+\mbox{\Hypertarget{class_gracz_a18681c0999a9257596b3178eb715e722}\label{class_gracz_a18681c0999a9257596b3178eb715e722}} 
+\index{Gracz@{Gracz}!czy\_wlasciciel@{czy\_wlasciciel}}
+\index{czy\_wlasciciel@{czy\_wlasciciel}!Gracz@{Gracz}}
+\doxysubsubsection{\texorpdfstring{czy\_wlasciciel()}{czy\_wlasciciel()}}
+{\footnotesize\ttfamily bool Gracz\+::czy\+\_\+wlasciciel (\begin{DoxyParamCaption}\item[{int}]{id\+\_\+pola }\end{DoxyParamCaption})}
+
+
+
+Definition at line 125 of file gracz.\+cpp.
+
+\mbox{\Hypertarget{class_gracz_afdc9d50cee093657a5e1739897221efe}\label{class_gracz_afdc9d50cee093657a5e1739897221efe}} 
+\index{Gracz@{Gracz}!gdzie\_jest@{gdzie\_jest}}
+\index{gdzie\_jest@{gdzie\_jest}!Gracz@{Gracz}}
+\doxysubsubsection{\texorpdfstring{gdzie\_jest()}{gdzie\_jest()}}
+{\footnotesize\ttfamily int Gracz\+::gdzie\+\_\+jest (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 89 of file gracz.\+cpp.
+
+Here is the caller graph for this function\+:

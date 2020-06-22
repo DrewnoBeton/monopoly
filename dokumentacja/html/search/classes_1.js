@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['neutralne_6',['Neutralne',['../class_neutralne.html',1,'']]]
+  ['neutralne_59',['Neutralne',['../class_neutralne.html',1,'']]]
 ];

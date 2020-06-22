@@ -1,47 +1,142 @@
 \hypertarget{class_pole}{}\doxysection{Pole Class Reference}
 \label{class_pole}\index{Pole@{Pole}}
-Inheritance diagram for Pole\+:\begin{figure}[H]
-\begin{center}
-\leavevmode
-\includegraphics[height=2.000000cm]{class_pole}
-\end{center}
-\end{figure}
+
+
+{\ttfamily \#include $<$pole.\+h$>$}
+
+
+
+Inheritance diagram for Pole\+:
+% FIG 0
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_pole_abc633ce15c565e9f7eb0fb3412d7752b}\label{class_pole_abc633ce15c565e9f7eb0fb3412d7752b}} 
-{\bfseries Pole} (int arg\+\_\+wlasciciel, string arg\+\_\+nazwa, int arg\+\_\+koszt)
+\mbox{\hyperlink{class_pole_abc633ce15c565e9f7eb0fb3412d7752b}{Pole}} (int arg\+\_\+wlasciciel, string arg\+\_\+nazwa, int arg\+\_\+koszt)
 \item 
-\mbox{\Hypertarget{class_pole_aaf53712b7dbb3e6c60392bb0f6f7d892}\label{class_pole_aaf53712b7dbb3e6c60392bb0f6f7d892}} 
-virtual int {\bfseries id\+\_\+wlasciciela} ()
+virtual int \mbox{\hyperlink{class_pole_aaf53712b7dbb3e6c60392bb0f6f7d892}{id\+\_\+wlasciciela}} ()
 \item 
-\mbox{\Hypertarget{class_pole_aec17f99be9f1cf860aa26d143460b4ea}\label{class_pole_aec17f99be9f1cf860aa26d143460b4ea}} 
-virtual void {\bfseries efekt\+\_\+na\+\_\+graczu} (\mbox{\hyperlink{class_gracz}{Gracz}} \&gracz, vector$<$ \mbox{\hyperlink{class_gracz}{Gracz}} $>$ \&arg\+\_\+gracze, vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{class_pole}{Pole}} $>$$>$ \&pola, sf\+::\+Text \&tekst)=0
+virtual void \mbox{\hyperlink{class_pole_aec17f99be9f1cf860aa26d143460b4ea}{efekt\+\_\+na\+\_\+graczu}} (\mbox{\hyperlink{class_gracz}{Gracz}} \&gracz, vector$<$ \mbox{\hyperlink{class_gracz}{Gracz}} $>$ \&arg\+\_\+gracze, vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{class_pole}{Pole}} $>$$>$ \&\mbox{\hyperlink{monopoly_8h_a9949f5d6dcb8f2151a69e55e0e9379da}{pola}}, sf\+::\+Text \&tekst)=0
 \item 
-\mbox{\Hypertarget{class_pole_adada21b101d324f21f787c089235996f}\label{class_pole_adada21b101d324f21f787c089235996f}} 
-string {\bfseries nazwap} ()
+string \mbox{\hyperlink{class_pole_adada21b101d324f21f787c089235996f}{nazwap}} ()
 \end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_pole_ace2d1b00d5ff56fa23b95a0bdd3bc8c8}\label{class_pole_ace2d1b00d5ff56fa23b95a0bdd3bc8c8}} 
-int {\bfseries id\+\_\+wlasciciela\+\_\+} =-\/1
+int \mbox{\hyperlink{class_pole_ace2d1b00d5ff56fa23b95a0bdd3bc8c8}{id\+\_\+wlasciciela\+\_\+}} =-\/1
 \item 
-\mbox{\Hypertarget{class_pole_ab57a368aef853e4e1e563abd2b41dcc7}\label{class_pole_ab57a368aef853e4e1e563abd2b41dcc7}} 
-string {\bfseries nazwa} = \char`\"{}nazwa\+\_\+pola\char`\"{}
+string \mbox{\hyperlink{class_pole_ab57a368aef853e4e1e563abd2b41dcc7}{nazwa}} = \char`\"{}nazwa\+\_\+pola\char`\"{}
 \item 
-\mbox{\Hypertarget{class_pole_a44a7635e270456e6b13d4727a097824f}\label{class_pole_a44a7635e270456e6b13d4727a097824f}} 
-int {\bfseries koszt}
+int \mbox{\hyperlink{class_pole_a44a7635e270456e6b13d4727a097824f}{koszt}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_pole_a695a5f91578fbf8cbafe31c109364d06}\label{class_pole_a695a5f91578fbf8cbafe31c109364d06}} 
-void {\bfseries ruch} (\mbox{\hyperlink{class_gracz}{Gracz}} \&gracz, vector$<$ \mbox{\hyperlink{class_gracz}{Gracz}} $>$ \&gracze, vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{class_pole}{Pole}} $>$$>$ \&pola, sf\+::\+Text \&tekst)
+void \mbox{\hyperlink{class_pole_a695a5f91578fbf8cbafe31c109364d06}{ruch}} (\mbox{\hyperlink{class_gracz}{Gracz}} \&gracz, vector$<$ \mbox{\hyperlink{class_gracz}{Gracz}} $>$ \&\mbox{\hyperlink{monopoly_8h_a05108cc23849c3ea13760c1b54482aae}{gracze}}, vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{class_pole}{Pole}} $>$$>$ \&\mbox{\hyperlink{monopoly_8h_a9949f5d6dcb8f2151a69e55e0e9379da}{pola}}, sf\+::\+Text \&tekst)
 \end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line 6 of file pole.\+h.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_pole_abc633ce15c565e9f7eb0fb3412d7752b}\label{class_pole_abc633ce15c565e9f7eb0fb3412d7752b}} 
+\index{Pole@{Pole}!Pole@{Pole}}
+\index{Pole@{Pole}!Pole@{Pole}}
+\doxysubsubsection{\texorpdfstring{Pole()}{Pole()}}
+{\footnotesize\ttfamily Pole\+::\+Pole (\begin{DoxyParamCaption}\item[{int}]{arg\+\_\+wlasciciel,  }\item[{string}]{arg\+\_\+nazwa,  }\item[{int}]{arg\+\_\+koszt }\end{DoxyParamCaption})}
+
+
+
+Definition at line 4 of file pole.\+cpp.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_pole_aec17f99be9f1cf860aa26d143460b4ea}\label{class_pole_aec17f99be9f1cf860aa26d143460b4ea}} 
+\index{Pole@{Pole}!efekt\_na\_graczu@{efekt\_na\_graczu}}
+\index{efekt\_na\_graczu@{efekt\_na\_graczu}!Pole@{Pole}}
+\doxysubsubsection{\texorpdfstring{efekt\_na\_graczu()}{efekt\_na\_graczu()}}
+{\footnotesize\ttfamily virtual void Pole\+::efekt\+\_\+na\+\_\+graczu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gracz}{Gracz}} \&}]{gracz,  }\item[{vector$<$ \mbox{\hyperlink{class_gracz}{Gracz}} $>$ \&}]{arg\+\_\+gracze,  }\item[{vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{class_pole}{Pole}} $>$$>$ \&}]{pola,  }\item[{sf\+::\+Text \&}]{tekst }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+
+
+
+Implemented in \mbox{\hyperlink{class_specjalna_a29eda8c094c1aac1f9cee1ea43b32f6f}{Specjalna}}, \mbox{\hyperlink{class_posiadlosc_a0e84f1a1b27c142d552e615ec0141780}{Posiadlosc}}, and \mbox{\hyperlink{class_neutralne_ac16b139c72d3922431f03adeebcac8bd}{Neutralne}}.
+
+\mbox{\Hypertarget{class_pole_aaf53712b7dbb3e6c60392bb0f6f7d892}\label{class_pole_aaf53712b7dbb3e6c60392bb0f6f7d892}} 
+\index{Pole@{Pole}!id\_wlasciciela@{id\_wlasciciela}}
+\index{id\_wlasciciela@{id\_wlasciciela}!Pole@{Pole}}
+\doxysubsubsection{\texorpdfstring{id\_wlasciciela()}{id\_wlasciciela()}}
+{\footnotesize\ttfamily int Pole\+::id\+\_\+wlasciciela (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+
+Definition at line 10 of file pole.\+cpp.
+
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{class_pole_adada21b101d324f21f787c089235996f}\label{class_pole_adada21b101d324f21f787c089235996f}} 
+\index{Pole@{Pole}!nazwap@{nazwap}}
+\index{nazwap@{nazwap}!Pole@{Pole}}
+\doxysubsubsection{\texorpdfstring{nazwap()}{nazwap()}}
+{\footnotesize\ttfamily string Pole\+::nazwap (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line 15 of file pole.\+cpp.
+
+
+
+\doxysubsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{class_pole_a695a5f91578fbf8cbafe31c109364d06}\label{class_pole_a695a5f91578fbf8cbafe31c109364d06}} 
+\index{Pole@{Pole}!ruch@{ruch}}
+\index{ruch@{ruch}!Pole@{Pole}}
+\doxysubsubsection{\texorpdfstring{ruch}{ruch}}
+{\footnotesize\ttfamily void ruch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gracz}{Gracz}} \&}]{gracz,  }\item[{vector$<$ \mbox{\hyperlink{class_gracz}{Gracz}} $>$ \&}]{gracze,  }\item[{vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{class_pole}{Pole}} $>$$>$ \&}]{pola,  }\item[{sf\+::\+Text \&}]{tekst }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Definition at line 166 of file funkcje.\+cpp.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_pole_ace2d1b00d5ff56fa23b95a0bdd3bc8c8}\label{class_pole_ace2d1b00d5ff56fa23b95a0bdd3bc8c8}} 
+\index{Pole@{Pole}!id\_wlasciciela\_@{id\_wlasciciela\_}}
+\index{id\_wlasciciela\_@{id\_wlasciciela\_}!Pole@{Pole}}
+\doxysubsubsection{\texorpdfstring{id\_wlasciciela\_}{id\_wlasciciela\_}}
+{\footnotesize\ttfamily int Pole\+::id\+\_\+wlasciciela\+\_\+ =-\/1\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 8 of file pole.\+h.
+
+\mbox{\Hypertarget{class_pole_a44a7635e270456e6b13d4727a097824f}\label{class_pole_a44a7635e270456e6b13d4727a097824f}} 
+\index{Pole@{Pole}!koszt@{koszt}}
+\index{koszt@{koszt}!Pole@{Pole}}
+\doxysubsubsection{\texorpdfstring{koszt}{koszt}}
+{\footnotesize\ttfamily int Pole\+::koszt\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 10 of file pole.\+h.
+
+\mbox{\Hypertarget{class_pole_ab57a368aef853e4e1e563abd2b41dcc7}\label{class_pole_ab57a368aef853e4e1e563abd2b41dcc7}} 
+\index{Pole@{Pole}!nazwa@{nazwa}}
+\index{nazwa@{nazwa}!Pole@{Pole}}
+\doxysubsubsection{\texorpdfstring{nazwa}{nazwa}}
+{\footnotesize\ttfamily string Pole\+::nazwa = \char`\"{}nazwa\+\_\+pola\char`\"{}\hspace{0.3cm}{\ttfamily [protected]}}
+
+
+
+Definition at line 9 of file pole.\+h.
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-D\+:/polibuda/sem2/monopoly/monopoly/pole.\+h\item 
-D\+:/polibuda/sem2/monopoly/monopoly/pole.\+cpp\end{DoxyCompactItemize}
+D\+:/polibuda/sem2/monopoly/monopoly/\mbox{\hyperlink{pole_8h}{pole.\+h}}\item 
+D\+:/polibuda/sem2/monopoly/monopoly/\mbox{\hyperlink{pole_8cpp}{pole.\+cpp}}\end{DoxyCompactItemize}

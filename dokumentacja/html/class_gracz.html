@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -20,6 +24,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="1572911971857529797.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Monopoly
    </div>
@@ -45,6 +50,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('class_gracz.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,7 +81,6 @@ $(function() {
 </iframe>
 </div>
 
-</div><!-- top -->
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
@@ -70,83 +91,600 @@ $(function() {
 <div class="title">Gracz Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The <a class="el" href="class_gracz.html" title="The Gracz class.">Gracz</a> class.  
+ <a href="class_gracz.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="gracz_8h_source.html">gracz.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a3e7a8b3ea71cb147351ac3fd768626ac"><td class="memItemLeft" align="right" valign="top"><a id="a3e7a8b3ea71cb147351ac3fd768626ac"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Gracz</b> (string arg_nazwa, bool arg_bankrut, int arg_saldo, int arg_pozycja, bool arg_tura)</td></tr>
+<tr class="memitem:a460af0a2e2749e8c81ae86127320013a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a460af0a2e2749e8c81ae86127320013a">Gracz</a> ()</td></tr>
+<tr class="separator:a460af0a2e2749e8c81ae86127320013a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e7a8b3ea71cb147351ac3fd768626ac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a3e7a8b3ea71cb147351ac3fd768626ac">Gracz</a> (string arg_nazwa, bool arg_bankrut, int arg_saldo, int arg_pozycja, bool arg_tura)</td></tr>
 <tr class="separator:a3e7a8b3ea71cb147351ac3fd768626ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a858548ee9ace1ac7acc8a744a34420f8"><td class="memItemLeft" align="right" valign="top"><a id="a858548ee9ace1ac7acc8a744a34420f8"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>id</b> ()</td></tr>
+<tr class="memitem:abdad0e2d01ae6c1acaa0cd43d0787fc0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#abdad0e2d01ae6c1acaa0cd43d0787fc0">~Gracz</a> ()</td></tr>
+<tr class="separator:abdad0e2d01ae6c1acaa0cd43d0787fc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a858548ee9ace1ac7acc8a744a34420f8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a858548ee9ace1ac7acc8a744a34420f8">id</a> ()</td></tr>
 <tr class="separator:a858548ee9ace1ac7acc8a744a34420f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f5ee97ace374124b736081d70140c54"><td class="memItemLeft" align="right" valign="top"><a id="a9f5ee97ace374124b736081d70140c54"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>rzuc_kostkami</b> ()</td></tr>
+<tr class="memitem:a9f5ee97ace374124b736081d70140c54"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a9f5ee97ace374124b736081d70140c54">rzuc_kostkami</a> ()</td></tr>
 <tr class="separator:a9f5ee97ace374124b736081d70140c54"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae82af23c4fc8f34ed844cd0d95579374"><td class="memItemLeft" align="right" valign="top"><a id="ae82af23c4fc8f34ed844cd0d95579374"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>zmien_pozycje</b> (int odleglosc)</td></tr>
+<tr class="memitem:ae82af23c4fc8f34ed844cd0d95579374"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#ae82af23c4fc8f34ed844cd0d95579374">zmien_pozycje</a> (int odleglosc)</td></tr>
+<tr class="memdesc:ae82af23c4fc8f34ed844cd0d95579374"><td class="mdescLeft">&#160;</td><td class="mdescRight">zmienia pozycje gracza o podana odleglosc  <a href="class_gracz.html#ae82af23c4fc8f34ed844cd0d95579374">More...</a><br /></td></tr>
 <tr class="separator:ae82af23c4fc8f34ed844cd0d95579374"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afdc9d50cee093657a5e1739897221efe"><td class="memItemLeft" align="right" valign="top"><a id="afdc9d50cee093657a5e1739897221efe"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>gdzie_jest</b> ()</td></tr>
+<tr class="memitem:afdc9d50cee093657a5e1739897221efe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#afdc9d50cee093657a5e1739897221efe">gdzie_jest</a> ()</td></tr>
 <tr class="separator:afdc9d50cee093657a5e1739897221efe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18b1e1c55fe64c923060f8d627884002"><td class="memItemLeft" align="right" valign="top"><a id="a18b1e1c55fe64c923060f8d627884002"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>zaplac</b> (int kwota)</td></tr>
+<tr class="memitem:a18b1e1c55fe64c923060f8d627884002"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a18b1e1c55fe64c923060f8d627884002">zaplac</a> (int kwota)</td></tr>
 <tr class="separator:a18b1e1c55fe64c923060f8d627884002"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9abc388dd7fac93da238eb82df52d482"><td class="memItemLeft" align="right" valign="top"><a id="a9abc388dd7fac93da238eb82df52d482"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>zaplac</b> (int kwota, <a class="el" href="class_gracz.html">Gracz</a> &amp;gracz)</td></tr>
+<tr class="memitem:a9abc388dd7fac93da238eb82df52d482"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a9abc388dd7fac93da238eb82df52d482">zaplac</a> (int kwota, <a class="el" href="class_gracz.html">Gracz</a> &amp;gracz)</td></tr>
 <tr class="separator:a9abc388dd7fac93da238eb82df52d482"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc70b43039dcdfe80daf97e4fae8f994"><td class="memItemLeft" align="right" valign="top"><a id="adc70b43039dcdfe80daf97e4fae8f994"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>otrzymaj</b> (int kwota)</td></tr>
+<tr class="memitem:adc70b43039dcdfe80daf97e4fae8f994"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#adc70b43039dcdfe80daf97e4fae8f994">otrzymaj</a> (int kwota)</td></tr>
 <tr class="separator:adc70b43039dcdfe80daf97e4fae8f994"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae63d2c84faf7bd787b1dcc270d94ff4a"><td class="memItemLeft" align="right" valign="top"><a id="ae63d2c84faf7bd787b1dcc270d94ff4a"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>otrzymaj</b> (int kwota, <a class="el" href="class_gracz.html">Gracz</a> &amp;gracz)</td></tr>
+<tr class="memitem:ae63d2c84faf7bd787b1dcc270d94ff4a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#ae63d2c84faf7bd787b1dcc270d94ff4a">otrzymaj</a> (int kwota, <a class="el" href="class_gracz.html">Gracz</a> &amp;gracz)</td></tr>
 <tr class="separator:ae63d2c84faf7bd787b1dcc270d94ff4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9b02ea548ef56aa43dde94395615635d"><td class="memItemLeft" align="right" valign="top"><a id="a9b02ea548ef56aa43dde94395615635d"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>stan_konta</b> ()</td></tr>
+<tr class="memitem:a9b02ea548ef56aa43dde94395615635d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a9b02ea548ef56aa43dde94395615635d">stan_konta</a> ()</td></tr>
+<tr class="memdesc:a9b02ea548ef56aa43dde94395615635d"><td class="mdescLeft">&#160;</td><td class="mdescRight">stan_konta  <a href="class_gracz.html#a9b02ea548ef56aa43dde94395615635d">More...</a><br /></td></tr>
 <tr class="separator:a9b02ea548ef56aa43dde94395615635d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a93677a5f9a7a422d29c3f0951f7d9369"><td class="memItemLeft" align="right" valign="top"><a id="a93677a5f9a7a422d29c3f0951f7d9369"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>czy_bankrut</b> ()</td></tr>
+<tr class="memitem:a93677a5f9a7a422d29c3f0951f7d9369"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a93677a5f9a7a422d29c3f0951f7d9369">czy_bankrut</a> ()</td></tr>
 <tr class="separator:a93677a5f9a7a422d29c3f0951f7d9369"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a18681c0999a9257596b3178eb715e722"><td class="memItemLeft" align="right" valign="top"><a id="a18681c0999a9257596b3178eb715e722"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>czy_wlasciciel</b> (int id_pola)</td></tr>
+<tr class="memitem:a18681c0999a9257596b3178eb715e722"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a18681c0999a9257596b3178eb715e722">czy_wlasciciel</a> (int id_pola)</td></tr>
 <tr class="separator:a18681c0999a9257596b3178eb715e722"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a334f6d2296c28e8cefbec34dc82beb36"><td class="memItemLeft" align="right" valign="top"><a id="a334f6d2296c28e8cefbec34dc82beb36"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>wyswietl_gracza</b> (sf::RenderWindow &amp;window)</td></tr>
+<tr class="memitem:a334f6d2296c28e8cefbec34dc82beb36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a334f6d2296c28e8cefbec34dc82beb36">wyswietl_gracza</a> (sf::RenderWindow &amp;window)</td></tr>
 <tr class="separator:a334f6d2296c28e8cefbec34dc82beb36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a188e9c156f9bc6c6a66398cec6b34851"><td class="memItemLeft" align="right" valign="top"><a id="a188e9c156f9bc6c6a66398cec6b34851"></a>
-sf::CircleShape&#160;</td><td class="memItemRight" valign="bottom"><b>pionek</b></td></tr>
+<tr class="memitem:a188e9c156f9bc6c6a66398cec6b34851"><td class="memItemLeft" align="right" valign="top">sf::CircleShape&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a188e9c156f9bc6c6a66398cec6b34851">pionek</a></td></tr>
 <tr class="separator:a188e9c156f9bc6c6a66398cec6b34851"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46483a2d724d3b30709dc12704bcb778"><td class="memItemLeft" align="right" valign="top"><a id="a46483a2d724d3b30709dc12704bcb778"></a>
-sf::Color&#160;</td><td class="memItemRight" valign="bottom"><b>kolor</b></td></tr>
+<tr class="memitem:a46483a2d724d3b30709dc12704bcb778"><td class="memItemLeft" align="right" valign="top">sf::Color&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a46483a2d724d3b30709dc12704bcb778">kolor</a></td></tr>
 <tr class="separator:a46483a2d724d3b30709dc12704bcb778"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4b6cb4abfba854a45d71fe50dea46f81"><td class="memItemLeft" align="right" valign="top"><a id="a4b6cb4abfba854a45d71fe50dea46f81"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>nazwa</b> = &quot;nazwa_gracza&quot;</td></tr>
+<tr class="memitem:a4b6cb4abfba854a45d71fe50dea46f81"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a4b6cb4abfba854a45d71fe50dea46f81">nazwa</a> = &quot;nazwa_gracza&quot;</td></tr>
 <tr class="separator:a4b6cb4abfba854a45d71fe50dea46f81"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b6c9564ad6d2d3b65b6ca356cffbda9"><td class="memItemLeft" align="right" valign="top"><a id="a2b6c9564ad6d2d3b65b6ca356cffbda9"></a>
-vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>posiadane_pola</b></td></tr>
+<tr class="memitem:a2b6c9564ad6d2d3b65b6ca356cffbda9"><td class="memItemLeft" align="right" valign="top">vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a2b6c9564ad6d2d3b65b6ca356cffbda9">posiadane_pola</a></td></tr>
 <tr class="separator:a2b6c9564ad6d2d3b65b6ca356cffbda9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a32eb8d998a989643cfd8aa5fd2bd7683"><td class="memItemLeft" align="right" valign="top"><a id="a32eb8d998a989643cfd8aa5fd2bd7683"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>tura</b> = false</td></tr>
+<tr class="memitem:a32eb8d998a989643cfd8aa5fd2bd7683"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a32eb8d998a989643cfd8aa5fd2bd7683">tura</a> = false</td></tr>
 <tr class="separator:a32eb8d998a989643cfd8aa5fd2bd7683"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
-<tr class="memitem:a62911cb75084f03eb9961368258eef95"><td class="memItemLeft" align="right" valign="top"><a id="a62911cb75084f03eb9961368258eef95"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (const <a class="el" href="class_gracz.html">Gracz</a> gracz1, const <a class="el" href="class_gracz.html">Gracz</a> &amp;gracz2)</td></tr>
+<tr class="memitem:a62911cb75084f03eb9961368258eef95"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a62911cb75084f03eb9961368258eef95">operator==</a> (const <a class="el" href="class_gracz.html">Gracz</a> gracz1, const <a class="el" href="class_gracz.html">Gracz</a> &amp;gracz2)</td></tr>
 <tr class="separator:a62911cb75084f03eb9961368258eef95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="class_gracz.html" title="The Gracz class.">Gracz</a> class. </p>
+
+<p class="definition">Definition at line <a class="el" href="gracz_8h_source.html#l00015">15</a> of file <a class="el" href="gracz_8h_source.html">gracz.h</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="a460af0a2e2749e8c81ae86127320013a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a460af0a2e2749e8c81ae86127320013a">&#9670;&nbsp;</a></span>Gracz() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Gracz::Gracz </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3e7a8b3ea71cb147351ac3fd768626ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e7a8b3ea71cb147351ac3fd768626ac">&#9670;&nbsp;</a></span>Gracz() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Gracz::Gracz </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>arg_nazwa</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>arg_bankrut</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>arg_saldo</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>arg_pozycja</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>arg_tura</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="gracz_8cpp_source.html#l00003">3</a> of file <a class="el" href="gracz_8cpp_source.html">gracz.cpp</a>.</p>
+
+</div>
+</div>
+<a id="abdad0e2d01ae6c1acaa0cd43d0787fc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abdad0e2d01ae6c1acaa0cd43d0787fc0">&#9670;&nbsp;</a></span>~Gracz()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Gracz::~Gracz </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="gracz_8cpp_source.html#l00063">63</a> of file <a class="el" href="gracz_8cpp_source.html">gracz.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a id="a93677a5f9a7a422d29c3f0951f7d9369"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93677a5f9a7a422d29c3f0951f7d9369">&#9670;&nbsp;</a></span>czy_bankrut()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Gracz::czy_bankrut </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="gracz_8cpp_source.html#l00121">121</a> of file <a class="el" href="gracz_8cpp_source.html">gracz.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a18681c0999a9257596b3178eb715e722"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18681c0999a9257596b3178eb715e722">&#9670;&nbsp;</a></span>czy_wlasciciel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Gracz::czy_wlasciciel </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>id_pola</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="gracz_8cpp_source.html#l00125">125</a> of file <a class="el" href="gracz_8cpp_source.html">gracz.cpp</a>.</p>
+
+</div>
+</div>
+<a id="afdc9d50cee093657a5e1739897221efe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afdc9d50cee093657a5e1739897221efe">&#9670;&nbsp;</a></span>gdzie_jest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Gracz::gdzie_jest </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="gracz_8cpp_source.html#l00089">89</a> of file <a class="el" href="gracz_8cpp_source.html">gracz.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_gracz_afdc9d50cee093657a5e1739897221efe_icgraph.png" border="0" usemap="#class_gracz_afdc9d50cee093657a5e1739897221efe_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a858548ee9ace1ac7acc8a744a34420f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a858548ee9ace1ac7acc8a744a34420f8">&#9670;&nbsp;</a></span>id()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Gracz::id </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="gracz_8cpp_source.html#l00069">69</a> of file <a class="el" href="gracz_8cpp_source.html">gracz.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_gracz_a858548ee9ace1ac7acc8a744a34420f8_icgraph.png" border="0" usemap="#class_gracz_a858548ee9ace1ac7acc8a744a34420f8_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="adc70b43039dcdfe80daf97e4fae8f994"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adc70b43039dcdfe80daf97e4fae8f994">&#9670;&nbsp;</a></span>otrzymaj() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gracz::otrzymaj </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>kwota</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="gracz_8cpp_source.html#l00103">103</a> of file <a class="el" href="gracz_8cpp_source.html">gracz.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_gracz_adc70b43039dcdfe80daf97e4fae8f994_icgraph.png" border="0" usemap="#class_gracz_adc70b43039dcdfe80daf97e4fae8f994_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ae63d2c84faf7bd787b1dcc270d94ff4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae63d2c84faf7bd787b1dcc270d94ff4a">&#9670;&nbsp;</a></span>otrzymaj() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gracz::otrzymaj </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>kwota</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_gracz.html">Gracz</a> &amp;&#160;</td>
+          <td class="paramname"><em>gracz</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="gracz_8cpp_source.html#l00112">112</a> of file <a class="el" href="gracz_8cpp_source.html">gracz.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_gracz_ae63d2c84faf7bd787b1dcc270d94ff4a_cgraph.png" border="0" usemap="#class_gracz_ae63d2c84faf7bd787b1dcc270d94ff4a_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a9f5ee97ace374124b736081d70140c54"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f5ee97ace374124b736081d70140c54">&#9670;&nbsp;</a></span>rzuc_kostkami()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Gracz::rzuc_kostkami </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="gracz_8cpp_source.html#l00073">73</a> of file <a class="el" href="gracz_8cpp_source.html">gracz.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_gracz_a9f5ee97ace374124b736081d70140c54_icgraph.png" border="0" usemap="#class_gracz_a9f5ee97ace374124b736081d70140c54_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a9b02ea548ef56aa43dde94395615635d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b02ea548ef56aa43dde94395615635d">&#9670;&nbsp;</a></span>stan_konta()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Gracz::stan_konta </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>stan_konta </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="gracz_8cpp_source.html#l00117">117</a> of file <a class="el" href="gracz_8cpp_source.html">gracz.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a334f6d2296c28e8cefbec34dc82beb36"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a334f6d2296c28e8cefbec34dc82beb36">&#9670;&nbsp;</a></span>wyswietl_gracza()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gracz::wyswietl_gracza </td>
+          <td>(</td>
+          <td class="paramtype">sf::RenderWindow &amp;&#160;</td>
+          <td class="paramname"><em>window</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="gracz_8cpp_source.html#l00138">138</a> of file <a class="el" href="gracz_8cpp_source.html">gracz.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a18b1e1c55fe64c923060f8d627884002"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18b1e1c55fe64c923060f8d627884002">&#9670;&nbsp;</a></span>zaplac() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gracz::zaplac </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>kwota</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="gracz_8cpp_source.html#l00093">93</a> of file <a class="el" href="gracz_8cpp_source.html">gracz.cpp</a>.</p>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_gracz_a18b1e1c55fe64c923060f8d627884002_icgraph.png" border="0" usemap="#class_gracz_a18b1e1c55fe64c923060f8d627884002_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="a9abc388dd7fac93da238eb82df52d482"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9abc388dd7fac93da238eb82df52d482">&#9670;&nbsp;</a></span>zaplac() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gracz::zaplac </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>kwota</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_gracz.html">Gracz</a> &amp;&#160;</td>
+          <td class="paramname"><em>gracz</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="gracz_8cpp_source.html#l00107">107</a> of file <a class="el" href="gracz_8cpp_source.html">gracz.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_gracz_a9abc388dd7fac93da238eb82df52d482_cgraph.png" border="0" usemap="#class_gracz_a9abc388dd7fac93da238eb82df52d482_cgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<a id="ae82af23c4fc8f34ed844cd0d95579374"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae82af23c4fc8f34ed844cd0d95579374">&#9670;&nbsp;</a></span>zmien_pozycje()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Gracz::zmien_pozycje </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>odleglosc</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>zmienia pozycje gracza o podana odleglosc </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">odleglosc</td><td>- podana odleglosc </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="gracz_8cpp_source.html#l00077">77</a> of file <a class="el" href="gracz_8cpp_source.html">gracz.cpp</a>.</p>
+<div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_gracz_ae82af23c4fc8f34ed844cd0d95579374_cgraph.png" border="0" usemap="#class_gracz_ae82af23c4fc8f34ed844cd0d95579374_cgraph" alt=""/></div>
+</div>
+<div class="dynheader">
+Here is the caller graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="class_gracz_ae82af23c4fc8f34ed844cd0d95579374_icgraph.png" border="0" usemap="#class_gracz_ae82af23c4fc8f34ed844cd0d95579374_icgraph" alt=""/></div>
+</div>
+
+</div>
+</div>
+<h2 class="groupheader">Friends And Related Function Documentation</h2>
+<a id="a62911cb75084f03eb9961368258eef95"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a62911cb75084f03eb9961368258eef95">&#9670;&nbsp;</a></span>operator==</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool operator== </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_gracz.html">Gracz</a>&#160;</td>
+          <td class="paramname"><em>gracz1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_gracz.html">Gracz</a> &amp;&#160;</td>
+          <td class="paramname"><em>gracz2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">friend</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="gracz_8h_source.html#l00054">54</a> of file <a class="el" href="gracz_8h_source.html">gracz.h</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="a46483a2d724d3b30709dc12704bcb778"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46483a2d724d3b30709dc12704bcb778">&#9670;&nbsp;</a></span>kolor</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::Color Gracz::kolor</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="gracz_8h_source.html#l00025">25</a> of file <a class="el" href="gracz_8h_source.html">gracz.h</a>.</p>
+
+</div>
+</div>
+<a id="a4b6cb4abfba854a45d71fe50dea46f81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b6cb4abfba854a45d71fe50dea46f81">&#9670;&nbsp;</a></span>nazwa</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string Gracz::nazwa = &quot;nazwa_gracza&quot;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="gracz_8h_source.html#l00026">26</a> of file <a class="el" href="gracz_8h_source.html">gracz.h</a>.</p>
+
+</div>
+</div>
+<a id="a188e9c156f9bc6c6a66398cec6b34851"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a188e9c156f9bc6c6a66398cec6b34851">&#9670;&nbsp;</a></span>pionek</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">sf::CircleShape Gracz::pionek</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="gracz_8h_source.html#l00024">24</a> of file <a class="el" href="gracz_8h_source.html">gracz.h</a>.</p>
+
+</div>
+</div>
+<a id="a2b6c9564ad6d2d3b65b6ca356cffbda9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b6c9564ad6d2d3b65b6ca356cffbda9">&#9670;&nbsp;</a></span>posiadane_pola</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">vector&lt;int&gt; Gracz::posiadane_pola</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="gracz_8h_source.html#l00027">27</a> of file <a class="el" href="gracz_8h_source.html">gracz.h</a>.</p>
+
+</div>
+</div>
+<a id="a32eb8d998a989643cfd8aa5fd2bd7683"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32eb8d998a989643cfd8aa5fd2bd7683">&#9670;&nbsp;</a></span>tura</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool Gracz::tura = false</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="gracz_8h_source.html#l00028">28</a> of file <a class="el" href="gracz_8h_source.html">gracz.h</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>D:/polibuda/sem2/monopoly/monopoly/<a class="el" href="gracz_8h_source.html">gracz.h</a></li>
-<li>D:/polibuda/sem2/monopoly/monopoly/gracz.cpp</li>
+<li>D:/polibuda/sem2/monopoly/monopoly/<a class="el" href="gracz_8cpp_source.html">gracz.cpp</a></li>
 </ul>
 </div><!-- contents -->
+</div><!-- doc-content -->
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.18
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_gracz.html">Gracz</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>

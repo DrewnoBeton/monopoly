@@ -8,6 +8,10 @@ using namespace std;
 #ifndef GRACZ_H
 #define GRACZ_H
 
+/**
+ * @brief The Gracz class
+ */
+
 class Gracz{
     int saldo =0;
     bool bankrut = false;
@@ -29,12 +33,20 @@ class Gracz{
 
     int id();
     int rzuc_kostkami();
+    /**
+     * @brief zmienia pozycje gracza o podana odleglosc
+     * @param odleglosc - podana odleglosc
+     */
     void zmien_pozycje(int odleglosc);
     int gdzie_jest();
     void zaplac(int kwota);
     void zaplac(int kwota, Gracz &gracz);
     void otrzymaj(int kwota);
     void otrzymaj(int kwota, Gracz &gracz);
+    /**
+     * @brief stan_konta
+     * @return
+     */
     int stan_konta();
     bool czy_bankrut();
     bool czy_wlasciciel(int id_pola);

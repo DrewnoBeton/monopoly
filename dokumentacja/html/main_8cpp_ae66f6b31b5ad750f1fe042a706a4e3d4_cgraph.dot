@@ -1,0 +1,40 @@
+digraph "main"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="main",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="czyja_tura",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funkcje_8cpp.html#aad3740b86a4266978288aafec74dffb8",tooltip=" "];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="debug_wyswietl_graczy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funkcje_8cpp.html#a6c5dcb0a1f5377d9dca7485b7656a650",tooltip=" "];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="debug_wyswietl_pola",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funkcje_8cpp.html#a67a9243ef8ab0ea36811d2e106e6d816",tooltip=" "];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="kup_lub_ulepsz_pole",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funkcje_8cpp.html#af55cc3e4378826a9e3ae6e8f8a02928a",tooltip=" "];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node6 [label="Gracz::gdzie_jest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_gracz.html#afdc9d50cee093657a5e1739897221efe",tooltip=" "];
+  Node5 -> Node7 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node7 [label="Gracz::id",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_gracz.html#a858548ee9ace1ac7acc8a744a34420f8",tooltip=" "];
+  Node1 -> Node8 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node8 [label="nowa_gra",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funkcje_8cpp.html#ab817d88f731e36637448f4d3f74b258e",tooltip=" "];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node9 [label="nowa_plansza",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funkcje_8cpp.html#ab5e6105b784ff595897534f72ec34988",tooltip=" "];
+  Node1 -> Node10 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 [label="ruch",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funkcje_8cpp.html#a695a5f91578fbf8cbafe31c109364d06",tooltip=" "];
+  Node10 -> Node6 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node10 -> Node11 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node11 [label="Gracz::rzuc_kostkami",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_gracz.html#a9f5ee97ace374124b736081d70140c54",tooltip=" "];
+  Node10 -> Node12 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node12 [label="Gracz::zmien_pozycje",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_gracz.html#ae82af23c4fc8f34ed844cd0d95579374",tooltip="zmienia pozycje gracza o podana odleglosc"];
+  Node12 -> Node13 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node13 [label="Gracz::otrzymaj",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_gracz.html#adc70b43039dcdfe80daf97e4fae8f994",tooltip=" "];
+  Node1 -> Node14 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node14 [label="ustaw_ture",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funkcje_8cpp.html#a9d7318e79c83ccf050bfa9402f9913e5",tooltip=" "];
+  Node14 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node1 -> Node15 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node15 [label="wyswietl_statystyki",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funkcje_8cpp.html#a2e1aa7df110079d123f7a6384f7ab4a8",tooltip=" "];
+  Node1 -> Node16 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node16 [label="wyswietl_wlascicieli",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funkcje_8cpp.html#a31a7ea3f6816327067da84581660acc6",tooltip=" "];
+}

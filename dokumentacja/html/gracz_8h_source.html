@@ -9,6 +9,10 @@
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
 <link href="search/search.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="search/searchdata.js"></script>
 <script type="text/javascript" src="search/search.js"></script>
@@ -20,6 +24,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="1572911971857529797.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Monopoly
    </div>
@@ -45,6 +50,23 @@ $(function() {
 });
 /* @license-end */</script>
 <div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('gracz_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
 <!-- window showing the filter options -->
 <div id="MSearchSelectWindow"
      onmouseover="return searchBox.OnSearchSelectShow()"
@@ -59,17 +81,12 @@ $(function() {
 </iframe>
 </div>
 
-<div id="nav-path" class="navpath">
-  <ul>
-<li class="navelem"><a class="el" href="dir_4a9fb555e93932f71bce8877fd7ac802.html">monopoly</a></li>  </ul>
-</div>
-</div><!-- top -->
 <div class="header">
   <div class="headertitle">
 <div class="title">gracz.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<a href="gracz_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;SFML/Window.hpp&gt;</span></div>
@@ -79,48 +96,58 @@ $(function() {
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef GRACZ_H</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define GRACZ_H</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_gracz.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_gracz.html">Gracz</a>{</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordtype">int</span> saldo =0;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keywordtype">bool</span> bankrut = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">int</span> poprzednia_pozycja = 0;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">int</span> pozycja = 0;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">int</span> id_;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_gracz.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_gracz.html">Gracz</a>{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">int</span> saldo =0;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">bool</span> bankrut = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    sf::CircleShape pionek;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    sf::Color kolor;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">string</span> nazwa = <span class="stringliteral">&quot;nazwa_gracza&quot;</span>;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    vector&lt;int&gt; posiadane_pola;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">bool</span> tura = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <a class="code" href="class_gracz.html">Gracz</a>();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <a class="code" href="class_gracz.html">Gracz</a>(<span class="keywordtype">string</span> arg_nazwa, <span class="keywordtype">bool</span> arg_bankrut, <span class="keywordtype">int</span> arg_saldo, <span class="keywordtype">int</span> arg_pozycja, <span class="keywordtype">bool</span> arg_tura);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    ~<a class="code" href="class_gracz.html">Gracz</a>();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">int</span> poprzednia_pozycja = 0;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">int</span> pozycja = 0;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">int</span> id_;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_gracz.html#a188e9c156f9bc6c6a66398cec6b34851">   24</a></span>&#160;    sf::CircleShape <a class="code" href="class_gracz.html#a188e9c156f9bc6c6a66398cec6b34851">pionek</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_gracz.html#a46483a2d724d3b30709dc12704bcb778">   25</a></span>&#160;    sf::Color <a class="code" href="class_gracz.html#a46483a2d724d3b30709dc12704bcb778">kolor</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_gracz.html#a4b6cb4abfba854a45d71fe50dea46f81">   26</a></span>&#160;    <span class="keywordtype">string</span> nazwa = <span class="stringliteral">&quot;nazwa_gracza&quot;</span>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_gracz.html#a2b6c9564ad6d2d3b65b6ca356cffbda9">   27</a></span>&#160;    vector&lt;int&gt; <a class="code" href="class_gracz.html#a2b6c9564ad6d2d3b65b6ca356cffbda9">posiadane_pola</a>;</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_gracz.html#a32eb8d998a989643cfd8aa5fd2bd7683">   28</a></span>&#160;    <span class="keywordtype">bool</span> tura = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">int</span> id();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">int</span> rzuc_kostkami();</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> zmien_pozycje(<span class="keywordtype">int</span> odleglosc);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keywordtype">int</span> gdzie_jest();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">void</span> zaplac(<span class="keywordtype">int</span> kwota);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">void</span> zaplac(<span class="keywordtype">int</span> kwota, <a class="code" href="class_gracz.html">Gracz</a> &amp;gracz);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keywordtype">void</span> otrzymaj(<span class="keywordtype">int</span> kwota);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordtype">void</span> otrzymaj(<span class="keywordtype">int</span> kwota, <a class="code" href="class_gracz.html">Gracz</a> &amp;gracz);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordtype">int</span> stan_konta();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keywordtype">bool</span> czy_bankrut();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">bool</span> czy_wlasciciel(<span class="keywordtype">int</span> id_pola);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">void</span> wyswietl_gracza(sf::RenderWindow &amp;window);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">friend</span> <span class="keywordtype">bool</span> operator==(<span class="keyword">const</span> <a class="code" href="class_gracz.html">Gracz</a> gracz1,<span class="keyword">const</span> <a class="code" href="class_gracz.html">Gracz</a> &amp;gracz2) {<span class="keywordflow">return</span> gracz1.nazwa==gracz2.nazwa;};</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;};</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#endif // GRACZ_H</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_gracz.html#a460af0a2e2749e8c81ae86127320013a">   30</a></span>&#160;    <a class="code" href="class_gracz.html#a460af0a2e2749e8c81ae86127320013a">Gracz</a>();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="class_gracz.html">Gracz</a>(<span class="keywordtype">string</span> arg_nazwa, <span class="keywordtype">bool</span> arg_bankrut, <span class="keywordtype">int</span> arg_saldo, <span class="keywordtype">int</span> arg_pozycja, <span class="keywordtype">bool</span> arg_tura);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    ~<a class="code" href="class_gracz.html">Gracz</a>();</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">int</span> id();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">int</span> rzuc_kostkami();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> zmien_pozycje(<span class="keywordtype">int</span> odleglosc);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">int</span> gdzie_jest();</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> zaplac(<span class="keywordtype">int</span> kwota);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> zaplac(<span class="keywordtype">int</span> kwota, <a class="code" href="class_gracz.html">Gracz</a> &amp;gracz);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> otrzymaj(<span class="keywordtype">int</span> kwota);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> otrzymaj(<span class="keywordtype">int</span> kwota, <a class="code" href="class_gracz.html">Gracz</a> &amp;gracz);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">int</span> stan_konta();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">bool</span> czy_bankrut();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">bool</span> czy_wlasciciel(<span class="keywordtype">int</span> id_pola);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> wyswietl_gracza(sf::RenderWindow &amp;window);</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_gracz.html#a62911cb75084f03eb9961368258eef95">   54</a></span>&#160;    <span class="keyword">friend</span> <span class="keywordtype">bool</span> <a class="code" href="class_gracz.html#a62911cb75084f03eb9961368258eef95">operator==</a>(<span class="keyword">const</span> <a class="code" href="class_gracz.html">Gracz</a> gracz1,<span class="keyword">const</span> <a class="code" href="class_gracz.html">Gracz</a> &amp;gracz2) {<span class="keywordflow">return</span> gracz1.<a class="code" href="class_gracz.html#a4b6cb4abfba854a45d71fe50dea46f81">nazwa</a>==gracz2.<a class="code" href="class_gracz.html#a4b6cb4abfba854a45d71fe50dea46f81">nazwa</a>;};</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;};</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#endif // GRACZ_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_gracz_html"><div class="ttname"><a href="class_gracz.html">Gracz</a></div><div class="ttdef"><b>Definition:</b> gracz.h:11</div></div>
+</div><!-- doc-content -->
+<div class="ttc" id="aclass_gracz_html"><div class="ttname"><a href="class_gracz.html">Gracz</a></div><div class="ttdoc">The Gracz class.</div><div class="ttdef"><b>Definition:</b> <a href="gracz_8h_source.html#l00015">gracz.h:15</a></div></div>
+<div class="ttc" id="aclass_gracz_html_a46483a2d724d3b30709dc12704bcb778"><div class="ttname"><a href="class_gracz.html#a46483a2d724d3b30709dc12704bcb778">Gracz::kolor</a></div><div class="ttdeci">sf::Color kolor</div><div class="ttdef"><b>Definition:</b> <a href="gracz_8h_source.html#l00025">gracz.h:25</a></div></div>
+<div class="ttc" id="aclass_gracz_html_a2b6c9564ad6d2d3b65b6ca356cffbda9"><div class="ttname"><a href="class_gracz.html#a2b6c9564ad6d2d3b65b6ca356cffbda9">Gracz::posiadane_pola</a></div><div class="ttdeci">vector&lt; int &gt; posiadane_pola</div><div class="ttdef"><b>Definition:</b> <a href="gracz_8h_source.html#l00027">gracz.h:27</a></div></div>
+<div class="ttc" id="aclass_gracz_html_a62911cb75084f03eb9961368258eef95"><div class="ttname"><a href="class_gracz.html#a62911cb75084f03eb9961368258eef95">Gracz::operator==</a></div><div class="ttdeci">friend bool operator==(const Gracz gracz1, const Gracz &amp;gracz2)</div><div class="ttdef"><b>Definition:</b> <a href="gracz_8h_source.html#l00054">gracz.h:54</a></div></div>
+<div class="ttc" id="aclass_gracz_html_a4b6cb4abfba854a45d71fe50dea46f81"><div class="ttname"><a href="class_gracz.html#a4b6cb4abfba854a45d71fe50dea46f81">Gracz::nazwa</a></div><div class="ttdeci">string nazwa</div><div class="ttdef"><b>Definition:</b> <a href="gracz_8h_source.html#l00026">gracz.h:26</a></div></div>
+<div class="ttc" id="aclass_gracz_html_a460af0a2e2749e8c81ae86127320013a"><div class="ttname"><a href="class_gracz.html#a460af0a2e2749e8c81ae86127320013a">Gracz::Gracz</a></div><div class="ttdeci">Gracz()</div></div>
+<div class="ttc" id="aclass_gracz_html_a188e9c156f9bc6c6a66398cec6b34851"><div class="ttname"><a href="class_gracz.html#a188e9c156f9bc6c6a66398cec6b34851">Gracz::pionek</a></div><div class="ttdeci">sf::CircleShape pionek</div><div class="ttdef"><b>Definition:</b> <a href="gracz_8h_source.html#l00024">gracz.h:24</a></div></div>
 <!-- start footer part -->
-<hr class="footer"/><address class="footer"><small>
-Generated by &#160;<a href="http://www.doxygen.org/index.html">
-<img class="footer" src="doxygen.png" alt="doxygen"/>
-</a> 1.8.18
-</small></address>
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_4a9fb555e93932f71bce8877fd7ac802.html">monopoly</a></li><li class="navelem"><a class="el" href="gracz_8h.html">gracz.h</a></li>
+    <li class="footer">Generated by
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.18 </li>
+  </ul>
+</div>
 </body>
 </html>
