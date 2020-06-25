@@ -6,49 +6,37 @@ int test(){
 }
 void nowa_plansza(vector<shared_ptr<Pole>> &pola)
 {
+    string typ;
+    int wlasciciel;
+    string nazwa;
+    int koszt;
+    vector<string> words;
+
+    fstream input_file("pliki//plansza.txt", ios::in);
+    if (input_file.is_open())
+    {
+        while (!input_file.eof())
+        {
+            string word;
+            input_file >> word;
+            words.emplace_back(word);
+        }
+    }
     if(!pola.empty()) pola.clear();
-    //grupy 1-zadupie, 2-wioska, 3-wies, 4-duza wies, 5-miasteczko, 6-male miasto, 7-miasto, 8-metropolia
-    pola.emplace_back(make_shared<Neutralne>(-1,"Start",9999999));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"Jablonowo Nowe",200,1));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"Jablonowo Stare",200,1));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"Stobno",200,1));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"Maczyce",200,1));
-    pola.emplace_back(make_shared<Specjalna>(-1,"Dworzec Poludniowy",750));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"Lucznik",400,2));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"Nowogard",400,2));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"Brzemiewice",400,2));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"Lobez",400,2));
-    pola.emplace_back(make_shared<Neutralne>(-1,"Parking #1",9999999)); //10
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"Mragowo",600,3));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"Wrzesnia",600,3));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"Biskupin",600,3));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"Tychy",600,3));
-    pola.emplace_back(make_shared<Specjalna>(-1,"Dworzec Zachodni",750));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"Olsztyn",800,4));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"Ciechocinek",800,4));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"Gniezno",800,4));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"Czestochowa",800,4));
-    pola.emplace_back(make_shared<Neutralne>(-1,"Parking #2",9999999)); //20
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"Szczecin",1000,5));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"Torun",1000,5));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"Bialystok",1000,5));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"Bydgoszcz",1000,5));
-    pola.emplace_back(make_shared<Specjalna>(-1,"Dworzec Polnocny",750));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"Krakow",1200,6));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"Poznan",1200,6));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"Gdansk",1200,6));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"Zakopane",1200,6));
-    pola.emplace_back(make_shared<Neutralne>(-1,"Parking #3",9999999)); //30
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"Praga",1400,7));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"Paryz",1400,7));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"Berlin",1400,7));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"Warszawa",1400,7));
-    pola.emplace_back(make_shared<Specjalna>(-1,"Dworzec Wschodni",750));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"Tokio",1600,8));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"Pekin",1600,8));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"Moskwa",1600,8));
-    pola.emplace_back(make_shared<Posiadlosc>(-1,"Nowy Jork",1600,8));
-    cout << "Utworzono nowa plansze!" <<endl;
+    for(int i =0; i<words.size();i++)
+    {
+        if(i%4 == 0) typ = words[i];
+        if(i%4 == 1) wlasciciel = stoi(words[i]);
+        if(i%4 == 2) nazwa = words[i];
+        if(i%4 == 3)
+        {
+            koszt = stoi(words[i]);
+            if(typ == "n") pola.emplace_back(make_shared<Neutralne>(wlasciciel,nazwa,koszt));//cout << "neutralne" << wlasciciel << nazwa << koszt <<endl;
+            if(typ == "p") pola.emplace_back(make_shared<Posiadlosc>(wlasciciel,nazwa,koszt));//cout << "posiadlosc" << wlasciciel << nazwa << koszt <<endl;
+            if(typ == "s") pola.emplace_back(make_shared<Specjalna>(wlasciciel,nazwa,koszt));//cout << "dworzec" << wlasciciel << nazwa << koszt <<endl;
+        }
+    }
+
 }
 void nowa_gra(vector<Gracz> &gracze,vector<shared_ptr<Pole>> &pola,int &ilosc)//do dokonczenia
 {
@@ -160,7 +148,7 @@ void debug_wyswietl_pola(vector<shared_ptr<Pole>> &pola)
     cout << endl;
     for(int i =0; i< pola.size(); i++)
     {
-        cout << i << " : " << pola[i]->id_wlasciciela() <<endl;
+        cout << i << " : " << pola[i]->id_wlasciciela() << " " <<pola[i]->nazwap() <<endl;
     }
 }
 void ruch(Gracz &gracz,vector<Gracz> &gracze,vector<shared_ptr<Pole>> &pola,sf::Text &tekst)

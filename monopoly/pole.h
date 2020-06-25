@@ -29,10 +29,7 @@ class Posiadlosc : public Pole
     int domki = 0;
     int koszt_domku = koszt*0.2;
     public:
-    Posiadlosc(int arg_wlasciciel,string arg_nazwa,int arg_koszt,int arg_grupa) : Pole(arg_wlasciciel,arg_nazwa,arg_koszt)
-    {
-        grupa = arg_grupa;
-    }
+    Posiadlosc(int arg_wlasciciel,string arg_nazwa,int arg_koszt) : Pole(arg_wlasciciel,arg_nazwa,arg_koszt){}
     void kup_pole(Gracz &gracz);
     void sprzedaj_pole(Gracz &gracz);
     void kup_domek(Gracz &gracz);

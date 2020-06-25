@@ -47,7 +47,7 @@ int main()
     tekst_statystyki.setColor(sf::Color::Black);
 
     sf::Music music;
-    if (!music.openFromFile("muza.ogg"))
+    if (!music.openFromFile("pliki//muza.ogg"))
         return -1; // error
     music.play();
     music.setLoop(true);
@@ -56,7 +56,7 @@ int main()
     sf::Clock clock;
 
     sf::Texture texture;
-    if (!texture.loadFromFile("obrazki//plansza_gotowa.png")) {
+    if (!texture.loadFromFile("pliki//plansza_gotowa.png")) {
         std::cerr << "Could not load texture" << std::endl;
         return 1;
     }
@@ -74,7 +74,8 @@ int main()
     gracze.emplace_back(gracz3);*/
     nowa_gra(gracze,pola,ilosc);
     debug_wyswietl_graczy(gracze);
-
+    //wczytaj(pola);
+    //cout << test();
     while (window.isOpen())
     {
         // check all the window's events that were triggered since the last iteration of the loop
