@@ -6,12 +6,12 @@
 using namespace std;
 #ifndef MONOPOLY_H
 #define MONOPOLY_H
-vector<Gracz> gracze;
+/*vector<Gracz> gracze;
 vector<shared_ptr<Pole>> pola;
 vector <sf::Sprite> pionki;
 bool koniec=false;
 bool menu = true;
-int ilosc =2;
+int ilosc =2;*/
 int test();
 void nowa_gra(vector<Gracz> &gracze,vector<shared_ptr<Pole>> &pola,int &ilosc);
 void nowa_plansza(vector<shared_ptr<Pole>> &pola);

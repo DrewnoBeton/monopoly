@@ -7,10 +7,12 @@ SOURCES += \
         funkcje.cpp \
         gracz.cpp \
         main.cpp \
+        menu.cpp \
         pole.cpp
 
 HEADERS += \
         gracz.h \
+        menu.h \
         monopoly.h \
         pole.h
 
