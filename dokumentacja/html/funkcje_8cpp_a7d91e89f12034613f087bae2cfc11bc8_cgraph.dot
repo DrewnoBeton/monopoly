@@ -1,0 +1,16 @@
+digraph "ruch"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="ruch",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="funkcja odpowiadająca za ruch gracza w jego turze"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="Gracz::gdzie_jest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_gracz.html#afdc9d50cee093657a5e1739897221efe",tooltip="zwraca pozycje na ktorej znajduje sie gracz"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Gracz::rzuc_kostkami",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_gracz.html#a9f5ee97ace374124b736081d70140c54",tooltip="zwraca liczbe wyrzucona przez gracza(2-12)"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Gracz::zmien_pozycje",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_gracz.html#ae82af23c4fc8f34ed844cd0d95579374",tooltip="zmienia pozycje gracza o podana odleglosc"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="Gracz::otrzymaj",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_gracz.html#adc70b43039dcdfe80daf97e4fae8f994",tooltip="gracz otrzymuje podana kwote od banku"];
+}

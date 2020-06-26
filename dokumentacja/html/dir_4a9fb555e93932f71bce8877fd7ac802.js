@@ -6,6 +6,10 @@ var dir_4a9fb555e93932f71bce8877fd7ac802 =
       [ "Gracz", "class_gracz.html", "class_gracz" ]
     ] ],
     [ "main.cpp", "main_8cpp.html", "main_8cpp" ],
+    [ "menu.cpp", "menu_8cpp.html", null ],
+    [ "menu.h", "menu_8h.html", [
+      [ "Menu", "class_menu.html", "class_menu" ]
+    ] ],
     [ "monopoly.h", "monopoly_8h.html", "monopoly_8h" ],
     [ "pole.cpp", "pole_8cpp.html", null ],
     [ "pole.h", "pole_8h.html", [

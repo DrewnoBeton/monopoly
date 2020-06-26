@@ -4,12 +4,14 @@ digraph "Gracz::gdzie_jest"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="RL";
-  Node1 [label="Gracz::gdzie_jest",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 [label="Gracz::gdzie_jest",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="zwraca pozycje na ktorej znajduje sie gracz"];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="kup_lub_ulepsz_pole",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$monopoly_8h.html#af55cc3e4378826a9e3ae6e8f8a02928a",tooltip=" "];
+  Node2 [label="kup_lub_ulepsz_pole",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$monopoly_8h.html#a151549d2ec4f2ccde96af85cbbc33669",tooltip="kupuje lub ulepsza pole"];
   Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4",tooltip=" "];
-  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 [label="ruch",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funkcje_8cpp.html#a695a5f91578fbf8cbafe31c109364d06",tooltip=" "];
-  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Menu::sterowanie",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_menu.html#a4dfd33c01ffd6a50b18eaf53a35bc4d2",tooltip="obsluguje sterowanie grą"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4",tooltip=" "];
+  Node1 -> Node5 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node5 [label="ruch",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funkcje_8cpp.html#a7d91e89f12034613f087bae2cfc11bc8",tooltip="funkcja odpowiadająca za ruch gracza w jego turze"];
+  Node5 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
 }

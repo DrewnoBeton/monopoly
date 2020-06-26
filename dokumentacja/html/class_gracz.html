@@ -24,7 +24,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="1572911971857529797.jpg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="ikonka.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Monopoly
    </div>
@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('class_gracz.html',''); initResizable()
 </div><!--header-->
 <div class="contents">
 
-<p>The <a class="el" href="class_gracz.html" title="The Gracz class.">Gracz</a> class.  
+<p>Jest to klasa przechowująca zmienne i metody każdego gracza.  
  <a href="class_gracz.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="gracz_8h_source.html">gracz.h</a>&gt;</code></p>
@@ -100,36 +100,49 @@ $(document).ready(function(){initNavTree('class_gracz.html',''); initResizable()
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a460af0a2e2749e8c81ae86127320013a"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a460af0a2e2749e8c81ae86127320013a">Gracz</a> ()</td></tr>
+<tr class="memdesc:a460af0a2e2749e8c81ae86127320013a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor domyslny, bez parametrow.  <a href="class_gracz.html#a460af0a2e2749e8c81ae86127320013a">More...</a><br /></td></tr>
 <tr class="separator:a460af0a2e2749e8c81ae86127320013a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3e7a8b3ea71cb147351ac3fd768626ac"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a3e7a8b3ea71cb147351ac3fd768626ac">Gracz</a> (string arg_nazwa, bool arg_bankrut, int arg_saldo, int arg_pozycja, bool arg_tura)</td></tr>
+<tr class="memdesc:a3e7a8b3ea71cb147351ac3fd768626ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konsturktor z parametrami.  <a href="class_gracz.html#a3e7a8b3ea71cb147351ac3fd768626ac">More...</a><br /></td></tr>
 <tr class="separator:a3e7a8b3ea71cb147351ac3fd768626ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abdad0e2d01ae6c1acaa0cd43d0787fc0"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#abdad0e2d01ae6c1acaa0cd43d0787fc0">~Gracz</a> ()</td></tr>
+<tr class="memdesc:abdad0e2d01ae6c1acaa0cd43d0787fc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruktor, w ramach zabezpieczenia ustawia stan konta na 0 i status bankruta.  <a href="class_gracz.html#abdad0e2d01ae6c1acaa0cd43d0787fc0">More...</a><br /></td></tr>
 <tr class="separator:abdad0e2d01ae6c1acaa0cd43d0787fc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a858548ee9ace1ac7acc8a744a34420f8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a858548ee9ace1ac7acc8a744a34420f8">id</a> ()</td></tr>
+<tr class="memdesc:a858548ee9ace1ac7acc8a744a34420f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">zwraca identyfikator gracza  <a href="class_gracz.html#a858548ee9ace1ac7acc8a744a34420f8">More...</a><br /></td></tr>
 <tr class="separator:a858548ee9ace1ac7acc8a744a34420f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9f5ee97ace374124b736081d70140c54"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a9f5ee97ace374124b736081d70140c54">rzuc_kostkami</a> ()</td></tr>
+<tr class="memdesc:a9f5ee97ace374124b736081d70140c54"><td class="mdescLeft">&#160;</td><td class="mdescRight">zwraca liczbe wyrzucona przez gracza(2-12)  <a href="class_gracz.html#a9f5ee97ace374124b736081d70140c54">More...</a><br /></td></tr>
 <tr class="separator:a9f5ee97ace374124b736081d70140c54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae82af23c4fc8f34ed844cd0d95579374"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#ae82af23c4fc8f34ed844cd0d95579374">zmien_pozycje</a> (int odleglosc)</td></tr>
 <tr class="memdesc:ae82af23c4fc8f34ed844cd0d95579374"><td class="mdescLeft">&#160;</td><td class="mdescRight">zmienia pozycje gracza o podana odleglosc  <a href="class_gracz.html#ae82af23c4fc8f34ed844cd0d95579374">More...</a><br /></td></tr>
 <tr class="separator:ae82af23c4fc8f34ed844cd0d95579374"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afdc9d50cee093657a5e1739897221efe"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#afdc9d50cee093657a5e1739897221efe">gdzie_jest</a> ()</td></tr>
+<tr class="memdesc:afdc9d50cee093657a5e1739897221efe"><td class="mdescLeft">&#160;</td><td class="mdescRight">zwraca pozycje na ktorej znajduje sie gracz  <a href="class_gracz.html#afdc9d50cee093657a5e1739897221efe">More...</a><br /></td></tr>
 <tr class="separator:afdc9d50cee093657a5e1739897221efe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18b1e1c55fe64c923060f8d627884002"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a18b1e1c55fe64c923060f8d627884002">zaplac</a> (int kwota)</td></tr>
+<tr class="memdesc:a18b1e1c55fe64c923060f8d627884002"><td class="mdescLeft">&#160;</td><td class="mdescRight">gracz placi podana kwote do banku  <a href="class_gracz.html#a18b1e1c55fe64c923060f8d627884002">More...</a><br /></td></tr>
 <tr class="separator:a18b1e1c55fe64c923060f8d627884002"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9abc388dd7fac93da238eb82df52d482"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a9abc388dd7fac93da238eb82df52d482">zaplac</a> (int kwota, <a class="el" href="class_gracz.html">Gracz</a> &amp;gracz)</td></tr>
+<tr class="memdesc:a9abc388dd7fac93da238eb82df52d482"><td class="mdescLeft">&#160;</td><td class="mdescRight">gracz placi podana kwote do innego graca  <a href="class_gracz.html#a9abc388dd7fac93da238eb82df52d482">More...</a><br /></td></tr>
 <tr class="separator:a9abc388dd7fac93da238eb82df52d482"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adc70b43039dcdfe80daf97e4fae8f994"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#adc70b43039dcdfe80daf97e4fae8f994">otrzymaj</a> (int kwota)</td></tr>
+<tr class="memdesc:adc70b43039dcdfe80daf97e4fae8f994"><td class="mdescLeft">&#160;</td><td class="mdescRight">gracz otrzymuje podana kwote od banku  <a href="class_gracz.html#adc70b43039dcdfe80daf97e4fae8f994">More...</a><br /></td></tr>
 <tr class="separator:adc70b43039dcdfe80daf97e4fae8f994"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae63d2c84faf7bd787b1dcc270d94ff4a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#ae63d2c84faf7bd787b1dcc270d94ff4a">otrzymaj</a> (int kwota, <a class="el" href="class_gracz.html">Gracz</a> &amp;gracz)</td></tr>
+<tr class="memdesc:ae63d2c84faf7bd787b1dcc270d94ff4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">gracz otrzymuje podana kwote od innego graca  <a href="class_gracz.html#ae63d2c84faf7bd787b1dcc270d94ff4a">More...</a><br /></td></tr>
 <tr class="separator:ae63d2c84faf7bd787b1dcc270d94ff4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b02ea548ef56aa43dde94395615635d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a9b02ea548ef56aa43dde94395615635d">stan_konta</a> ()</td></tr>
-<tr class="memdesc:a9b02ea548ef56aa43dde94395615635d"><td class="mdescLeft">&#160;</td><td class="mdescRight">stan_konta  <a href="class_gracz.html#a9b02ea548ef56aa43dde94395615635d">More...</a><br /></td></tr>
+<tr class="memdesc:a9b02ea548ef56aa43dde94395615635d"><td class="mdescLeft">&#160;</td><td class="mdescRight">zwraca stan konta gracza  <a href="class_gracz.html#a9b02ea548ef56aa43dde94395615635d">More...</a><br /></td></tr>
 <tr class="separator:a9b02ea548ef56aa43dde94395615635d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93677a5f9a7a422d29c3f0951f7d9369"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a93677a5f9a7a422d29c3f0951f7d9369">czy_bankrut</a> ()</td></tr>
+<tr class="memdesc:a93677a5f9a7a422d29c3f0951f7d9369"><td class="mdescLeft">&#160;</td><td class="mdescRight">zwraca informacje czy gracz zbankrutowal  <a href="class_gracz.html#a93677a5f9a7a422d29c3f0951f7d9369">More...</a><br /></td></tr>
 <tr class="separator:a93677a5f9a7a422d29c3f0951f7d9369"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a18681c0999a9257596b3178eb715e722"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a18681c0999a9257596b3178eb715e722">czy_wlasciciel</a> (int id_pola)</td></tr>
+<tr class="memdesc:a18681c0999a9257596b3178eb715e722"><td class="mdescLeft">&#160;</td><td class="mdescRight">sprawdza czy gracz jest wlascicielem podanego pola  <a href="class_gracz.html#a18681c0999a9257596b3178eb715e722">More...</a><br /></td></tr>
 <tr class="separator:a18681c0999a9257596b3178eb715e722"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a334f6d2296c28e8cefbec34dc82beb36"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a334f6d2296c28e8cefbec34dc82beb36">wyswietl_gracza</a> (sf::RenderWindow &amp;window)</td></tr>
+<tr class="memdesc:a334f6d2296c28e8cefbec34dc82beb36"><td class="mdescLeft">&#160;</td><td class="mdescRight">wyswietl_gracza  <a href="class_gracz.html#a334f6d2296c28e8cefbec34dc82beb36">More...</a><br /></td></tr>
 <tr class="separator:a334f6d2296c28e8cefbec34dc82beb36"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -148,12 +161,13 @@ Public Attributes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:a62911cb75084f03eb9961368258eef95"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_gracz.html#a62911cb75084f03eb9961368258eef95">operator==</a> (const <a class="el" href="class_gracz.html">Gracz</a> gracz1, const <a class="el" href="class_gracz.html">Gracz</a> &amp;gracz2)</td></tr>
+<tr class="memdesc:a62911cb75084f03eb9961368258eef95"><td class="mdescLeft">&#160;</td><td class="mdescRight">operator ==  <a href="class_gracz.html#a62911cb75084f03eb9961368258eef95">More...</a><br /></td></tr>
 <tr class="separator:a62911cb75084f03eb9961368258eef95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>The <a class="el" href="class_gracz.html" title="The Gracz class.">Gracz</a> class. </p>
+<div class="textblock"><p>Jest to klasa przechowująca zmienne i metody każdego gracza. </p>
 
-<p class="definition">Definition at line <a class="el" href="gracz_8h_source.html#l00015">15</a> of file <a class="el" href="gracz_8h_source.html">gracz.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gracz_8h_source.html#l00016">16</a> of file <a class="el" href="gracz_8h_source.html">gracz.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a460af0a2e2749e8c81ae86127320013a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a460af0a2e2749e8c81ae86127320013a">&#9670;&nbsp;</a></span>Gracz() <span class="overload">[1/2]</span></h2>
@@ -169,6 +183,8 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Konstruktor domyslny, bez parametrow. </p>
 
 </div>
 </div>
@@ -216,6 +232,18 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Konsturktor z parametrami. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg_nazwa</td><td>nazwa gracza </td></tr>
+    <tr><td class="paramname">arg_bankrut</td><td>czy gracz jest bankrutem </td></tr>
+    <tr><td class="paramname">arg_saldo</td><td>poczatkowy stan konta gracza </td></tr>
+    <tr><td class="paramname">arg_pozycja</td><td>poczatkowa pozycja na ktorej znajduje sie gracz </td></tr>
+    <tr><td class="paramname">arg_tura</td><td>czy gracz ma ture </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition">Definition at line <a class="el" href="gracz_8cpp_source.html#l00003">3</a> of file <a class="el" href="gracz_8cpp_source.html">gracz.cpp</a>.</p>
 
 </div>
@@ -234,6 +262,8 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Destruktor, w ramach zabezpieczenia ustawia stan konta na 0 i status bankruta. </p>
 
 <p class="definition">Definition at line <a class="el" href="gracz_8cpp_source.html#l00063">63</a> of file <a class="el" href="gracz_8cpp_source.html">gracz.cpp</a>.</p>
 
@@ -255,6 +285,9 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>zwraca informacje czy gracz zbankrutowal </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
 <p class="definition">Definition at line <a class="el" href="gracz_8cpp_source.html#l00121">121</a> of file <a class="el" href="gracz_8cpp_source.html">gracz.cpp</a>.</p>
 
 </div>
@@ -275,6 +308,15 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>sprawdza czy gracz jest wlascicielem podanego pola </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id_pola</td><td>pole, które sprawdzamy </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
 <p class="definition">Definition at line <a class="el" href="gracz_8cpp_source.html#l00125">125</a> of file <a class="el" href="gracz_8cpp_source.html">gracz.cpp</a>.</p>
 
 </div>
@@ -294,12 +336,10 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>zwraca pozycje na ktorej znajduje sie gracz </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
 <p class="definition">Definition at line <a class="el" href="gracz_8cpp_source.html#l00089">89</a> of file <a class="el" href="gracz_8cpp_source.html">gracz.cpp</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_gracz_afdc9d50cee093657a5e1739897221efe_icgraph.png" border="0" usemap="#class_gracz_afdc9d50cee093657a5e1739897221efe_icgraph" alt=""/></div>
-</div>
 
 </div>
 </div>
@@ -318,12 +358,10 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>zwraca identyfikator gracza </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
 <p class="definition">Definition at line <a class="el" href="gracz_8cpp_source.html#l00069">69</a> of file <a class="el" href="gracz_8cpp_source.html">gracz.cpp</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_gracz_a858548ee9ace1ac7acc8a744a34420f8_icgraph.png" border="0" usemap="#class_gracz_a858548ee9ace1ac7acc8a744a34420f8_icgraph" alt=""/></div>
-</div>
 
 </div>
 </div>
@@ -343,12 +381,15 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>gracz otrzymuje podana kwote od banku </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">kwota</td><td>kwota, którą gracz ma otrzymać </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition">Definition at line <a class="el" href="gracz_8cpp_source.html#l00103">103</a> of file <a class="el" href="gracz_8cpp_source.html">gracz.cpp</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_gracz_adc70b43039dcdfe80daf97e4fae8f994_icgraph.png" border="0" usemap="#class_gracz_adc70b43039dcdfe80daf97e4fae8f994_icgraph" alt=""/></div>
-</div>
 
 </div>
 </div>
@@ -378,12 +419,16 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>gracz otrzymuje podana kwote od innego graca </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">kwota</td><td>kwota, którą gracz ma otrzymać </td></tr>
+    <tr><td class="paramname">gracz</td><td>gracz, który ma zapłacić kwotę </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition">Definition at line <a class="el" href="gracz_8cpp_source.html#l00112">112</a> of file <a class="el" href="gracz_8cpp_source.html">gracz.cpp</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_gracz_ae63d2c84faf7bd787b1dcc270d94ff4a_cgraph.png" border="0" usemap="#class_gracz_ae63d2c84faf7bd787b1dcc270d94ff4a_cgraph" alt=""/></div>
-</div>
 
 </div>
 </div>
@@ -402,12 +447,10 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>zwraca liczbe wyrzucona przez gracza(2-12) </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
 <p class="definition">Definition at line <a class="el" href="gracz_8cpp_source.html#l00073">73</a> of file <a class="el" href="gracz_8cpp_source.html">gracz.cpp</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_gracz_a9f5ee97ace374124b736081d70140c54_icgraph.png" border="0" usemap="#class_gracz_a9f5ee97ace374124b736081d70140c54_icgraph" alt=""/></div>
-</div>
 
 </div>
 </div>
@@ -426,7 +469,7 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
-<p>stan_konta </p>
+<p>zwraca stan konta gracza </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="gracz_8cpp_source.html#l00117">117</a> of file <a class="el" href="gracz_8cpp_source.html">gracz.cpp</a>.</p>
@@ -449,6 +492,14 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>wyswietl_gracza </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">window</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition">Definition at line <a class="el" href="gracz_8cpp_source.html#l00138">138</a> of file <a class="el" href="gracz_8cpp_source.html">gracz.cpp</a>.</p>
 
 </div>
@@ -469,12 +520,15 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>gracz placi podana kwote do banku </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">kwota</td><td>kwota, którą gracz ma zapłacić </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition">Definition at line <a class="el" href="gracz_8cpp_source.html#l00093">93</a> of file <a class="el" href="gracz_8cpp_source.html">gracz.cpp</a>.</p>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_gracz_a18b1e1c55fe64c923060f8d627884002_icgraph.png" border="0" usemap="#class_gracz_a18b1e1c55fe64c923060f8d627884002_icgraph" alt=""/></div>
-</div>
 
 </div>
 </div>
@@ -504,12 +558,16 @@ Here is the caller graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>gracz placi podana kwote do innego graca </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">kwota</td><td>kwota, którą gracz ma zapłacić </td></tr>
+    <tr><td class="paramname">gracz</td><td>gracz, który ma otrzymać kwotę </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition">Definition at line <a class="el" href="gracz_8cpp_source.html#l00107">107</a> of file <a class="el" href="gracz_8cpp_source.html">gracz.cpp</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_gracz_a9abc388dd7fac93da238eb82df52d482_cgraph.png" border="0" usemap="#class_gracz_a9abc388dd7fac93da238eb82df52d482_cgraph" alt=""/></div>
-</div>
 
 </div>
 </div>
@@ -532,22 +590,12 @@ Here is the call graph for this function:</div>
 <p>zmienia pozycje gracza o podana odleglosc </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">odleglosc</td><td>- podana odleglosc </td></tr>
+    <tr><td class="paramname">odleglosc</td><td>podana odleglosc </td></tr>
   </table>
   </dd>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="gracz_8cpp_source.html#l00077">77</a> of file <a class="el" href="gracz_8cpp_source.html">gracz.cpp</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_gracz_ae82af23c4fc8f34ed844cd0d95579374_cgraph.png" border="0" usemap="#class_gracz_ae82af23c4fc8f34ed844cd0d95579374_cgraph" alt=""/></div>
-</div>
-<div class="dynheader">
-Here is the caller graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_gracz_ae82af23c4fc8f34ed844cd0d95579374_icgraph.png" border="0" usemap="#class_gracz_ae82af23c4fc8f34ed844cd0d95579374_icgraph" alt=""/></div>
-</div>
 
 </div>
 </div>
@@ -586,7 +634,17 @@ Here is the caller graph for this function:</div>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="gracz_8h_source.html#l00054">54</a> of file <a class="el" href="gracz_8h_source.html">gracz.h</a>.</p>
+<p>operator == </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gracz1</td><td>pierwszy gracz </td></tr>
+    <tr><td class="paramname">gracz1</td><td>drugi gracz </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="gracz_8h_source.html#l00125">125</a> of file <a class="el" href="gracz_8h_source.html">gracz.h</a>.</p>
 
 </div>
 </div>
@@ -602,8 +660,11 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<ul>
+<li>kolor odpowiadajacy graczu </li>
+</ul>
 
-<p class="definition">Definition at line <a class="el" href="gracz_8h_source.html#l00025">25</a> of file <a class="el" href="gracz_8h_source.html">gracz.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gracz_8h_source.html#l00030">30</a> of file <a class="el" href="gracz_8h_source.html">gracz.h</a>.</p>
 
 </div>
 </div>
@@ -618,8 +679,11 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<ul>
+<li>nazwa gracza </li>
+</ul>
 
-<p class="definition">Definition at line <a class="el" href="gracz_8h_source.html#l00026">26</a> of file <a class="el" href="gracz_8h_source.html">gracz.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gracz_8h_source.html#l00032">32</a> of file <a class="el" href="gracz_8h_source.html">gracz.h</a>.</p>
 
 </div>
 </div>
@@ -634,8 +698,11 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<ul>
+<li>pionek odpowiadajacy graczu </li>
+</ul>
 
-<p class="definition">Definition at line <a class="el" href="gracz_8h_source.html#l00024">24</a> of file <a class="el" href="gracz_8h_source.html">gracz.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gracz_8h_source.html#l00028">28</a> of file <a class="el" href="gracz_8h_source.html">gracz.h</a>.</p>
 
 </div>
 </div>
@@ -650,8 +717,11 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<ul>
+<li>identyfikatory pol posiadanych przez gracza </li>
+</ul>
 
-<p class="definition">Definition at line <a class="el" href="gracz_8h_source.html#l00027">27</a> of file <a class="el" href="gracz_8h_source.html">gracz.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gracz_8h_source.html#l00034">34</a> of file <a class="el" href="gracz_8h_source.html">gracz.h</a>.</p>
 
 </div>
 </div>
@@ -666,8 +736,11 @@ Here is the caller graph for this function:</div>
         </tr>
       </table>
 </div><div class="memdoc">
+<ul>
+<li>czy gracz ma ture </li>
+</ul>
 
-<p class="definition">Definition at line <a class="el" href="gracz_8h_source.html#l00028">28</a> of file <a class="el" href="gracz_8h_source.html">gracz.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="gracz_8h_source.html#l00036">36</a> of file <a class="el" href="gracz_8h_source.html">gracz.h</a>.</p>
 
 </div>
 </div>

@@ -2,23 +2,30 @@
 \label{class_pole}\index{Pole@{Pole}}
 
 
+Klasa abstrakcyjna, sluzy do dziedziczenia przez inne rodzaje pol.  
+
+
+
+
 {\ttfamily \#include $<$pole.\+h$>$}
 
-
-
-Inheritance diagram for Pole\+:
-% FIG 0
+Inheritance diagram for Pole\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_pole}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_pole_abc633ce15c565e9f7eb0fb3412d7752b}{Pole}} (int arg\+\_\+wlasciciel, string arg\+\_\+nazwa, int arg\+\_\+koszt)
-\item 
+\begin{DoxyCompactList}\small\item\em Kostruktor pola. \end{DoxyCompactList}\item 
 virtual int \mbox{\hyperlink{class_pole_aaf53712b7dbb3e6c60392bb0f6f7d892}{id\+\_\+wlasciciela}} ()
-\item 
-virtual void \mbox{\hyperlink{class_pole_aec17f99be9f1cf860aa26d143460b4ea}{efekt\+\_\+na\+\_\+graczu}} (\mbox{\hyperlink{class_gracz}{Gracz}} \&gracz, vector$<$ \mbox{\hyperlink{class_gracz}{Gracz}} $>$ \&arg\+\_\+gracze, vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{class_pole}{Pole}} $>$$>$ \&\mbox{\hyperlink{monopoly_8h_a9949f5d6dcb8f2151a69e55e0e9379da}{pola}}, sf\+::\+Text \&tekst)=0
-\item 
+\begin{DoxyCompactList}\small\item\em zwraca identyfikator właściciela \end{DoxyCompactList}\item 
+virtual void \mbox{\hyperlink{class_pole_aafd7b8a0b45b3d599243c0eb2a8d9282}{efekt\+\_\+na\+\_\+graczu}} (\mbox{\hyperlink{class_gracz}{Gracz}} \&gracz, vector$<$ \mbox{\hyperlink{class_gracz}{Gracz}} $>$ \&arg\+\_\+gracze, vector$<$ unique\+\_\+ptr$<$ \mbox{\hyperlink{class_pole}{Pole}} $>$$>$ \&pola, sf\+::\+Text \&tekst)=0
+\begin{DoxyCompactList}\small\item\em wykonuje czynności po najechaniu gracza na pole \end{DoxyCompactList}\item 
 string \mbox{\hyperlink{class_pole_adada21b101d324f21f787c089235996f}{nazwap}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em zwraca nazwę pola \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Protected Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -31,14 +38,14 @@ int \mbox{\hyperlink{class_pole_a44a7635e270456e6b13d4727a097824f}{koszt}}
 \doxysubsection*{Friends}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_pole_a695a5f91578fbf8cbafe31c109364d06}{ruch}} (\mbox{\hyperlink{class_gracz}{Gracz}} \&gracz, vector$<$ \mbox{\hyperlink{class_gracz}{Gracz}} $>$ \&\mbox{\hyperlink{monopoly_8h_a05108cc23849c3ea13760c1b54482aae}{gracze}}, vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{class_pole}{Pole}} $>$$>$ \&\mbox{\hyperlink{monopoly_8h_a9949f5d6dcb8f2151a69e55e0e9379da}{pola}}, sf\+::\+Text \&tekst)
-\end{DoxyCompactItemize}
+void \mbox{\hyperlink{class_pole_a7d91e89f12034613f087bae2cfc11bc8}{ruch}} (\mbox{\hyperlink{class_gracz}{Gracz}} \&gracz, vector$<$ \mbox{\hyperlink{class_gracz}{Gracz}} $>$ \&gracze, vector$<$ unique\+\_\+ptr$<$ \mbox{\hyperlink{class_pole}{Pole}} $>$$>$ \&pola, sf\+::\+Text \&tekst)
+\begin{DoxyCompactList}\small\item\em funkcja odpowiadająca za ruch gracza w jego turze \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
+Klasa abstrakcyjna, sluzy do dziedziczenia przez inne rodzaje pol. 
 
-
-Definition at line 6 of file pole.\+h.
+Definition at line 9 of file pole.\+h.
 
 
 
@@ -51,20 +58,48 @@ Definition at line 6 of file pole.\+h.
 
 
 
+Kostruktor pola. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg\+\_\+wlasciciel} & własciciel pola \\
+\hline
+{\em arg\+\_\+nazwa} & nazwa pola \\
+\hline
+{\em arg\+\_\+koszt} & koszt pola \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line 4 of file pole.\+cpp.
 
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_pole_aec17f99be9f1cf860aa26d143460b4ea}\label{class_pole_aec17f99be9f1cf860aa26d143460b4ea}} 
+\mbox{\Hypertarget{class_pole_aafd7b8a0b45b3d599243c0eb2a8d9282}\label{class_pole_aafd7b8a0b45b3d599243c0eb2a8d9282}} 
 \index{Pole@{Pole}!efekt\_na\_graczu@{efekt\_na\_graczu}}
 \index{efekt\_na\_graczu@{efekt\_na\_graczu}!Pole@{Pole}}
 \doxysubsubsection{\texorpdfstring{efekt\_na\_graczu()}{efekt\_na\_graczu()}}
-{\footnotesize\ttfamily virtual void Pole\+::efekt\+\_\+na\+\_\+graczu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gracz}{Gracz}} \&}]{gracz,  }\item[{vector$<$ \mbox{\hyperlink{class_gracz}{Gracz}} $>$ \&}]{arg\+\_\+gracze,  }\item[{vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{class_pole}{Pole}} $>$$>$ \&}]{pola,  }\item[{sf\+::\+Text \&}]{tekst }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
+{\footnotesize\ttfamily virtual void Pole\+::efekt\+\_\+na\+\_\+graczu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gracz}{Gracz}} \&}]{gracz,  }\item[{vector$<$ \mbox{\hyperlink{class_gracz}{Gracz}} $>$ \&}]{arg\+\_\+gracze,  }\item[{vector$<$ unique\+\_\+ptr$<$ \mbox{\hyperlink{class_pole}{Pole}} $>$$>$ \&}]{pola,  }\item[{sf\+::\+Text \&}]{tekst }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [pure virtual]}}
 
 
 
-Implemented in \mbox{\hyperlink{class_specjalna_a29eda8c094c1aac1f9cee1ea43b32f6f}{Specjalna}}, \mbox{\hyperlink{class_posiadlosc_a0e84f1a1b27c142d552e615ec0141780}{Posiadlosc}}, and \mbox{\hyperlink{class_neutralne_ac16b139c72d3922431f03adeebcac8bd}{Neutralne}}.
+wykonuje czynności po najechaniu gracza na pole 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gracz} & gracz, który wszedł na pole \\
+\hline
+{\em arg\+\_\+gracze} & wektor graczy \\
+\hline
+{\em pola} & wektor pól \\
+\hline
+{\em tekst} & tekst w sfml, w którym wyświetlamy \\
+\hline
+\end{DoxyParams}
+
+
+Implemented in \mbox{\hyperlink{class_specjalna_abf8dd546f746608a5b2352dd4a8eea56}{Specjalna}}, \mbox{\hyperlink{class_posiadlosc_aefb13171958ff84c8c711b5c4783bbc1}{Posiadlosc}}, and \mbox{\hyperlink{class_neutralne_a8f91beecd6164fc80e13d8005f47678a}{Neutralne}}.
 
 \mbox{\Hypertarget{class_pole_aaf53712b7dbb3e6c60392bb0f6f7d892}\label{class_pole_aaf53712b7dbb3e6c60392bb0f6f7d892}} 
 \index{Pole@{Pole}!id\_wlasciciela@{id\_wlasciciela}}
@@ -74,10 +109,15 @@ Implemented in \mbox{\hyperlink{class_specjalna_a29eda8c094c1aac1f9cee1ea43b32f6
 
 
 
+zwraca identyfikator właściciela 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
 Definition at line 10 of file pole.\+cpp.
 
-Here is the caller graph for this function\+:
-% FIG 1
 \mbox{\Hypertarget{class_pole_adada21b101d324f21f787c089235996f}\label{class_pole_adada21b101d324f21f787c089235996f}} 
 \index{Pole@{Pole}!nazwap@{nazwap}}
 \index{nazwap@{nazwap}!Pole@{Pole}}
@@ -86,20 +126,42 @@ Here is the caller graph for this function\+:
 
 
 
+zwraca nazwę pola 
+
+\begin{DoxyReturn}{Returns}
+
+\end{DoxyReturn}
+
+
 Definition at line 15 of file pole.\+cpp.
 
 
 
 \doxysubsection{Friends And Related Function Documentation}
-\mbox{\Hypertarget{class_pole_a695a5f91578fbf8cbafe31c109364d06}\label{class_pole_a695a5f91578fbf8cbafe31c109364d06}} 
+\mbox{\Hypertarget{class_pole_a7d91e89f12034613f087bae2cfc11bc8}\label{class_pole_a7d91e89f12034613f087bae2cfc11bc8}} 
 \index{Pole@{Pole}!ruch@{ruch}}
 \index{ruch@{ruch}!Pole@{Pole}}
 \doxysubsubsection{\texorpdfstring{ruch}{ruch}}
-{\footnotesize\ttfamily void ruch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gracz}{Gracz}} \&}]{gracz,  }\item[{vector$<$ \mbox{\hyperlink{class_gracz}{Gracz}} $>$ \&}]{gracze,  }\item[{vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{class_pole}{Pole}} $>$$>$ \&}]{pola,  }\item[{sf\+::\+Text \&}]{tekst }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+{\footnotesize\ttfamily void ruch (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gracz}{Gracz}} \&}]{gracz,  }\item[{vector$<$ \mbox{\hyperlink{class_gracz}{Gracz}} $>$ \&}]{gracze,  }\item[{vector$<$ unique\+\_\+ptr$<$ \mbox{\hyperlink{class_pole}{Pole}} $>$$>$ \&}]{pola,  }\item[{sf\+::\+Text \&}]{tekst }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
 
 
 
-Definition at line 166 of file funkcje.\+cpp.
+funkcja odpowiadająca za ruch gracza w jego turze 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gracz} & gracz, którego jest tura \\
+\hline
+{\em gracze} & wektor graczy \\
+\hline
+{\em pola} & wektor pól \\
+\hline
+{\em teskt} & tekst w sfml, w którym wyświetlamy \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 154 of file funkcje.\+cpp.
 
 
 
@@ -111,8 +173,11 @@ Definition at line 166 of file funkcje.\+cpp.
 {\footnotesize\ttfamily int Pole\+::id\+\_\+wlasciciela\+\_\+ =-\/1\hspace{0.3cm}{\ttfamily [protected]}}
 
 
+\begin{DoxyItemize}
+\item identyfikator wlasciciela pola, -\/1 to bank 
+\end{DoxyItemize}
 
-Definition at line 8 of file pole.\+h.
+Definition at line 12 of file pole.\+h.
 
 \mbox{\Hypertarget{class_pole_a44a7635e270456e6b13d4727a097824f}\label{class_pole_a44a7635e270456e6b13d4727a097824f}} 
 \index{Pole@{Pole}!koszt@{koszt}}
@@ -121,8 +186,11 @@ Definition at line 8 of file pole.\+h.
 {\footnotesize\ttfamily int Pole\+::koszt\hspace{0.3cm}{\ttfamily [protected]}}
 
 
+\begin{DoxyItemize}
+\item koszt pola 
+\end{DoxyItemize}
 
-Definition at line 10 of file pole.\+h.
+Definition at line 16 of file pole.\+h.
 
 \mbox{\Hypertarget{class_pole_ab57a368aef853e4e1e563abd2b41dcc7}\label{class_pole_ab57a368aef853e4e1e563abd2b41dcc7}} 
 \index{Pole@{Pole}!nazwa@{nazwa}}
@@ -131,8 +199,11 @@ Definition at line 10 of file pole.\+h.
 {\footnotesize\ttfamily string Pole\+::nazwa = \char`\"{}nazwa\+\_\+pola\char`\"{}\hspace{0.3cm}{\ttfamily [protected]}}
 
 
+\begin{DoxyItemize}
+\item nazwa pola 
+\end{DoxyItemize}
 
-Definition at line 9 of file pole.\+h.
+Definition at line 14 of file pole.\+h.
 
 
 

@@ -4,9 +4,11 @@ digraph "Gracz::rzuc_kostkami"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="RL";
-  Node1 [label="Gracz::rzuc_kostkami",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 [label="Gracz::rzuc_kostkami",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="zwraca liczbe wyrzucona przez gracza(2-12)"];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="ruch",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funkcje_8cpp.html#a695a5f91578fbf8cbafe31c109364d06",tooltip=" "];
+  Node2 [label="ruch",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funkcje_8cpp.html#a7d91e89f12034613f087bae2cfc11bc8",tooltip="funkcja odpowiadająca za ruch gracza w jego turze"];
   Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4",tooltip=" "];
+  Node3 [label="Menu::sterowanie",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_menu.html#a4dfd33c01ffd6a50b18eaf53a35bc4d2",tooltip="obsluguje sterowanie grą"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4",tooltip=" "];
 }

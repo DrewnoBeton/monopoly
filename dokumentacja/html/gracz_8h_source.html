@@ -24,7 +24,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="1572911971857529797.jpg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="ikonka.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Monopoly
    </div>
@@ -89,57 +89,56 @@ $(document).ready(function(){initNavTree('gracz_8h_source.html',''); initResizab
 <a href="gracz_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;SFML/Window.hpp&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;SFML/Graphics.hpp&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;SFML/Audio.hpp&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">using namespace </span>std;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#ifndef GRACZ_H</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#define GRACZ_H</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_gracz.html">   15</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_gracz.html">Gracz</a>{</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordtype">int</span> saldo =0;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">bool</span> bankrut = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">int</span> poprzednia_pozycja = 0;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">int</span> pozycja = 0;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">int</span> id_;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_gracz.html#a188e9c156f9bc6c6a66398cec6b34851">   24</a></span>&#160;    sf::CircleShape <a class="code" href="class_gracz.html#a188e9c156f9bc6c6a66398cec6b34851">pionek</a>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_gracz.html#a46483a2d724d3b30709dc12704bcb778">   25</a></span>&#160;    sf::Color <a class="code" href="class_gracz.html#a46483a2d724d3b30709dc12704bcb778">kolor</a>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_gracz.html#a4b6cb4abfba854a45d71fe50dea46f81">   26</a></span>&#160;    <span class="keywordtype">string</span> nazwa = <span class="stringliteral">&quot;nazwa_gracza&quot;</span>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_gracz.html#a2b6c9564ad6d2d3b65b6ca356cffbda9">   27</a></span>&#160;    vector&lt;int&gt; <a class="code" href="class_gracz.html#a2b6c9564ad6d2d3b65b6ca356cffbda9">posiadane_pola</a>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_gracz.html#a32eb8d998a989643cfd8aa5fd2bd7683">   28</a></span>&#160;    <span class="keywordtype">bool</span> tura = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_gracz.html#a460af0a2e2749e8c81ae86127320013a">   30</a></span>&#160;    <a class="code" href="class_gracz.html#a460af0a2e2749e8c81ae86127320013a">Gracz</a>();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <a class="code" href="class_gracz.html">Gracz</a>(<span class="keywordtype">string</span> arg_nazwa, <span class="keywordtype">bool</span> arg_bankrut, <span class="keywordtype">int</span> arg_saldo, <span class="keywordtype">int</span> arg_pozycja, <span class="keywordtype">bool</span> arg_tura);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    ~<a class="code" href="class_gracz.html">Gracz</a>();</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keywordtype">int</span> id();</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">int</span> rzuc_kostkami();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">void</span> zmien_pozycje(<span class="keywordtype">int</span> odleglosc);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordtype">int</span> gdzie_jest();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keywordtype">void</span> zaplac(<span class="keywordtype">int</span> kwota);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">void</span> zaplac(<span class="keywordtype">int</span> kwota, <a class="code" href="class_gracz.html">Gracz</a> &amp;gracz);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="keywordtype">void</span> otrzymaj(<span class="keywordtype">int</span> kwota);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordtype">void</span> otrzymaj(<span class="keywordtype">int</span> kwota, <a class="code" href="class_gracz.html">Gracz</a> &amp;gracz);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">int</span> stan_konta();</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordtype">bool</span> czy_bankrut();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keywordtype">bool</span> czy_wlasciciel(<span class="keywordtype">int</span> id_pola);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordtype">void</span> wyswietl_gracza(sf::RenderWindow &amp;window);</div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_gracz.html#a62911cb75084f03eb9961368258eef95">   54</a></span>&#160;    <span class="keyword">friend</span> <span class="keywordtype">bool</span> <a class="code" href="class_gracz.html#a62911cb75084f03eb9961368258eef95">operator==</a>(<span class="keyword">const</span> <a class="code" href="class_gracz.html">Gracz</a> gracz1,<span class="keyword">const</span> <a class="code" href="class_gracz.html">Gracz</a> &amp;gracz2) {<span class="keywordflow">return</span> gracz1.<a class="code" href="class_gracz.html#a4b6cb4abfba854a45d71fe50dea46f81">nazwa</a>==gracz2.<a class="code" href="class_gracz.html#a4b6cb4abfba854a45d71fe50dea46f81">nazwa</a>;};</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;SFML/Window.hpp&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;SFML/Graphics.hpp&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;SFML/Audio.hpp&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using namespace </span>std;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef GRACZ_H</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define GRACZ_H</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_gracz.html">   16</a></span>&#160;<span class="keyword">class </span><a class="code" href="class_gracz.html">Gracz</a>{</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">int</span> saldo =0;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">bool</span> bankrut = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">int</span> pozycja = 0;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">int</span> id_;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_gracz.html#a188e9c156f9bc6c6a66398cec6b34851">   28</a></span>&#160;    sf::CircleShape <a class="code" href="class_gracz.html#a188e9c156f9bc6c6a66398cec6b34851">pionek</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_gracz.html#a46483a2d724d3b30709dc12704bcb778">   30</a></span>&#160;    sf::Color <a class="code" href="class_gracz.html#a46483a2d724d3b30709dc12704bcb778">kolor</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="class_gracz.html#a4b6cb4abfba854a45d71fe50dea46f81">   32</a></span>&#160;    <span class="keywordtype">string</span> nazwa = <span class="stringliteral">&quot;nazwa_gracza&quot;</span>;</div>
+<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="class_gracz.html#a2b6c9564ad6d2d3b65b6ca356cffbda9">   34</a></span>&#160;    vector&lt;int&gt; <a class="code" href="class_gracz.html#a2b6c9564ad6d2d3b65b6ca356cffbda9">posiadane_pola</a>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_gracz.html#a32eb8d998a989643cfd8aa5fd2bd7683">   36</a></span>&#160;    <span class="keywordtype">bool</span> tura = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno"><a class="line" href="class_gracz.html#a460af0a2e2749e8c81ae86127320013a">   41</a></span>&#160;    <a class="code" href="class_gracz.html#a460af0a2e2749e8c81ae86127320013a">Gracz</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <a class="code" href="class_gracz.html">Gracz</a>(<span class="keywordtype">string</span> arg_nazwa, <span class="keywordtype">bool</span> arg_bankrut, <span class="keywordtype">int</span> arg_saldo, <span class="keywordtype">int</span> arg_pozycja, <span class="keywordtype">bool</span> arg_tura);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    ~<a class="code" href="class_gracz.html">Gracz</a>();</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;};</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#endif // GRACZ_H</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">int</span> id();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordtype">int</span> rzuc_kostkami();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keywordtype">void</span> zmien_pozycje(<span class="keywordtype">int</span> odleglosc);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">int</span> gdzie_jest();</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">void</span> zaplac(<span class="keywordtype">int</span> kwota);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keywordtype">void</span> zaplac(<span class="keywordtype">int</span> kwota, <a class="code" href="class_gracz.html">Gracz</a> &amp;gracz);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordtype">void</span> otrzymaj(<span class="keywordtype">int</span> kwota);</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordtype">void</span> otrzymaj(<span class="keywordtype">int</span> kwota, <a class="code" href="class_gracz.html">Gracz</a> &amp;gracz);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordtype">int</span> stan_konta();</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keywordtype">bool</span> czy_bankrut();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    <span class="keywordtype">bool</span> czy_wlasciciel(<span class="keywordtype">int</span> id_pola);</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;    <span class="keywordtype">void</span> wyswietl_gracza(sf::RenderWindow &amp;window);</div>
+<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="class_gracz.html#a62911cb75084f03eb9961368258eef95">  125</a></span>&#160;    <span class="keyword">friend</span> <span class="keywordtype">bool</span> <a class="code" href="class_gracz.html#a62911cb75084f03eb9961368258eef95">operator==</a>(<span class="keyword">const</span> <a class="code" href="class_gracz.html">Gracz</a> gracz1,<span class="keyword">const</span> <a class="code" href="class_gracz.html">Gracz</a> &amp;gracz2) {<span class="keywordflow">return</span> gracz1.<a class="code" href="class_gracz.html#a4b6cb4abfba854a45d71fe50dea46f81">nazwa</a>==gracz2.<a class="code" href="class_gracz.html#a4b6cb4abfba854a45d71fe50dea46f81">nazwa</a>;};</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160; </div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;};</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="preprocessor">#endif // GRACZ_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclass_gracz_html"><div class="ttname"><a href="class_gracz.html">Gracz</a></div><div class="ttdoc">The Gracz class.</div><div class="ttdef"><b>Definition:</b> <a href="gracz_8h_source.html#l00015">gracz.h:15</a></div></div>
-<div class="ttc" id="aclass_gracz_html_a46483a2d724d3b30709dc12704bcb778"><div class="ttname"><a href="class_gracz.html#a46483a2d724d3b30709dc12704bcb778">Gracz::kolor</a></div><div class="ttdeci">sf::Color kolor</div><div class="ttdef"><b>Definition:</b> <a href="gracz_8h_source.html#l00025">gracz.h:25</a></div></div>
-<div class="ttc" id="aclass_gracz_html_a2b6c9564ad6d2d3b65b6ca356cffbda9"><div class="ttname"><a href="class_gracz.html#a2b6c9564ad6d2d3b65b6ca356cffbda9">Gracz::posiadane_pola</a></div><div class="ttdeci">vector&lt; int &gt; posiadane_pola</div><div class="ttdef"><b>Definition:</b> <a href="gracz_8h_source.html#l00027">gracz.h:27</a></div></div>
-<div class="ttc" id="aclass_gracz_html_a62911cb75084f03eb9961368258eef95"><div class="ttname"><a href="class_gracz.html#a62911cb75084f03eb9961368258eef95">Gracz::operator==</a></div><div class="ttdeci">friend bool operator==(const Gracz gracz1, const Gracz &amp;gracz2)</div><div class="ttdef"><b>Definition:</b> <a href="gracz_8h_source.html#l00054">gracz.h:54</a></div></div>
-<div class="ttc" id="aclass_gracz_html_a4b6cb4abfba854a45d71fe50dea46f81"><div class="ttname"><a href="class_gracz.html#a4b6cb4abfba854a45d71fe50dea46f81">Gracz::nazwa</a></div><div class="ttdeci">string nazwa</div><div class="ttdef"><b>Definition:</b> <a href="gracz_8h_source.html#l00026">gracz.h:26</a></div></div>
-<div class="ttc" id="aclass_gracz_html_a460af0a2e2749e8c81ae86127320013a"><div class="ttname"><a href="class_gracz.html#a460af0a2e2749e8c81ae86127320013a">Gracz::Gracz</a></div><div class="ttdeci">Gracz()</div></div>
-<div class="ttc" id="aclass_gracz_html_a188e9c156f9bc6c6a66398cec6b34851"><div class="ttname"><a href="class_gracz.html#a188e9c156f9bc6c6a66398cec6b34851">Gracz::pionek</a></div><div class="ttdeci">sf::CircleShape pionek</div><div class="ttdef"><b>Definition:</b> <a href="gracz_8h_source.html#l00024">gracz.h:24</a></div></div>
+<div class="ttc" id="aclass_gracz_html"><div class="ttname"><a href="class_gracz.html">Gracz</a></div><div class="ttdoc">Jest to klasa przechowująca zmienne i metody każdego gracza.</div><div class="ttdef"><b>Definition:</b> <a href="gracz_8h_source.html#l00016">gracz.h:16</a></div></div>
+<div class="ttc" id="aclass_gracz_html_a46483a2d724d3b30709dc12704bcb778"><div class="ttname"><a href="class_gracz.html#a46483a2d724d3b30709dc12704bcb778">Gracz::kolor</a></div><div class="ttdeci">sf::Color kolor</div><div class="ttdef"><b>Definition:</b> <a href="gracz_8h_source.html#l00030">gracz.h:30</a></div></div>
+<div class="ttc" id="aclass_gracz_html_a2b6c9564ad6d2d3b65b6ca356cffbda9"><div class="ttname"><a href="class_gracz.html#a2b6c9564ad6d2d3b65b6ca356cffbda9">Gracz::posiadane_pola</a></div><div class="ttdeci">vector&lt; int &gt; posiadane_pola</div><div class="ttdef"><b>Definition:</b> <a href="gracz_8h_source.html#l00034">gracz.h:34</a></div></div>
+<div class="ttc" id="aclass_gracz_html_a62911cb75084f03eb9961368258eef95"><div class="ttname"><a href="class_gracz.html#a62911cb75084f03eb9961368258eef95">Gracz::operator==</a></div><div class="ttdeci">friend bool operator==(const Gracz gracz1, const Gracz &amp;gracz2)</div><div class="ttdoc">operator ==</div><div class="ttdef"><b>Definition:</b> <a href="gracz_8h_source.html#l00125">gracz.h:125</a></div></div>
+<div class="ttc" id="aclass_gracz_html_a4b6cb4abfba854a45d71fe50dea46f81"><div class="ttname"><a href="class_gracz.html#a4b6cb4abfba854a45d71fe50dea46f81">Gracz::nazwa</a></div><div class="ttdeci">string nazwa</div><div class="ttdef"><b>Definition:</b> <a href="gracz_8h_source.html#l00032">gracz.h:32</a></div></div>
+<div class="ttc" id="aclass_gracz_html_a460af0a2e2749e8c81ae86127320013a"><div class="ttname"><a href="class_gracz.html#a460af0a2e2749e8c81ae86127320013a">Gracz::Gracz</a></div><div class="ttdeci">Gracz()</div><div class="ttdoc">Konstruktor domyslny, bez parametrow.</div></div>
+<div class="ttc" id="aclass_gracz_html_a188e9c156f9bc6c6a66398cec6b34851"><div class="ttname"><a href="class_gracz.html#a188e9c156f9bc6c6a66398cec6b34851">Gracz::pionek</a></div><div class="ttdeci">sf::CircleShape pionek</div><div class="ttdef"><b>Definition:</b> <a href="gracz_8h_source.html#l00028">gracz.h:28</a></div></div>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>

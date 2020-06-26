@@ -10,21 +10,30 @@ using namespace std;
 #define GRACZ_H
 
 /**
- * @brief Klasa Gracz, jest to klasa przechowująca zmienne i metody każdego gracza.
+ * @brief Jest to klasa przechowująca zmienne i metody każdego gracza.
  */
 
 class Gracz{
-    int saldo =0;/** - stan konta gracza*/
-    bool bankrut = false;/** - czy gracz jest bankrutem*/
-    int pozycja = 0;/** - pozycja gracza na planszy*/
-    int id_;/** - identyfikator gracza*/
+    /** - stan konta gracza*/
+    int saldo =0;
+    /** - czy gracz jest bankrutem*/
+    bool bankrut = false;
+    /** - pozycja gracza na planszy*/
+    int pozycja = 0;
+    /** - identyfikator gracza*/
+    int id_;
 
     public:
-    sf::CircleShape pionek; /** - pionek odpowiadajacy graczu*/
-    sf::Color kolor;/** - kolor odpowiadajacy graczu*/
-    string nazwa = "nazwa_gracza";/** - nazwa gracza*/
-    vector<int> posiadane_pola;/** - identyfikatory pol posiadanych przez gracza*/
-    bool tura = false;/** - czy gracz ma ture*/
+    /** - pionek odpowiadajacy graczu*/
+    sf::CircleShape pionek;
+    /** - kolor odpowiadajacy graczu*/
+    sf::Color kolor;
+    /** - nazwa gracza*/
+    string nazwa = "nazwa_gracza";
+    /** - identyfikatory pol posiadanych przez gracza*/
+    vector<int> posiadane_pola;
+    /** - czy gracz ma ture*/
+    bool tura = false;
 
     /**
      * @brief Konstruktor domyslny, bez parametrow
@@ -32,13 +41,16 @@ class Gracz{
     Gracz();
     /**
      * @brief Konsturktor z parametrami
-     * @param nazwa gracza
-     * @param czy gracz jest bankrutem
-     * @param poczatkowy stan konta gracza
-     * @param poczatkowa pozycja na ktorej znajduje sie gracz
-     * @param czy gracz ma ture
+     * @param arg_nazwa nazwa gracza
+     * @param arg_bankrut czy gracz jest bankrutem
+     * @param arg_saldo poczatkowy stan konta gracza
+     * @param arg_pozycja poczatkowa pozycja na ktorej znajduje sie gracz
+     * @param arg_tura czy gracz ma ture
      */
     Gracz(string arg_nazwa, bool arg_bankrut, int arg_saldo, int arg_pozycja, bool arg_tura);
+    /**
+     * @brief Destruktor, w ramach zabezpieczenia ustawia stan konta na 0 i status bankruta
+     */
     ~Gracz();
 
     /**
@@ -53,7 +65,7 @@ class Gracz{
     int rzuc_kostkami();
     /**
      * @brief zmienia pozycje gracza o podana odleglosc
-     * @param odleglosc - podana odleglosc
+     * @param odleglosc podana odleglosc
      */
     void zmien_pozycje(int odleglosc);
     /**
@@ -63,24 +75,24 @@ class Gracz{
     int gdzie_jest();
     /**
      * @brief gracz placi podana kwote do banku
-     * @param kwota, którą gracz ma zapłacić
+     * @param kwota kwota, którą gracz ma zapłacić
      */
     void zaplac(int kwota);
     /**
      * @brief gracz placi podana kwote do innego graca
-     * @param kwota, którą gracz ma zapłacić
-     * @param gracz, który ma otrzymać kwotę
+     * @param kwota kwota, którą gracz ma zapłacić
+     * @param gracz gracz, który ma otrzymać kwotę
      */
     void zaplac(int kwota, Gracz &gracz);
     /**
      * @brief gracz otrzymuje podana kwote od banku
-     * @param kwota, którą gracz ma otrzymać
+     * @param kwota kwota, którą gracz ma otrzymać
      */
     void otrzymaj(int kwota);
     /**
      * @brief gracz otrzymuje podana kwote od innego graca
-     * @param kwota, którą gracz ma otrzymać
-     * @param gracz, który ma zapłacić kwotę
+     * @param kwota kwota, którą gracz ma otrzymać
+     * @param gracz gracz, który ma zapłacić kwotę
      */
     void otrzymaj(int kwota, Gracz &gracz);
     /**
@@ -95,7 +107,7 @@ class Gracz{
     bool czy_bankrut();
     /**
      * @brief sprawdza czy gracz jest wlascicielem podanego pola
-     * @param pole, które sprawdzamy
+     * @param id_pola pole, które sprawdzamy
      * @return
      */
     bool czy_wlasciciel(int id_pola);
@@ -106,8 +118,8 @@ class Gracz{
     void wyswietl_gracza(sf::RenderWindow &window);
     /**
      * @brief operator ==
-     * @param pierwszy gracz
-     * @param drugi gracz
+     * @param gracz1 pierwszy gracz
+     * @param gracz1 drugi gracz
      * @return
      */
     friend bool operator==(const Gracz gracz1,const Gracz &gracz2) {return gracz1.nazwa==gracz2.nazwa;};

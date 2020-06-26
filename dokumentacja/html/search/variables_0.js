@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gracze_105',['gracze',['../monopoly_8h.html#a05108cc23849c3ea13760c1b54482aae',1,'monopoly.h']]]
+  ['id_5fwlasciciela_5f_109',['id_wlasciciela_',['../class_pole.html#ace2d1b00d5ff56fa23b95a0bdd3bc8c8',1,'Pole']]]
 ];

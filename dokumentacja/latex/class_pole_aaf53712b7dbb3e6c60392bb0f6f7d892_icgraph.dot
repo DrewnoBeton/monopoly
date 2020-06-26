@@ -4,7 +4,7 @@ digraph "Pole::id_wlasciciela"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="RL";
-  Node1 [label="Pole::id_wlasciciela",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 [label="Pole::id_wlasciciela",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="zwraca identyfikator właściciela"];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid"];
-  Node2 [label="Specjalna::efekt_na\l_graczu",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_specjalna.html#a29eda8c094c1aac1f9cee1ea43b32f6f",tooltip=" "];
+  Node2 [label="Specjalna::efekt_na\l_graczu",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_specjalna.html#abf8dd546f746608a5b2352dd4a8eea56",tooltip="wykonuje czynności po najechaniu gracza na pole"];
 }

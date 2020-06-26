@@ -2,71 +2,100 @@
 \label{class_posiadlosc}\index{Posiadlosc@{Posiadlosc}}
 
 
+\mbox{\hyperlink{class_pole}{Pole}} typu posiadlosc.  
+
+
+
+
 {\ttfamily \#include $<$pole.\+h$>$}
 
-
-
-Inheritance diagram for Posiadlosc\+:
-% FIG 0
-
-
-Collaboration diagram for Posiadlosc\+:
-% FIG 1
+Inheritance diagram for Posiadlosc\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_posiadlosc}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\hyperlink{class_posiadlosc_ac02ce5e6488966891ceb4560a2743f96}{Posiadlosc}} (int arg\+\_\+wlasciciel, string arg\+\_\+nazwa, int arg\+\_\+koszt, int arg\+\_\+grupa)
-\item 
+\mbox{\hyperlink{class_posiadlosc_a0442b6f3fbc6e65dcffb3f37ec874c31}{Posiadlosc}} (int arg\+\_\+wlasciciel, string arg\+\_\+nazwa, int arg\+\_\+koszt)
+\begin{DoxyCompactList}\small\item\em Kostruktor pola. \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_posiadlosc_a28d425abb542d0e98d00fa2da4b84000}{kup\+\_\+pole}} (\mbox{\hyperlink{class_gracz}{Gracz}} \&gracz)
-\item 
+\begin{DoxyCompactList}\small\item\em kupuje pole graczowi \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_posiadlosc_a6cfe94657ed317c032fff7d8ca5df889}{sprzedaj\+\_\+pole}} (\mbox{\hyperlink{class_gracz}{Gracz}} \&gracz)
-\item 
+\begin{DoxyCompactList}\small\item\em sprzedaje pole graczowi \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_posiadlosc_a4751faea37ac76af6db2278bae58bdb4}{kup\+\_\+domek}} (\mbox{\hyperlink{class_gracz}{Gracz}} \&gracz)
-\item 
+\begin{DoxyCompactList}\small\item\em kupuje domek na polu \end{DoxyCompactList}\item 
 void \mbox{\hyperlink{class_posiadlosc_a216cb184b27739fa3d89531efe966e8b}{sprzedaj\+\_\+domek}} (\mbox{\hyperlink{class_gracz}{Gracz}} \&gracz)
-\item 
-void \mbox{\hyperlink{class_posiadlosc_a0e84f1a1b27c142d552e615ec0141780}{efekt\+\_\+na\+\_\+graczu}} (\mbox{\hyperlink{class_gracz}{Gracz}} \&gracz, vector$<$ \mbox{\hyperlink{class_gracz}{Gracz}} $>$ \&arg\+\_\+gracze, vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{class_pole}{Pole}} $>$$>$ \&\mbox{\hyperlink{monopoly_8h_a9949f5d6dcb8f2151a69e55e0e9379da}{pola}}, sf\+::\+Text \&tekst) override
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em sprzedaje domek na polu \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_posiadlosc_aefb13171958ff84c8c711b5c4783bbc1}{efekt\+\_\+na\+\_\+graczu}} (\mbox{\hyperlink{class_gracz}{Gracz}} \&gracz, vector$<$ \mbox{\hyperlink{class_gracz}{Gracz}} $>$ \&arg\+\_\+gracze, vector$<$ unique\+\_\+ptr$<$ \mbox{\hyperlink{class_pole}{Pole}} $>$$>$ \&pola, sf\+::\+Text \&tekst) override
+\begin{DoxyCompactList}\small\item\em wykonuje czynności po najechaniu gracza na pole \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_pole}{Pole}} typu posiadlosc. 
 
-
-Definition at line 26 of file pole.\+h.
+Definition at line 72 of file pole.\+h.
 
 
 
 \doxysubsection{Constructor \& Destructor Documentation}
-\mbox{\Hypertarget{class_posiadlosc_ac02ce5e6488966891ceb4560a2743f96}\label{class_posiadlosc_ac02ce5e6488966891ceb4560a2743f96}} 
+\mbox{\Hypertarget{class_posiadlosc_a0442b6f3fbc6e65dcffb3f37ec874c31}\label{class_posiadlosc_a0442b6f3fbc6e65dcffb3f37ec874c31}} 
 \index{Posiadlosc@{Posiadlosc}!Posiadlosc@{Posiadlosc}}
 \index{Posiadlosc@{Posiadlosc}!Posiadlosc@{Posiadlosc}}
 \doxysubsubsection{\texorpdfstring{Posiadlosc()}{Posiadlosc()}}
-{\footnotesize\ttfamily Posiadlosc\+::\+Posiadlosc (\begin{DoxyParamCaption}\item[{int}]{arg\+\_\+wlasciciel,  }\item[{string}]{arg\+\_\+nazwa,  }\item[{int}]{arg\+\_\+koszt,  }\item[{int}]{arg\+\_\+grupa }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+{\footnotesize\ttfamily Posiadlosc\+::\+Posiadlosc (\begin{DoxyParamCaption}\item[{int}]{arg\+\_\+wlasciciel,  }\item[{string}]{arg\+\_\+nazwa,  }\item[{int}]{arg\+\_\+koszt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
-Definition at line 32 of file pole.\+h.
+Kostruktor pola. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg\+\_\+wlasciciel} & własciciel pola \\
+\hline
+{\em arg\+\_\+nazwa} & nazwa pola \\
+\hline
+{\em arg\+\_\+koszt} & koszt pola \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 85 of file pole.\+h.
 
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_posiadlosc_a0e84f1a1b27c142d552e615ec0141780}\label{class_posiadlosc_a0e84f1a1b27c142d552e615ec0141780}} 
+\mbox{\Hypertarget{class_posiadlosc_aefb13171958ff84c8c711b5c4783bbc1}\label{class_posiadlosc_aefb13171958ff84c8c711b5c4783bbc1}} 
 \index{Posiadlosc@{Posiadlosc}!efekt\_na\_graczu@{efekt\_na\_graczu}}
 \index{efekt\_na\_graczu@{efekt\_na\_graczu}!Posiadlosc@{Posiadlosc}}
 \doxysubsubsection{\texorpdfstring{efekt\_na\_graczu()}{efekt\_na\_graczu()}}
-{\footnotesize\ttfamily void Posiadlosc\+::efekt\+\_\+na\+\_\+graczu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gracz}{Gracz}} \&}]{gracz,  }\item[{vector$<$ \mbox{\hyperlink{class_gracz}{Gracz}} $>$ \&}]{arg\+\_\+gracze,  }\item[{vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{class_pole}{Pole}} $>$$>$ \&}]{pola,  }\item[{sf\+::\+Text \&}]{tekst }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Posiadlosc\+::efekt\+\_\+na\+\_\+graczu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gracz}{Gracz}} \&}]{gracz,  }\item[{vector$<$ \mbox{\hyperlink{class_gracz}{Gracz}} $>$ \&}]{arg\+\_\+gracze,  }\item[{vector$<$ unique\+\_\+ptr$<$ \mbox{\hyperlink{class_pole}{Pole}} $>$$>$ \&}]{pola,  }\item[{sf\+::\+Text \&}]{tekst }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-Implements \mbox{\hyperlink{class_pole_aec17f99be9f1cf860aa26d143460b4ea}{Pole}}.
+wykonuje czynności po najechaniu gracza na pole 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gracz} & gracz, który wszedł na pole \\
+\hline
+{\em arg\+\_\+gracze} & wektor graczy \\
+\hline
+{\em pola} & wektor pól \\
+\hline
+{\em tekst} & tekst w sfml, w którym wyświetlamy \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_pole_aafd7b8a0b45b3d599243c0eb2a8d9282}{Pole}}.
 
 
 
 Definition at line 46 of file pole.\+cpp.
 
-Here is the call graph for this function\+:
-% FIG 2
 \mbox{\Hypertarget{class_posiadlosc_a4751faea37ac76af6db2278bae58bdb4}\label{class_posiadlosc_a4751faea37ac76af6db2278bae58bdb4}} 
 \index{Posiadlosc@{Posiadlosc}!kup\_domek@{kup\_domek}}
 \index{kup\_domek@{kup\_domek}!Posiadlosc@{Posiadlosc}}
@@ -75,10 +104,17 @@ Here is the call graph for this function\+:
 
 
 
+kupuje domek na polu 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gracz} & gracz, który jest właścicielem \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line 28 of file pole.\+cpp.
 
-Here is the call graph for this function\+:
-% FIG 3
 \mbox{\Hypertarget{class_posiadlosc_a28d425abb542d0e98d00fa2da4b84000}\label{class_posiadlosc_a28d425abb542d0e98d00fa2da4b84000}} 
 \index{Posiadlosc@{Posiadlosc}!kup\_pole@{kup\_pole}}
 \index{kup\_pole@{kup\_pole}!Posiadlosc@{Posiadlosc}}
@@ -87,10 +123,17 @@ Here is the call graph for this function\+:
 
 
 
+kupuje pole graczowi 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gracz} & gracz, który będzie właścicielem pola \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line 65 of file pole.\+cpp.
 
-Here is the call graph for this function\+:
-% FIG 4
 \mbox{\Hypertarget{class_posiadlosc_a216cb184b27739fa3d89531efe966e8b}\label{class_posiadlosc_a216cb184b27739fa3d89531efe966e8b}} 
 \index{Posiadlosc@{Posiadlosc}!sprzedaj\_domek@{sprzedaj\_domek}}
 \index{sprzedaj\_domek@{sprzedaj\_domek}!Posiadlosc@{Posiadlosc}}
@@ -99,10 +142,17 @@ Here is the call graph for this function\+:
 
 
 
+sprzedaje domek na polu 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gracz} & gracz, który jest właścicielem \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line 37 of file pole.\+cpp.
 
-Here is the call graph for this function\+:
-% FIG 5
 \mbox{\Hypertarget{class_posiadlosc_a6cfe94657ed317c032fff7d8ca5df889}\label{class_posiadlosc_a6cfe94657ed317c032fff7d8ca5df889}} 
 \index{Posiadlosc@{Posiadlosc}!sprzedaj\_pole@{sprzedaj\_pole}}
 \index{sprzedaj\_pole@{sprzedaj\_pole}!Posiadlosc@{Posiadlosc}}
@@ -111,10 +161,17 @@ Here is the call graph for this function\+:
 
 
 
+sprzedaje pole graczowi 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gracz} & gracz, który był właścicielem pola \\
+\hline
+\end{DoxyParams}
+
+
 Definition at line 84 of file pole.\+cpp.
 
-Here is the call graph for this function\+:
-% FIG 6
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

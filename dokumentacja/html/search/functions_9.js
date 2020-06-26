@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['pole_89',['Pole',['../class_pole.html#abc633ce15c565e9f7eb0fb3412d7752b',1,'Pole']]],
-  ['posiadlosc_90',['Posiadlosc',['../class_posiadlosc.html#ac02ce5e6488966891ceb4560a2743f96',1,'Posiadlosc']]]
+  ['pole_90',['Pole',['../class_pole.html#abc633ce15c565e9f7eb0fb3412d7752b',1,'Pole']]],
+  ['posiadlosc_91',['Posiadlosc',['../class_posiadlosc.html#a0442b6f3fbc6e65dcffb3f37ec874c31',1,'Posiadlosc']]],
+  ['przygotuj_5fokno_92',['przygotuj_okno',['../class_menu.html#a274d24a9a25c6aa5e194ec3b66fc7245',1,'Menu']]]
 ];

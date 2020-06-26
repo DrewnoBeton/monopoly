@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['id_5fwlasciciela_5f_106',['id_wlasciciela_',['../class_pole.html#ace2d1b00d5ff56fa23b95a0bdd3bc8c8',1,'Pole']]],
-  ['ilosc_107',['ilosc',['../monopoly_8h.html#a98bb1ec4bc805a5618816aafc0c69128',1,'monopoly.h']]]
+  ['kolor_110',['kolor',['../class_gracz.html#a46483a2d724d3b30709dc12704bcb778',1,'Gracz']]],
+  ['koszt_111',['koszt',['../class_pole.html#a44a7635e270456e6b13d4727a097824f',1,'Pole']]]
 ];

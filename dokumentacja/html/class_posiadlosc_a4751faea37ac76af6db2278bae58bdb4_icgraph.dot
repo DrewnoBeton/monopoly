@@ -1,0 +1,14 @@
+digraph "Posiadlosc::kup_domek"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="RL";
+  Node1 [label="Posiadlosc::kup_domek",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="kupuje domek na polu"];
+  Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="kup_lub_ulepsz_pole",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$monopoly_8h.html#a151549d2ec4f2ccde96af85cbbc33669",tooltip="kupuje lub ulepsza pole"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="Menu::sterowanie",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_menu.html#a4dfd33c01ffd6a50b18eaf53a35bc4d2",tooltip="obsluguje sterowanie grą"];
+  Node3 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4",tooltip=" "];
+}

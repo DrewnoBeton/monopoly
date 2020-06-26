@@ -1,0 +1,46 @@
+digraph "Menu::sterowanie"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="Menu::sterowanie",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="obsluguje sterowanie grą"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="czyja_tura",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funkcje_8cpp.html#aad3740b86a4266978288aafec74dffb8",tooltip="zwraca identyfikator gracza, który ma turę"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="debug_wyswietl_graczy",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funkcje_8cpp.html#a6c5dcb0a1f5377d9dca7485b7656a650",tooltip="(DEBUG) wyświetla statystyki graczy w konsoli"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="debug_wyswietl_pola",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funkcje_8cpp.html#aff901c8ca46e154c08af4be938348a4e",tooltip="(DEBUG) wyświetla parametry pól w konsoli"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="kup_lub_ulepsz_pole",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funkcje_8cpp.html#a151549d2ec4f2ccde96af85cbbc33669",tooltip="kupuje lub ulepsza pole"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="Gracz::gdzie_jest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_gracz.html#afdc9d50cee093657a5e1739897221efe",tooltip="zwraca pozycje na ktorej znajduje sie gracz"];
+  Node5 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="Gracz::id",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_gracz.html#a858548ee9ace1ac7acc8a744a34420f8",tooltip="zwraca identyfikator gracza"];
+  Node5 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="Posiadlosc::kup_domek",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_posiadlosc.html#a4751faea37ac76af6db2278bae58bdb4",tooltip="kupuje domek na polu"];
+  Node8 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="Gracz::zaplac",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_gracz.html#a18b1e1c55fe64c923060f8d627884002",tooltip="gracz placi podana kwote do banku"];
+  Node5 -> Node10 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 [label="Specjalna::kup_pole",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_specjalna.html#a23940b15662794ce9b7a2d49bb2a6e2a",tooltip="sprzedaje pole graczowi"];
+  Node10 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node10 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node11 [color="midnightblue",fontsize="10",style="solid"];
+  Node11 [label="nowa_gra",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funkcje_8cpp.html#aacdd8db249aaae4d90457f4ab5b0ac8d",tooltip="tworzy nową grę"];
+  Node11 -> Node12 [color="midnightblue",fontsize="10",style="solid"];
+  Node12 [label="nowa_plansza",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funkcje_8cpp.html#a1ac3c8d2a2c3263aa1de332344622625",tooltip="tworzy nową planszę, wczytując ją z pliku .txt"];
+  Node1 -> Node13 [color="midnightblue",fontsize="10",style="solid"];
+  Node13 [label="ruch",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funkcje_8cpp.html#a7d91e89f12034613f087bae2cfc11bc8",tooltip="funkcja odpowiadająca za ruch gracza w jego turze"];
+  Node13 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node13 -> Node14 [color="midnightblue",fontsize="10",style="solid"];
+  Node14 [label="Gracz::rzuc_kostkami",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_gracz.html#a9f5ee97ace374124b736081d70140c54",tooltip="zwraca liczbe wyrzucona przez gracza(2-12)"];
+  Node13 -> Node15 [color="midnightblue",fontsize="10",style="solid"];
+  Node15 [label="Gracz::zmien_pozycje",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_gracz.html#ae82af23c4fc8f34ed844cd0d95579374",tooltip="zmienia pozycje gracza o podana odleglosc"];
+  Node15 -> Node16 [color="midnightblue",fontsize="10",style="solid"];
+  Node16 [label="Gracz::otrzymaj",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_gracz.html#adc70b43039dcdfe80daf97e4fae8f994",tooltip="gracz otrzymuje podana kwote od banku"];
+  Node1 -> Node17 [color="midnightblue",fontsize="10",style="solid"];
+  Node17 [label="ustaw_ture",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funkcje_8cpp.html#a9d7318e79c83ccf050bfa9402f9913e5",tooltip="ustawia turę kolejnemu graczowi, który nie jest bankrutem przy okazji usuwa ewentualne błędy w system..."];
+  Node17 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node1 -> Node18 [color="midnightblue",fontsize="10",style="solid"];
+  Node18 [label="wyswietl_statystyki",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$funkcje_8cpp.html#a2e1aa7df110079d123f7a6384f7ab4a8",tooltip="wyświetla statystyki graczy(identyfikator i stan konta)"];
+}

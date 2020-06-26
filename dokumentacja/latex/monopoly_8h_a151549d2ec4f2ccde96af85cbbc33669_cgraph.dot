@@ -1,0 +1,20 @@
+digraph "kup_lub_ulepsz_pole"
+{
+ // LATEX_PDF_SIZE
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="kup_lub_ulepsz_pole",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="kupuje lub ulepsza pole"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Gracz::gdzie_jest",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_gracz.html#afdc9d50cee093657a5e1739897221efe",tooltip="zwraca pozycje na ktorej znajduje sie gracz"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="Gracz::id",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_gracz.html#a858548ee9ace1ac7acc8a744a34420f8",tooltip="zwraca identyfikator gracza"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="Posiadlosc::kup_domek",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_posiadlosc.html#a4751faea37ac76af6db2278bae58bdb4",tooltip="kupuje domek na polu"];
+  Node4 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="Gracz::zaplac",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_gracz.html#a18b1e1c55fe64c923060f8d627884002",tooltip="gracz placi podana kwote do banku"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="Specjalna::kup_pole",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_specjalna.html#a23940b15662794ce9b7a2d49bb2a6e2a",tooltip="sprzedaje pole graczowi"];
+  Node6 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+}

@@ -24,7 +24,7 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="1572911971857529797.jpg"/></td>
+  <td id="projectlogo"><img alt="Logo" src="ikonka.jpg"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Monopoly
    </div>
@@ -90,34 +90,43 @@ $(document).ready(function(){initNavTree('class_specjalna.html',''); initResizab
 </div><!--header-->
 <div class="contents">
 
+<p><a class="el" href="class_pole.html" title="Klasa abstrakcyjna, sluzy do dziedziczenia przez inne rodzaje pol.">Pole</a> specjalne(dworce)  
+ <a href="class_specjalna.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="pole_8h_source.html">pole.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Specjalna:</div>
 <div class="dyncontent">
-<div class="center"><img src="class_specjalna__inherit__graph.png" border="0" usemap="#_specjalna_inherit__map" alt="Inheritance graph"/></div>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for Specjalna:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_specjalna__coll__graph.png" border="0" usemap="#_specjalna_coll__map" alt="Collaboration graph"/></div>
-<center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
+ <div class="center">
+  <img src="class_specjalna.png" usemap="#Specjalna_map" alt=""/>
+  <map id="Specjalna_map" name="Specjalna_map">
+<area href="class_pole.html" title="Klasa abstrakcyjna, sluzy do dziedziczenia przez inne rodzaje pol." alt="Pole" shape="rect" coords="0,0,68,24"/>
+  </map>
+</div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a3f15525be340980d7b832827a559ae48"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_specjalna.html#a3f15525be340980d7b832827a559ae48">Specjalna</a> (int arg_wlasciciel, string arg_nazwa, int arg_koszt)</td></tr>
+<tr class="memdesc:a3f15525be340980d7b832827a559ae48"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kostruktor pola.  <a href="class_specjalna.html#a3f15525be340980d7b832827a559ae48">More...</a><br /></td></tr>
 <tr class="separator:a3f15525be340980d7b832827a559ae48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a23940b15662794ce9b7a2d49bb2a6e2a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_specjalna.html#a23940b15662794ce9b7a2d49bb2a6e2a">kup_pole</a> (<a class="el" href="class_gracz.html">Gracz</a> &amp;gracz)</td></tr>
+<tr class="memdesc:a23940b15662794ce9b7a2d49bb2a6e2a"><td class="mdescLeft">&#160;</td><td class="mdescRight">sprzedaje pole graczowi  <a href="class_specjalna.html#a23940b15662794ce9b7a2d49bb2a6e2a">More...</a><br /></td></tr>
 <tr class="separator:a23940b15662794ce9b7a2d49bb2a6e2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a167aa7f6c6d5af9134f32d73e6cc57ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_specjalna.html#a167aa7f6c6d5af9134f32d73e6cc57ce">sprzedaj_pole</a> (<a class="el" href="class_gracz.html">Gracz</a> &amp;gracz)</td></tr>
+<tr class="memdesc:a167aa7f6c6d5af9134f32d73e6cc57ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">kupuje domek na polu  <a href="class_specjalna.html#a167aa7f6c6d5af9134f32d73e6cc57ce">More...</a><br /></td></tr>
 <tr class="separator:a167aa7f6c6d5af9134f32d73e6cc57ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a29eda8c094c1aac1f9cee1ea43b32f6f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_specjalna.html#a29eda8c094c1aac1f9cee1ea43b32f6f">efekt_na_graczu</a> (<a class="el" href="class_gracz.html">Gracz</a> &amp;gracz, vector&lt; <a class="el" href="class_gracz.html">Gracz</a> &gt; &amp;arg_gracze, vector&lt; shared_ptr&lt; <a class="el" href="class_pole.html">Pole</a> &gt;&gt; &amp;<a class="el" href="monopoly_8h.html#a9949f5d6dcb8f2151a69e55e0e9379da">pola</a>, sf::Text &amp;tekst) override</td></tr>
-<tr class="separator:a29eda8c094c1aac1f9cee1ea43b32f6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf8dd546f746608a5b2352dd4a8eea56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_specjalna.html#abf8dd546f746608a5b2352dd4a8eea56">efekt_na_graczu</a> (<a class="el" href="class_gracz.html">Gracz</a> &amp;gracz, vector&lt; <a class="el" href="class_gracz.html">Gracz</a> &gt; &amp;arg_gracze, vector&lt; unique_ptr&lt; <a class="el" href="class_pole.html">Pole</a> &gt;&gt; &amp;pola, sf::Text &amp;tekst) override</td></tr>
+<tr class="memdesc:abf8dd546f746608a5b2352dd4a8eea56"><td class="mdescLeft">&#160;</td><td class="mdescRight">wykonuje czynności po najechaniu gracza na pole  <a href="class_specjalna.html#abf8dd546f746608a5b2352dd4a8eea56">More...</a><br /></td></tr>
+<tr class="separator:abf8dd546f746608a5b2352dd4a8eea56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_pole"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_pole')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_pole.html">Pole</a></td></tr>
 <tr class="memitem:abc633ce15c565e9f7eb0fb3412d7752b inherit pub_methods_class_pole"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pole.html#abc633ce15c565e9f7eb0fb3412d7752b">Pole</a> (int arg_wlasciciel, string arg_nazwa, int arg_koszt)</td></tr>
+<tr class="memdesc:abc633ce15c565e9f7eb0fb3412d7752b inherit pub_methods_class_pole"><td class="mdescLeft">&#160;</td><td class="mdescRight">Kostruktor pola.  <a href="class_pole.html#abc633ce15c565e9f7eb0fb3412d7752b">More...</a><br /></td></tr>
 <tr class="separator:abc633ce15c565e9f7eb0fb3412d7752b inherit pub_methods_class_pole"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaf53712b7dbb3e6c60392bb0f6f7d892 inherit pub_methods_class_pole"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pole.html#aaf53712b7dbb3e6c60392bb0f6f7d892">id_wlasciciela</a> ()</td></tr>
+<tr class="memdesc:aaf53712b7dbb3e6c60392bb0f6f7d892 inherit pub_methods_class_pole"><td class="mdescLeft">&#160;</td><td class="mdescRight">zwraca identyfikator właściciela  <a href="class_pole.html#aaf53712b7dbb3e6c60392bb0f6f7d892">More...</a><br /></td></tr>
 <tr class="separator:aaf53712b7dbb3e6c60392bb0f6f7d892 inherit pub_methods_class_pole"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adada21b101d324f21f787c089235996f inherit pub_methods_class_pole"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_pole.html#adada21b101d324f21f787c089235996f">nazwap</a> ()</td></tr>
+<tr class="memdesc:adada21b101d324f21f787c089235996f inherit pub_methods_class_pole"><td class="mdescLeft">&#160;</td><td class="mdescRight">zwraca nazwę pola  <a href="class_pole.html#adada21b101d324f21f787c089235996f">More...</a><br /></td></tr>
 <tr class="separator:adada21b101d324f21f787c089235996f inherit pub_methods_class_pole"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
@@ -131,8 +140,9 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a44a7635e270456e6b13d4727a097824f inherit pro_attribs_class_pole"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock">
-<p class="definition">Definition at line <a class="el" href="pole_8h_source.html#l00043">43</a> of file <a class="el" href="pole_8h_source.html">pole.h</a>.</p>
+<div class="textblock"><p><a class="el" href="class_pole.html" title="Klasa abstrakcyjna, sluzy do dziedziczenia przez inne rodzaje pol.">Pole</a> specjalne(dworce) </p>
+
+<p class="definition">Definition at line <a class="el" href="pole_8h_source.html#l00118">118</a> of file <a class="el" href="pole_8h_source.html">pole.h</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a3f15525be340980d7b832827a559ae48"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a3f15525be340980d7b832827a559ae48">&#9670;&nbsp;</a></span>Specjalna()</h2>
@@ -174,13 +184,23 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="pole_8h_source.html#l00046">46</a> of file <a class="el" href="pole_8h_source.html">pole.h</a>.</p>
+<p>Kostruktor pola. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">arg_wlasciciel</td><td>własciciel pola </td></tr>
+    <tr><td class="paramname">arg_nazwa</td><td>nazwa pola </td></tr>
+    <tr><td class="paramname">arg_koszt</td><td>koszt pola </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="pole_8h_source.html#l00127">127</a> of file <a class="el" href="pole_8h_source.html">pole.h</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a29eda8c094c1aac1f9cee1ea43b32f6f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a29eda8c094c1aac1f9cee1ea43b32f6f">&#9670;&nbsp;</a></span>efekt_na_graczu()</h2>
+<a id="abf8dd546f746608a5b2352dd4a8eea56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf8dd546f746608a5b2352dd4a8eea56">&#9670;&nbsp;</a></span>efekt_na_graczu()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -203,7 +223,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">vector&lt; shared_ptr&lt; <a class="el" href="class_pole.html">Pole</a> &gt;&gt; &amp;&#160;</td>
+          <td class="paramtype">vector&lt; unique_ptr&lt; <a class="el" href="class_pole.html">Pole</a> &gt;&gt; &amp;&#160;</td>
           <td class="paramname"><em>pola</em>, </td>
         </tr>
         <tr>
@@ -225,14 +245,20 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="class_pole.html#aec17f99be9f1cf860aa26d143460b4ea">Pole</a>.</p>
+<p>wykonuje czynności po najechaniu gracza na pole </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gracz</td><td>gracz, który wszedł na pole </td></tr>
+    <tr><td class="paramname">arg_gracze</td><td>wektor graczy </td></tr>
+    <tr><td class="paramname">pola</td><td>wektor pól </td></tr>
+    <tr><td class="paramname">tekst</td><td>tekst w sfml, w którym wyświetlamy </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implements <a class="el" href="class_pole.html#aafd7b8a0b45b3d599243c0eb2a8d9282">Pole</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="pole_8cpp_source.html#l00126">126</a> of file <a class="el" href="pole_8cpp_source.html">pole.cpp</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_specjalna_a29eda8c094c1aac1f9cee1ea43b32f6f_cgraph.png" border="0" usemap="#class_specjalna_a29eda8c094c1aac1f9cee1ea43b32f6f_cgraph" alt=""/></div>
-</div>
 
 </div>
 </div>
@@ -252,12 +278,15 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>sprzedaje pole graczowi </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gracz</td><td>gracz, który był właścicielem pola </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition">Definition at line <a class="el" href="pole_8cpp_source.html#l00097">97</a> of file <a class="el" href="pole_8cpp_source.html">pole.cpp</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_specjalna_a23940b15662794ce9b7a2d49bb2a6e2a_cgraph.png" border="0" usemap="#class_specjalna_a23940b15662794ce9b7a2d49bb2a6e2a_cgraph" alt=""/></div>
-</div>
 
 </div>
 </div>
@@ -277,12 +306,15 @@ Here is the call graph for this function:</div>
       </table>
 </div><div class="memdoc">
 
+<p>kupuje domek na polu </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">gracz</td><td>gracz, który jest właścicielem </td></tr>
+  </table>
+  </dd>
+</dl>
+
 <p class="definition">Definition at line <a class="el" href="pole_8cpp_source.html#l00116">116</a> of file <a class="el" href="pole_8cpp_source.html">pole.cpp</a>.</p>
-<div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="class_specjalna_a167aa7f6c6d5af9134f32d73e6cc57ce_cgraph.png" border="0" usemap="#class_specjalna_a167aa7f6c6d5af9134f32d73e6cc57ce_cgraph" alt=""/></div>
-</div>
 
 </div>
 </div>

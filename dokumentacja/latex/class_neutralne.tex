@@ -2,30 +2,33 @@
 \label{class_neutralne}\index{Neutralne@{Neutralne}}
 
 
+\mbox{\hyperlink{class_pole}{Pole}} neutralne.  
+
+
+
+
 {\ttfamily \#include $<$pole.\+h$>$}
 
-
-
-Inheritance diagram for Neutralne\+:
-% FIG 0
-
-
-Collaboration diagram for Neutralne\+:
-% FIG 1
+Inheritance diagram for Neutralne\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_neutralne}
+\end{center}
+\end{figure}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-void \mbox{\hyperlink{class_neutralne_ac16b139c72d3922431f03adeebcac8bd}{efekt\+\_\+na\+\_\+graczu}} (\mbox{\hyperlink{class_gracz}{Gracz}} \&gracz, vector$<$ \mbox{\hyperlink{class_gracz}{Gracz}} $>$ \&arg\+\_\+gracze, vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{class_pole}{Pole}} $>$$>$ \&\mbox{\hyperlink{monopoly_8h_a9949f5d6dcb8f2151a69e55e0e9379da}{pola}}, sf\+::\+Text \&tekst) override
-\item 
+void \mbox{\hyperlink{class_neutralne_a8f91beecd6164fc80e13d8005f47678a}{efekt\+\_\+na\+\_\+graczu}} (\mbox{\hyperlink{class_gracz}{Gracz}} \&gracz, vector$<$ \mbox{\hyperlink{class_gracz}{Gracz}} $>$ \&arg\+\_\+gracze, vector$<$ unique\+\_\+ptr$<$ \mbox{\hyperlink{class_pole}{Pole}} $>$$>$ \&pola, sf\+::\+Text \&tekst) override
+\begin{DoxyCompactList}\small\item\em wykonuje czynności po najechaniu gracza na pole \end{DoxyCompactList}\item 
 \mbox{\hyperlink{class_neutralne_a2c31098ae6b86c950a8b3e25b5df0729}{Neutralne}} (int arg\+\_\+wlasciciel, string arg\+\_\+nazwa, int arg\+\_\+koszt)
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Kostruktor pola. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Additional Inherited Members}
 
 
 \doxysubsection{Detailed Description}
+\mbox{\hyperlink{class_pole}{Pole}} neutralne. 
 
-
-Definition at line 20 of file pole.\+h.
+Definition at line 50 of file pole.\+h.
 
 
 
@@ -38,20 +41,48 @@ Definition at line 20 of file pole.\+h.
 
 
 
-Definition at line 24 of file pole.\+h.
+Kostruktor pola. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em arg\+\_\+wlasciciel} & własciciel pola \\
+\hline
+{\em arg\+\_\+nazwa} & nazwa pola \\
+\hline
+{\em arg\+\_\+koszt} & koszt pola \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line 67 of file pole.\+h.
 
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_neutralne_ac16b139c72d3922431f03adeebcac8bd}\label{class_neutralne_ac16b139c72d3922431f03adeebcac8bd}} 
+\mbox{\Hypertarget{class_neutralne_a8f91beecd6164fc80e13d8005f47678a}\label{class_neutralne_a8f91beecd6164fc80e13d8005f47678a}} 
 \index{Neutralne@{Neutralne}!efekt\_na\_graczu@{efekt\_na\_graczu}}
 \index{efekt\_na\_graczu@{efekt\_na\_graczu}!Neutralne@{Neutralne}}
 \doxysubsubsection{\texorpdfstring{efekt\_na\_graczu()}{efekt\_na\_graczu()}}
-{\footnotesize\ttfamily void Neutralne\+::efekt\+\_\+na\+\_\+graczu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gracz}{Gracz}} \&}]{gracz,  }\item[{vector$<$ \mbox{\hyperlink{class_gracz}{Gracz}} $>$ \&}]{arg\+\_\+gracze,  }\item[{vector$<$ shared\+\_\+ptr$<$ \mbox{\hyperlink{class_pole}{Pole}} $>$$>$ \&}]{pola,  }\item[{sf\+::\+Text \&}]{tekst }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+{\footnotesize\ttfamily void Neutralne\+::efekt\+\_\+na\+\_\+graczu (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_gracz}{Gracz}} \&}]{gracz,  }\item[{vector$<$ \mbox{\hyperlink{class_gracz}{Gracz}} $>$ \&}]{arg\+\_\+gracze,  }\item[{vector$<$ unique\+\_\+ptr$<$ \mbox{\hyperlink{class_pole}{Pole}} $>$$>$ \&}]{pola,  }\item[{sf\+::\+Text \&}]{tekst }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
 
 
 
-Implements \mbox{\hyperlink{class_pole_aec17f99be9f1cf860aa26d143460b4ea}{Pole}}.
+wykonuje czynności po najechaniu gracza na pole 
+
+
+\begin{DoxyParams}{Parameters}
+{\em gracz} & gracz, który wszedł na pole \\
+\hline
+{\em arg\+\_\+gracze} & wektor graczy \\
+\hline
+{\em pola} & wektor pól \\
+\hline
+{\em tekst} & tekst w sfml, w którym wyświetlamy \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_pole_aafd7b8a0b45b3d599243c0eb2a8d9282}{Pole}}.
 
 
 

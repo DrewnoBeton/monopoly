@@ -4,7 +4,12 @@ digraph "debug_wyswietl_graczy"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="RL";
-  Node1 [label="debug_wyswietl_graczy",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 [label="debug_wyswietl_graczy",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="(DEBUG) wyświetla statystyki graczy w konsoli"];
   Node1 -> Node2 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4",tooltip=" "];
+  Node2 [label="Menu::przygotuj_okno",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_menu.html#a274d24a9a25c6aa5e194ec3b66fc7245",tooltip="przygtowuje okno gry do wyświetlenia"];
+  Node2 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="main",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4",tooltip=" "];
+  Node1 -> Node4 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="Menu::sterowanie",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_menu.html#a4dfd33c01ffd6a50b18eaf53a35bc4d2",tooltip="obsluguje sterowanie grą"];
+  Node4 -> Node3 [dir="back",color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
 }

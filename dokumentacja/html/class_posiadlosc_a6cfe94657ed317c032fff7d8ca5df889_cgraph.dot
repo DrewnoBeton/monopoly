@@ -4,9 +4,9 @@ digraph "Posiadlosc::sprzedaj_pole"
   edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
   node [fontname="Helvetica",fontsize="10",shape=record];
   rankdir="LR";
-  Node1 [label="Posiadlosc::sprzedaj_pole",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip=" "];
+  Node1 [label="Posiadlosc::sprzedaj_pole",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black",tooltip="sprzedaje pole graczowi"];
   Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node2 [label="Gracz::id",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_gracz.html#a858548ee9ace1ac7acc8a744a34420f8",tooltip=" "];
+  Node2 [label="Gracz::id",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_gracz.html#a858548ee9ace1ac7acc8a744a34420f8",tooltip="zwraca identyfikator gracza"];
   Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node3 [label="Gracz::otrzymaj",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_gracz.html#adc70b43039dcdfe80daf97e4fae8f994",tooltip=" "];
+  Node3 [label="Gracz::otrzymaj",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_gracz.html#adc70b43039dcdfe80daf97e4fae8f994",tooltip="gracz otrzymuje podana kwote od banku"];
 }

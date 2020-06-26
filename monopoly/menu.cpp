@@ -1,7 +1,7 @@
 #include "menu.h"
 void Menu::przygotuj_okno(sf::RenderWindow &window)
 {
-    font.loadFromFile("czcionka.ttf");
+    font.loadFromFile("pliki//czcionka.ttf");
     tekst.setFont(font);
     tekst.setCharacterSize(20);
     tekst.setPosition(300, 400);
@@ -22,6 +22,12 @@ void Menu::przygotuj_okno(sf::RenderWindow &window)
     tekst_statystyki.setCharacterSize(15);
     tekst_statystyki.setPosition(600, 600);
     tekst_statystyki.setColor(sf::Color::Black);
+
+    if (!icon.loadFromFile("pliki//ikonka.png")) {
+        std::cerr << "Could not load texture" << std::endl;
+        window.close();
+    }
+    window.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
 
     if (!music.openFromFile("pliki//muza.ogg"))
         window.close(); // error
