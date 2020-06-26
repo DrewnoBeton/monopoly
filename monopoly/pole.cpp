@@ -18,7 +18,7 @@ string Pole::nazwap()
 }
 
 //Neutralne
-void Neutralne::efekt_na_graczu(Gracz &gracz, vector<Gracz> &gracze, vector<shared_ptr<Pole>> &pola,sf::Text &tekst)
+void Neutralne::efekt_na_graczu(Gracz &gracz, vector<Gracz> &gracze, vector<unique_ptr<Pole>> &pola,sf::Text &tekst)
 {
     cout << "pole neutralne";
     //pole neutralne, tu bedzie wialo nuda
@@ -43,7 +43,7 @@ void Posiadlosc::sprzedaj_domek(Gracz &gracz)
         gracz.otrzymaj(koszt_domku);
     }
 }
-void Posiadlosc::efekt_na_graczu(Gracz &gracz, vector<Gracz> &gracze, vector<shared_ptr<Pole>> &pola,sf::Text &tekst)
+void Posiadlosc::efekt_na_graczu(Gracz &gracz, vector<Gracz> &gracze, vector<unique_ptr<Pole>> &pola,sf::Text &tekst)
 {
     if(id_wlasciciela_==-1)
     {
@@ -123,7 +123,7 @@ void Specjalna::sprzedaj_pole(Gracz &gracz)
         return;
     }
 }
-void Specjalna::efekt_na_graczu(Gracz &gracz, vector<Gracz> &gracze, vector<shared_ptr<Pole>> &pola,sf::Text &tekst)//do naprawy
+void Specjalna::efekt_na_graczu(Gracz &gracz, vector<Gracz> &gracze, vector<unique_ptr<Pole>> &pola,sf::Text &tekst)//do naprawy
 {
 
     if(id_wlasciciela_==-1)

@@ -4,7 +4,7 @@
 int test(){
     return 887;
 }
-void nowa_plansza(vector<shared_ptr<Pole>> &pola)
+void nowa_plansza(vector<unique_ptr<Pole>> &pola)
 {
     string typ;
     int wlasciciel;
@@ -31,14 +31,14 @@ void nowa_plansza(vector<shared_ptr<Pole>> &pola)
         if(i%4 == 3)
         {
             koszt = stoi(words[i]);
-            if(typ == "n") pola.emplace_back(make_shared<Neutralne>(wlasciciel,nazwa,koszt));//cout << "neutralne" << wlasciciel << nazwa << koszt <<endl;
-            if(typ == "p") pola.emplace_back(make_shared<Posiadlosc>(wlasciciel,nazwa,koszt));//cout << "posiadlosc" << wlasciciel << nazwa << koszt <<endl;
-            if(typ == "s") pola.emplace_back(make_shared<Specjalna>(wlasciciel,nazwa,koszt));//cout << "dworzec" << wlasciciel << nazwa << koszt <<endl;
+            if(typ == "n") pola.emplace_back(make_unique<Neutralne>(wlasciciel,nazwa,koszt));//cout << "neutralne" << wlasciciel << nazwa << koszt <<endl;
+            if(typ == "p") pola.emplace_back(make_unique<Posiadlosc>(wlasciciel,nazwa,koszt));//cout << "posiadlosc" << wlasciciel << nazwa << koszt <<endl;
+            if(typ == "s") pola.emplace_back(make_unique<Specjalna>(wlasciciel,nazwa,koszt));//cout << "dworzec" << wlasciciel << nazwa << koszt <<endl;
         }
     }
 
 }
-void nowa_gra(vector<Gracz> &gracze,vector<shared_ptr<Pole>> &pola,int &ilosc)//do dokonczenia
+void nowa_gra(vector<Gracz> &gracze,vector<unique_ptr<Pole>> &pola,int &ilosc)//do dokonczenia
 {
     if(ilosc > 8) ilosc =8;
     int ilu_graczy = ilosc;
@@ -143,7 +143,7 @@ void debug_wyswietl_graczy(vector<Gracz> &gracze)
     }
     cout << "-------------------------------------\n";
 }
-void debug_wyswietl_pola(vector<shared_ptr<Pole>> &pola)
+void debug_wyswietl_pola(vector<unique_ptr<Pole>> &pola)
 {
     cout << endl;
     for(int i =0; i< pola.size(); i++)
@@ -151,7 +151,7 @@ void debug_wyswietl_pola(vector<shared_ptr<Pole>> &pola)
         cout << i << " : " << pola[i]->id_wlasciciela() << " " <<pola[i]->nazwap() <<endl;
     }
 }
-void ruch(Gracz &gracz,vector<Gracz> &gracze,vector<shared_ptr<Pole>> &pola,sf::Text &tekst)
+void ruch(Gracz &gracz,vector<Gracz> &gracze,vector<unique_ptr<Pole>> &pola,sf::Text &tekst)
 {
     int rzut = gracz.rzuc_kostkami();
     cout << "wyrzucono: " <<rzut<<endl;
@@ -172,9 +172,9 @@ void ruch(Gracz &gracz,vector<Gracz> &gracze,vector<shared_ptr<Pole>> &pola,sf::
         }
     }
 }
-void kup_lub_ulepsz_pole(Gracz &gracz,vector<Gracz> &gracze,vector<shared_ptr<Pole>> &pola,sf::Text &tekst)
+void kup_lub_ulepsz_pole(Gracz &gracz,vector<Gracz> &gracze,vector<unique_ptr<Pole>> &pola,sf::Text &tekst)
 {
-    auto neutralne = dynamic_pointer_cast<Neutralne>(pola[gracz.gdzie_jest()]);
+    auto neutralne = dynamic_cast<Neutralne*>(pola[gracz.gdzie_jest()].get());
     if(neutralne)
     {
         cout << "Pola neutralnego nie mozesz kupic"<<endl;
@@ -184,8 +184,8 @@ void kup_lub_ulepsz_pole(Gracz &gracz,vector<Gracz> &gracze,vector<shared_ptr<Po
     {
         if(pola[gracz.gdzie_jest()]->id_wlasciciela() == -1)
         {
-            auto posiadlosc = dynamic_pointer_cast<Posiadlosc>(pola[gracz.gdzie_jest()]);
-            auto specjalna = dynamic_pointer_cast<Specjalna>(pola[gracz.gdzie_jest()]);
+            auto posiadlosc = dynamic_cast<Posiadlosc*>(pola[gracz.gdzie_jest()].get());
+            auto specjalna = dynamic_cast<Specjalna*>(pola[gracz.gdzie_jest()].get());
             if(posiadlosc)
             {
                 posiadlosc->kup_pole(gracz);
@@ -201,7 +201,7 @@ void kup_lub_ulepsz_pole(Gracz &gracz,vector<Gracz> &gracze,vector<shared_ptr<Po
         {
             cout << "To twoje pole!"<<endl;
             tekst.setString("To twoje pole!");
-            auto posiadlosc = dynamic_pointer_cast<Posiadlosc>(pola[gracz.gdzie_jest()]);
+            auto posiadlosc = dynamic_cast<Posiadlosc*>(pola[gracz.gdzie_jest()].get());
             if(posiadlosc)
             {
                 posiadlosc->kup_domek(gracz);
@@ -215,12 +215,12 @@ void kup_lub_ulepsz_pole(Gracz &gracz,vector<Gracz> &gracze,vector<shared_ptr<Po
         }
     }
 }
-void wyswietl_wlascicieli(vector<shared_ptr<Pole>> &pola,vector<Gracz> &gracze,sf::RenderWindow &window)
+void wyswietl_wlascicieli(vector<unique_ptr<Pole>> &pola,vector<Gracz> &gracze,sf::RenderWindow &window)
 {
     int licznik =0;
     sf::RectangleShape znacznik;
     znacznik.setSize(sf::Vector2f(20,20));
-    for(auto p:pola)
+    for(auto &p:pola)
     {
         if(p->id_wlasciciela() != -1) znacznik.setFillColor(gracze[p->id_wlasciciela()].kolor);
         else znacznik.setFillColor(sf::Color::Transparent);

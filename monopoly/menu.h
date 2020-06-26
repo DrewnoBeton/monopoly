@@ -7,7 +7,7 @@ using namespace std;
 
 class Menu{
     vector<Gracz> gracze;/** - wektor przechowujący graczy*/
-    vector<shared_ptr<Pole>> pola;/** - wektor przechowujący pola*/
+    vector<unique_ptr<Pole>> pola;/** - wektor przechowujący pola*/
     vector <sf::Sprite> pionki;/** - wektor przechowujący pionki*/
     bool koniec=false;/** - czy gra dobiegła końca*/
     bool menu = true;/** - czy znajdujemy sie w menu, czy juz w grze*/

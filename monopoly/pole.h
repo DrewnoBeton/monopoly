@@ -29,8 +29,8 @@ class Pole{
      * @param wektor pól
      * @param tekst w sfml, w którym wyświetlamy
      */
-    virtual void efekt_na_graczu(Gracz &gracz, vector<Gracz> &arg_gracze, vector<shared_ptr<Pole>> &pola,sf::Text &tekst) =0;
-    friend void ruch(Gracz &gracz,vector<Gracz> &gracze,vector<shared_ptr<Pole>> &pola,sf::Text &tekst);
+    virtual void efekt_na_graczu(Gracz &gracz, vector<Gracz> &arg_gracze, vector<unique_ptr<Pole>> &pola,sf::Text &tekst) =0;
+    friend void ruch(Gracz &gracz,vector<Gracz> &gracze,vector<unique_ptr<Pole>> &pola,sf::Text &tekst);
     /**
      * @brief zwraca nazwę pola
      * @return
@@ -48,7 +48,7 @@ class Neutralne : public Pole
      * @param wektor pól
      * @param tekst w sfml, w którym wyświetlamy
      */
-    void efekt_na_graczu(Gracz &gracz, vector<Gracz> &arg_gracze, vector<shared_ptr<Pole>> &pola,sf::Text &tekst) override;
+    void efekt_na_graczu(Gracz &gracz, vector<Gracz> &arg_gracze, vector<unique_ptr<Pole>> &pola,sf::Text &tekst) override;
     /**
      * @brief Kostruktor pola
      * @param własciciel pola
@@ -96,7 +96,7 @@ class Posiadlosc : public Pole
      * @param wektor pól
      * @param tekst w sfml, w którym wyświetlamy
      */
-    void efekt_na_graczu(Gracz &gracz, vector<Gracz> &arg_gracze, vector<shared_ptr<Pole>> &pola,sf::Text &tekst) override;
+    void efekt_na_graczu(Gracz &gracz, vector<Gracz> &arg_gracze, vector<unique_ptr<Pole>> &pola,sf::Text &tekst) override;
 };
 class Specjalna : public Pole
 {
@@ -125,7 +125,7 @@ class Specjalna : public Pole
      * @param wektor pól
      * @param tekst w sfml, w którym wyświetlamy
      */
-    void efekt_na_graczu(Gracz &gracz, vector<Gracz> &arg_gracze, vector<shared_ptr<Pole>> &pola,sf::Text &tekst) override;
+    void efekt_na_graczu(Gracz &gracz, vector<Gracz> &arg_gracze, vector<unique_ptr<Pole>> &pola,sf::Text &tekst) override;
 };
 
 #endif // POLE_H
